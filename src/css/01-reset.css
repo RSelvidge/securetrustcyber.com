@@ -1,0 +1,39 @@
+/* 01-reset.css — minimal modern reset. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+* { margin: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  min-height: 100vh;
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img, picture, svg, video, canvas { display: block; max-width: 100%; }
+img { height: auto; }
+
+input, button, textarea, select { font: inherit; color: inherit; }
+button { background: none; border: none; cursor: pointer; padding: 0; }
+
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+
+ul[role="list"], ol[role="list"] { list-style: none; padding: 0; }
+
+/* The [hidden] trap: [hidden] sets display:none at UA priority, so any author
+   rule with display:flex/grid on the same element silently overrides it and
+   the "hidden" panel stays visible. Fix once, globally. */
+[hidden] { display: none !important; }
+
+/* Native <details>/<summary> disclosure marker control (used by FAQ). */
+summary { cursor: pointer; list-style: none; }
+summary::-webkit-details-marker { display: none; }

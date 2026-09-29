@@ -1,0 +1,74 @@
+/* 03-layout.css — container, section, grid primitives. */
+
+.container {
+  width: 100%;
+  max-width: var(--container-l);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.container--s { max-width: var(--container-s); }
+.container--m { max-width: var(--container-m); }
+.container--xl { max-width: var(--container-xl); }
+
+.section { padding-block: var(--section-y); }
+.section--muted { background: var(--color-bg-muted); }
+.section--deep { background: var(--color-bg-deep); color: var(--color-text-inverse); }
+.section--band { background: var(--color-bg-band); color: var(--color-text-inverse); }
+.section--deepest { background: var(--color-bg-deepest); color: var(--color-text-inverse); }
+
+.section--deep .section__title,
+.section--deep h1, .section--deep h2, .section--deep h3,
+.section--band .section__title,
+.section--band h1, .section--band h2, .section--band h3 {
+  color: var(--white);
+}
+.section--deep .section__intro,
+.section--band .section__intro { color: var(--color-text-inverse-muted); }
+
+/* Section header cluster: eyebrow + title + intro stacked left. */
+.section-head {
+  display: grid;
+  gap: var(--space-s);
+  margin-bottom: var(--space-xl);
+}
+.section-head--center { text-align: center; justify-items: center; }
+.section-head--center .section__title,
+.section-head--center .section__intro { margin-inline: auto; }
+
+/* ---------- grids ---------- */
+.grid { display: grid; gap: var(--space-l); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 64rem) {
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .grid--3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 40rem) {
+  .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; }
+}
+
+/* ---------- stacks & clusters ---------- */
+.stack { display: grid; gap: var(--stack-m); }
+.stack--s { gap: var(--stack-s); }
+.stack--l { gap: var(--stack-l); }
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  align-items: center;
+}
+
+/* Split: two columns, collapses to one at the small breakpoint. */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+.split--narrow { grid-template-columns: 1.05fr 0.95fr; }
+@media (max-width: 60rem) {
+  .split { grid-template-columns: 1fr; }
+}

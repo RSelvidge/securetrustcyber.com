@@ -1,0 +1,83 @@
+/* 02-base.css — typography, links, prose, focus, selection. */
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text);
+}
+
+h1 { font-size: var(--step-5); line-height: var(--lh-tight); }
+h2 { font-size: var(--step-4); }
+h3 { font-size: var(--step-2); }
+h4 { font-size: var(--step-1); }
+
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color var(--dur-fast) var(--ease);
+}
+a:hover { color: var(--color-link-hover); }
+
+/* Inverse links sit on navy/deep bands. */
+.on-dark a, .section--deep a:not(.btn):not(.mega__link):not(.footer-col__link),
+.section--band a:not(.btn) { color: var(--color-link-inverse); }
+.on-dark a:hover, .section--deep a:not(.btn):hover { color: var(--white); }
+
+strong { font-weight: var(--weight-bold); }
+
+code, kbd, pre { font-family: var(--font-mono); font-size: 0.92em; }
+code { background: var(--slate-100); padding: 0.1em 0.35em; border-radius: 4px; }
+pre {
+  background: var(--navy-900);
+  color: #d7e3ff;
+  padding: var(--space-m);
+  border-radius: var(--radius-m);
+  overflow-x: auto;
+  line-height: 1.6;
+}
+pre code { background: none; padding: 0; color: inherit; }
+
+::selection { background: rgba(72,171,224,.28); }
+
+/* Focus is amber because it must be visible on both #FFFFFF and #0A1A65.
+   A blue focus ring on a blue hero would be invisible. Never outline:none. */
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---------- prose ---------- */
+.prose { max-width: var(--container-s); }
+.prose > * + * { margin-top: var(--space-m); }
+.prose h2 { margin-top: var(--space-xl); }
+.prose h3 { margin-top: var(--space-l); }
+.prose ul, .prose ol { padding-left: 1.25rem; }
+.prose li + li { margin-top: var(--space-2xs); }
+.prose--lead { font-size: var(--step-1); line-height: var(--lh-body); color: var(--color-text-muted); }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-size: var(--step--1);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-link);
+}
+.on-dark .eyebrow, .section--deep .eyebrow { color: var(--color-accent); }
+
+.section__title { max-width: 24ch; }
+.section__intro { max-width: 60ch; color: var(--color-text-muted); }

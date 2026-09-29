@@ -1,0 +1,5 @@
+# Cloudflare Pages project configuration.
+# Direct deploy:  npx wrangler pages deploy dist --project-name=securetrust-cyber
+# Git-connected:  build command = "node build.mjs", output directory = "dist"
+name = "securetrust-cyber"
+pages_build_output_dir = "dist"

@@ -1,0 +1,30 @@
+/* 07-utilities.css — deliberately tiny. Anything reused more than twice
+   belongs in a real component, not here. */
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.mt-s { margin-top: var(--space-s); }
+.mt-m { margin-top: var(--space-m); }
+.mt-l { margin-top: var(--space-l); }
+.mt-xl { margin-top: var(--space-xl); }
+.mb-m { margin-bottom: var(--space-m); }
+.mb-l { margin-bottom: var(--space-l); }
+.mb-xl { margin-bottom: var(--space-xl); }
+
+/* Flow: stack children with a vertical gap. */
+.flow > * + * { margin-top: var(--stack-m); }
+.flow--s > * + * { margin-top: var(--stack-s); }
+
+/* Section band rhythm helper for stacked sections sharing a background. */
+.band + .band { padding-top: 0; }

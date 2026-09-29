@@ -1,0 +1,32 @@
+/* 06-animations.css — scroll reveals and rotating headline. All gated on
+   .js (so nothing is hidden when JS is off) and prefers-reduced-motion. */
+
+/* Scroll reveals: base state is visible; only hidden when JS is present. */
+.js .reveal { opacity: 0; transform: translateY(16px); }
+.js .reveal.is-visible {
+  opacity: 1; transform: none;
+  transition: opacity var(--dur-reveal) var(--ease-out),
+              transform var(--dur-reveal) var(--ease-out);
+}
+
+/* Rotating headline. No-JS: only the first phrase shows (via :first-child).
+   With JS: only the .is-active phrase is displayed, fading in as it appears. */
+.hero__rotate { display: inline-block; }
+.hero__rotate-item { display: none; }
+.hero__rotate-item:first-child { display: inline; }
+.js .hero__rotate-item { display: none; }
+.js .hero__rotate-item.is-active {
+  display: inline;
+  animation: fade-in var(--dur-slow) var(--ease);
+}
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* Platform diagram connection strokes */
+.platform-diagram .conn { stroke-dasharray: 6 6; animation: dash 30s linear infinite; }
+@keyframes dash { to { stroke-dashoffset: -600; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .js .hero__rotate-item.is-active { animation: none; }
+  .platform-diagram .conn { animation: none; }
+}
