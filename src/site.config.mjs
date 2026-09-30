@@ -14,6 +14,7 @@ export const SITE = {
 
   // The live domain.
   origin: 'https://securetrustcyber.com',
+  bookingUrl: 'https://bookings.cloud.microsoft/bookwithme/user/20566259f3624bc19b31984aa6bd3d05@securetrust.io/meetingtype/2wj5NMEGaUC1HXxVo9IWUA2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile',
 
   // Address is placeholder copy — replace before going live.
   address: 'Replace with your registered address',
@@ -32,7 +33,7 @@ export const SITE = {
   cta: {
     demo: 'Get a Demo',
     pricing: 'Get Pricing',
-    trial: 'Start Free Trial',
+    trial: 'Book a Demo',
     contact: 'Contact Sales',
   },
 

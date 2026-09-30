@@ -54,7 +54,7 @@ export function platformDiagram(ctx, opts = {}) {
         ${complianceRow}
       </svg>`)}
       <div class="dual-cta__actions" style="margin-top:var(--space-l)">
-        <a class="btn btn--primary" href="${ctx.url('request-demo')}">Get a Demo</a>
+        <a class="btn btn--primary"${ctx.linkAttrs('request-demo')} href="${ctx.url('request-demo')}">Get a Demo</a>
         <a class="btn btn--outline-inverse" href="${ctx.url('products')}">Learn More</a>
       </div>
     </div>

@@ -22,8 +22,8 @@ export function comparisonTable(ctx, opts = {}) {
             ${join(rows.map((r) => html`
               <tr class="${r.win ? 'row-win' : ''}">
                 <th scope="row">${r.capability}</th>
-                <td class="${r.us ? 'cell-yes' : 'cell-no'}">${r.us ? `${icon('check')} Available` : `${icon('x')} Not available`}</td>
-                <td class="${r.them ? 'cell-yes' : 'cell-no'}">${r.them ? `${icon('check')} Available` : `${icon('x')} Not available`}</td>
+                <td class="${r.us ? 'cell-yes' : 'cell-no'}">${join([icon(r.us ? 'check' : 'x'), r.us ? ' Available' : ' Not available'])}</td>
+                <td class="${r.them ? 'cell-yes' : 'cell-no'}">${join([icon(r.them ? 'check' : 'x'), r.them ? ' Available' : ' Not available'])}</td>
               </tr>`))}
           </tbody>
         </table>

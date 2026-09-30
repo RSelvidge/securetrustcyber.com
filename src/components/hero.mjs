@@ -28,8 +28,8 @@ export function hero(ctx, opts = {}) {
     : '';
 
   const actions = html`<div class="hero__actions">
-    ${primary ? html`<a class="btn btn--primary btn--lg" href="${ctx.url(primary.href)}">${primary.label} ${icon('arrowRight')}</a>` : ''}
-    ${secondary ? html`<a class="btn btn--outline-inverse btn--lg" href="${ctx.url(secondary.href)}">${secondary.label}</a>` : ''}
+    ${primary ? html`<a class="btn btn--primary btn--lg"${ctx.linkAttrs(primary.href)} href="${ctx.url(primary.href)}">${primary.label} ${icon('arrowRight')}</a>` : ''}
+    ${secondary ? html`<a class="btn btn--outline-inverse btn--lg"${ctx.linkAttrs(secondary.href)} href="${ctx.url(secondary.href)}">${secondary.label}</a>` : ''}
   </div>`;
 
   const chipRow = chips.length

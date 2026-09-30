@@ -452,6 +452,29 @@
 .bundle__fit { color: var(--color-text-muted); font-size: var(--step--1); }
 .bundle__actions { display: flex; flex-wrap: wrap; gap: var(--space-s); }
 
+/* ---------- device pricing calculator ---------- */
+.pricing-calculator {
+  background: var(--white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-2);
+  padding: clamp(var(--space-l), 5vw, var(--space-2xl));
+}
+.pricing-calculator__fields { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-l); }
+.pricing-calculator__result {
+  margin-top: var(--space-xl);
+  padding: var(--space-l);
+  border-radius: var(--radius-m);
+  background: var(--navy-800);
+  color: var(--white);
+}
+.pricing-calculator__label { color: var(--color-text-inverse-muted); font-size: var(--step--1); }
+.pricing-calculator__price { margin-top: var(--space-2xs); font-family: var(--font-display); font-size: var(--step-5); font-weight: var(--weight-bold); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.pricing-calculator__detail { margin-top: var(--space-xs); color: var(--color-text-inverse-muted); }
+.pricing-calculator__result .btn { margin-top: var(--space-m); }
+.pricing-calculator__note { margin-top: var(--space-m); }
+@media (max-width: 40rem) { .pricing-calculator__fields { grid-template-columns: 1fr; } }
+
 /* ---------- metrics band ---------- */
 .metrics-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-l); }
 .metric { text-align: center; }

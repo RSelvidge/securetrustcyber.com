@@ -5,6 +5,7 @@ import { breadcrumbs } from '../components/breadcrumbs.mjs';
 import { dualCta } from '../components/dual-cta.mjs';
 
 export default function blogPost(ctx, page) {
+  const body = String(page.body ?? '').replace(/(src|href)=(['"])\/assets\//g, (_, attr, quote) => `${attr}=${quote}${ctx.url.asset('')}`);
   return html`
     ${breadcrumbs(ctx, page)}
     <article class="section">
@@ -17,7 +18,7 @@ export default function blogPost(ctx, page) {
           </p>
           <p class="prose prose--lead" style="color:var(--color-text-muted)">${page.dek}</p>
         </header>
-        <div class="prose" style="margin-top:var(--space-xl)">${raw(page.body)}</div>
+        <div class="prose" style="margin-top:var(--space-xl)">${raw(body)}</div>
       </div>
     </article>
     ${dualCta(ctx, page.cta ?? {})}

@@ -9,7 +9,7 @@ import path from 'node:path';
 const EXTERNAL_DOMAINS = [
   'fonts.googleapis.com', 'fonts.gstatic.com', 'www.g2.com', 'www.capterra.com',
   'www.gartner.com', 'sourceforge.net', 'www.linkedin.com', 'www.youtube.com',
-  'www.facebook.com', 'x.com', 'twitter.com',
+  'www.facebook.com', 'x.com', 'twitter.com', 'bookings.cloud.microsoft',
 ];
 
 const SITE_HOST = new URL(SITE.origin).host;

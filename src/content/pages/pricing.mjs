@@ -1,5 +1,4 @@
-// src/content/pages/pricing.mjs — pricing & bundles page. No prices shown; CTAs
-// route to the demo/pricing-request flow (mirrors the reference site).
+// src/content/pages/pricing.mjs — pricing & bundles page.
 
 export default {
   slug: 'pricing',
@@ -12,7 +11,7 @@ export default {
     eyebrow: 'Pricing',
     headline: 'Solutions for every business',
     sub: 'Select your plan and deploy instantly. Flexible options for enterprises and MSPs alike.',
-    primary: { label: 'Get Pricing', href: 'request-demo' },
+    primary: { label: 'Estimate pricing', href: '#pricing-calculator' },
   },
   bundles: [
     {

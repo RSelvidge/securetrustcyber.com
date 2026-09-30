@@ -16,8 +16,8 @@ export function dualCta(ctx, opts = {}) {
         <h2>${heading}</h2>
         ${when(body, html`<p>${body}</p>`)}
         <div class="dual-cta__actions">
-          <a class="btn btn--primary btn--lg" href="${ctx.url(primary.href)}">${primary.label}</a>
-          ${secondary ? html`<a class="btn btn--outline-inverse btn--lg" href="${ctx.url(secondary.href)}">${secondary.label}</a>` : ''}
+          <a class="btn btn--primary"${ctx.linkAttrs(primary.href)} href="${ctx.url(primary.href)}">${primary.label}</a>
+          ${secondary ? html`<a class="btn btn--outline-inverse"${ctx.linkAttrs(secondary.href)} href="${ctx.url(secondary.href)}">${secondary.label}</a>` : ''}
         </div>
       </div>
     </div>

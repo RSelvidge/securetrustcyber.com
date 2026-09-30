@@ -7,7 +7,7 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-import { toString } from './src/lib/html.mjs';
+import { raw, toString } from './src/lib/html.mjs';
 import { makeUrl } from './src/lib/url.mjs';
 import { base } from './src/layouts/base.mjs';
 import * as validate from './src/lib/validate.mjs';
@@ -112,7 +112,15 @@ export async function build() {
   const rendered = [];
   for (const page of pages) {
     const out = outputPathFor(page.slug);
-    const ctx = { slug: page.slug, out, url: makeUrl(out), registry: registryMap, site: SITE };
+    const relativeUrl = makeUrl(out);
+    const url = (target = '') => target === 'request-demo' ? SITE.bookingUrl : relativeUrl(target);
+    const linkAttrs = (target) => target === 'request-demo' || target === SITE.bookingUrl
+      ? raw(' target="_blank" rel="noopener noreferrer"')
+      : raw('');
+    url.asset = relativeUrl.asset;
+    url.self = relativeUrl.self;
+    url.depth = relativeUrl.depth;
+    const ctx = { slug: page.slug, out, url, linkAttrs, registry: registryMap, site: SITE };
     const tpl = TEMPLATES[page.type] ?? TEMPLATES.default;
     if (!page.type) errors.push(`"${page.slug}" missing type`);
     const doc = base(ctx, page, tpl(ctx, page));

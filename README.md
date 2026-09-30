@@ -83,3 +83,10 @@ in `00-tokens.css` — a two-line change.
 text and even the 3:1 large-text threshold. It is a *dark-background* accent.
 Use `--color-accent` only for fills/icons/borders on navy, and `--color-link`
 (`#1B6FA8`) for text on light backgrounds. This is documented in `00-tokens.css`.
+# Blog editor
+
+Blog articles are managed with the hosted [Pages CMS](https://app.pagescms.org/) and stored in `src/content/posts/` as one JSON file per article. The repository’s `.pages.yml` config provides title, URL slug, category, date, author, summary, a rich-text article editor, and image uploads. Uploaded images are stored in `assets/img/blog/` and included in the site build.
+
+To connect it, sign in to Pages CMS with GitHub, install its GitHub App for the account or organization that owns this repository, then open the repository and select `.pages.yml`. Save an article to the production branch to commit it to GitHub; the connected Cloudflare Pages project then builds and publishes the change. Keep editor access limited to trusted contributors because saved article changes publish through the repository workflow.
+
+The site build reads the post files automatically. New articles use a lowercase, hyphenated slug and publish at `/blog/<slug>.html`.

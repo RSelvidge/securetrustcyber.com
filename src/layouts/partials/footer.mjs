@@ -19,7 +19,7 @@ export const footer = (ctx) => {
         <span class="brand__wordmark">${WORDMARK}<span style="color:var(--color-accent)">Cyber</span></span>
       </a>
       <p class="site-footer__tagline">${ctx.site.tagline}</p>
-      <a class="btn btn--inverse" href="${ctx.url('request-demo')}" style="justify-self:start">${ctx.site.cta.trial}</a>
+      <a class="btn btn--inverse"${ctx.linkAttrs('request-demo')} href="${ctx.url('request-demo')}" style="justify-self:start">${ctx.site.cta.trial}</a>
       <address class="site-footer__address">${ctx.site.address}<br>VAT ${ctx.site.vat}</address>
       <div class="social-links">
         ${join(ctx.site.socials.map((s) => html`

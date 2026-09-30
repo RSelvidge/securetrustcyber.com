@@ -23,7 +23,7 @@
   };
 
   document.addEventListener('DOMContentLoaded', function () {
-    ['header', 'megaMenu', 'drawer', 'heroRotate', 'tabs', 'reveal', 'slider', 'toTop', 'forms']
+    ['header', 'megaMenu', 'drawer', 'heroRotate', 'tabs', 'reveal', 'slider', 'toTop', 'forms', 'pricingCalculator']
       .forEach(function (name) {
         var mod = STC[name];
         if (mod && typeof mod.init === 'function') {
