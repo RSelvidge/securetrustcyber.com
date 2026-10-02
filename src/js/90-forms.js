@@ -37,7 +37,7 @@
     var success = form.querySelector('[data-success]') || document.createElement('div');
     success.setAttribute('data-success', '');
     success.className = 'form__success';
-    success.textContent = 'Thanks — your request has been recorded. A solutions engineer will be in touch shortly.';
+    success.textContent = 'Thanks, your request has been recorded. A solutions engineer will be in touch shortly.';
     form.reset();
     var first = form.firstElementChild;
     if (first) form.insertBefore(success, first);

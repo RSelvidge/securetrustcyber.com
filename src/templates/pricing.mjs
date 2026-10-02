@@ -51,9 +51,9 @@ export default function pricing(ctx, page) {
             <div class="field">
               <label class="field__label" for="pricing-bundle">Bundle</label>
               <select class="field__input" id="pricing-bundle" name="bundle" data-bundle-choice>
-                <option value="essentials" data-rate="30">SecureTrust Essentials — $30/device/month</option>
-                <option value="advanced" data-rate="50">SecureTrust Advanced — $50/device/month</option>
-                <option value="complete" data-rate="70">SecureTrust Complete — starts at $70/device/month</option>
+                <option value="essentials" data-rate="30">SecureTrust Essentials: $30/device/month</option>
+                <option value="advanced" data-rate="50">SecureTrust Advanced: $50/device/month</option>
+                <option value="complete" data-rate="70">SecureTrust Complete: starts at $70/device/month</option>
               </select>
             </div>
             <div class="field" data-retention-field hidden>

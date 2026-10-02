@@ -44,7 +44,7 @@ const buildCompetitor = (c) => ({
 
 // Shared pain points: the recurring gaps across the SASE/SSE market.
 const sharedPain = (name) => [
-  { icon: 'grid', title: 'Security ops are separate', body: `${name} stops at secure access — SIEM, vulnerability management and patching are still separate products from separate vendors.` },
+  { icon: 'grid', title: 'Security ops are separate', body: `${name} stops at secure access. SIEM, vulnerability management and patching are still separate products from separate vendors.` },
   { icon: 'layers', title: 'Point products, not a platform', body: 'You stitch together SWG, CASB, ZTNA and DLP from different modules, each with its own console and policy.' },
   { icon: 'zap', title: 'Shadow AI is an afterthought', body: 'AI Security for End Users is missing or bolted on, leaving GenAI usage ungoverned.' },
   { icon: 'chart', title: 'Add-on pricing', body: 'Core capabilities are gated behind tiers and add-ons, so the price climbs as you turn features on.' },
@@ -54,15 +54,15 @@ export const COMPETITORS = [
   buildCompetitor({
     slug: 'vs-zscaler', name: 'Zscaler',
     meta: 'A fair comparison of SecureTrust Cyber and Zscaler: coverage, security operations and total cost.',
-    heroSub: 'Zscaler leads the SSE market. But it stops at secure access — security operations are a separate problem you still have to solve.',
+    heroSub: 'Zscaler leads the SSE market. But it stops at secure access. Security operations are a separate problem you still have to solve.',
     framing: 'Zscaler is a serious platform and the market leader for a reason. The question for many teams is whether secure access is enough, or whether they want detection, compliance and patching in the same platform.',
     painPoints: sharedPain('Zscaler'),
     differentiators: [
-      { n: 1, title: 'SSE plus security operations', body: 'SecureTrust Cyber adds SIEM, vulnerability detection and managed patch to the full secure-access stack — one platform instead of SSE plus a separate SOC toolchain.' },
+      { n: 1, title: 'SSE plus security operations', body: 'SecureTrust Cyber adds SIEM, vulnerability detection and managed patch to the full secure-access stack, one platform instead of SSE plus a separate SOC toolchain.' },
       { n: 2, title: 'One policy, one console', body: 'Network, zero trust, cloud and data policy live in a single pane, not spread across Zscaler and the tools that surround it.' },
       { n: 3, title: 'AI security built in', body: 'Shadow AI discovery and guardrails are native, so GenAI usage is governed from day one.' },
     ],
-    migration: { heading: 'Consolidating around a full platform?', body: 'Keep secure access and add the operations layer — without running a second stack.' },
+    migration: { heading: 'Consolidating around a full platform?', body: 'Keep secure access and add the operations layer, without running a second stack.' },
     themHas: ['DNS Security', 'Secure Web Gateway', 'Universal ZTNA', 'CASB', 'Data Loss Prevention'],
     faq: [
       { q: 'Does SecureTrust Cyber replace Zscaler?', a: 'For teams that want secure access plus SIEM, vulnerability management and patching in one platform, yes.' },
@@ -94,7 +94,7 @@ export const COMPETITORS = [
     heroSub: 'Prisma SASE brings Palo Alto’s firewall to the cloud. But detection, compliance and patching still live in separate products.',
     framing: 'Prisma SASE is a strong choice if you are already deep in the Palo Alto ecosystem. The trade-off is that security operations live in Cortex and other products, not in the SASE platform itself.',
     painPoints: [
-      { icon: 'layers', title: 'Operations are separate', body: 'Detection lives in Cortex, patching elsewhere — you are still running a multi-product stack.' },
+      { icon: 'layers', title: 'Operations are separate', body: 'Detection lives in Cortex, patching elsewhere, so you are still running a multi-product stack.' },
       { icon: 'grid', title: 'Ecosystem lock-in', body: 'The value is greatest if you standardize on Palo Alto across firewall, SASE and XDR.' },
       { icon: 'chart', title: 'Enterprise complexity', body: 'Licensing and management are built for large enterprises with dedicated teams.' },
       { icon: 'zap', title: 'Shadow AI gap', body: 'AI Security for End Users is not a first-class part of the SASE offering.' },
@@ -102,12 +102,12 @@ export const COMPETITORS = [
     differentiators: [
       { n: 1, title: 'One platform, not an ecosystem', body: 'SecureTrust Cyber delivers SASE, SIEM and patch in one product rather than a family of products to integrate.' },
       { n: 2, title: 'AI security built in', body: 'Shadow AI governance is native, not an add-on or a separate service.' },
-      { n: 3, title: 'Simpler to run', body: 'One console, one policy engine and one support team — no multi-product integration work.' },
+      { n: 3, title: 'Simpler to run', body: 'One console, one policy engine and one support team, no multi-product integration work.' },
     ],
     migration: { heading: 'Consolidating off a multi-product stack?', body: 'Bring SASE and security operations together without the integration burden.' },
     themHas: ['Firewall-as-a-Service', 'Intrusion Prevention System', 'DNS Security', 'Secure Web Gateway', 'Universal ZTNA', 'CASB', 'Data Loss Prevention'],
     faq: [
-      { q: 'Does SecureTrust Cyber match Prisma on network security?', a: 'We cover the same network surface — FWaaS, IPS, DNS, SWG — and add SIEM and patch in the same platform.' },
+      { q: 'Does SecureTrust Cyber match Prisma on network security?', a: 'We cover the same network surface (FWaaS, IPS, DNS, SWG) and add SIEM and patch in the same platform.' },
     ],
   }),
 
@@ -137,7 +137,7 @@ export const COMPETITORS = [
   buildCompetitor({
     slug: 'vs-perimeter-81', name: 'Perimeter 81',
     meta: 'A fair comparison of SecureTrust Cyber and Perimeter 81 for SMB and mid-market SASE.',
-    heroSub: 'Perimeter 81 makes ZTNA easy for mid-market teams. But the rest of the stack — network security, data and operations — is thin.',
+    heroSub: 'Perimeter 81 makes ZTNA easy for mid-market teams. But the rest of the stack (network security, data and operations) is thin.',
     framing: 'Perimeter 81 is popular for making ZTNA approachable. If ZTNA is all you need, it is a fine choice. If you need the full security surface, the coverage is limited.',
     painPoints: [
       { icon: 'key', title: 'ZTNA-first, thin elsewhere', body: 'Strong access, but limited FWaaS, IPS, DLP and no security operations.' },
@@ -152,7 +152,7 @@ export const COMPETITORS = [
     migration: { heading: 'Outgrowing ZTNA-only?', body: 'Move to a full platform without losing the simplicity you like.' },
     themHas: ['Firewall-as-a-Service', 'DNS Security', 'Secure Web Gateway', 'Universal ZTNA', 'CASB', 'Data Loss Prevention'],
     faq: [
-      { q: 'Is SecureTrust Cyber as easy to deploy as Perimeter 81?', a: 'Yes — cloud-delivered, no appliances — with a much deeper feature set behind the same simplicity.' },
+      { q: 'Is SecureTrust Cyber as easy to deploy as Perimeter 81?', a: 'Yes, cloud-delivered, no appliances, with a much deeper feature set behind the same simplicity.' },
     ],
   }),
 
@@ -160,7 +160,7 @@ export const COMPETITORS = [
     slug: 'vs-forcepoint', name: 'Forcepoint',
     meta: 'A fair comparison of SecureTrust Cyber and Forcepoint across SSE depth and operations.',
     heroSub: 'Forcepoint has deep DLP and SWG heritage. But it is a point-product SSE, with operations and AI security left to other vendors.',
-    framing: 'Forcepoint does DLP and SWG well, with a long enterprise history. The trade-off is that it is an SSE point product — the network and operations layers come from elsewhere.',
+    framing: 'Forcepoint does DLP and SWG well, with a long enterprise history. The trade-off is that it is an SSE point product, so the network and operations layers come from elsewhere.',
     painPoints: sharedPain('Forcepoint'),
     differentiators: [
       { n: 1, title: 'Network security included', body: 'FWaaS and IPS come with the platform, alongside SWG, CASB and DLP.' },
@@ -200,7 +200,7 @@ export const COMPETITORS = [
   buildCompetitor({
     slug: 'vs-symantec', name: 'Symantec (Broadcom)',
     meta: 'A fair comparison of SecureTrust Cyber and Symantec SWG/CASB across maturity and breadth.',
-    heroSub: 'Symantec’s SWG and DLP are mature, but aging — and the network security and operations layers are missing.',
+    heroSub: 'Symantec’s SWG and DLP are mature, but aging, and the network security and operations layers are missing.',
     framing: 'Symantec has a long SWG and DLP pedigree, but the portfolio has aged. It does not cover network security or security operations, leaving you to fill those gaps.',
     painPoints: sharedPain('Symantec'),
     differentiators: [
@@ -252,7 +252,7 @@ export const COMPETITORS = [
     migration: { heading: 'Prioritizing security over SD-WAN?', body: 'Move to a platform where security is the point, not an add-on.' },
     themHas: ['Firewall-as-a-Service', 'Intrusion Prevention System', 'DNS Security', 'Secure Web Gateway', 'Universal ZTNA'],
     faq: [
-      { q: 'Does SecureTrust Cyber do SD-WAN?', a: 'Our focus is security — SASE, SIEM and patch. We integrate with your connectivity rather than replacing your SD-WAN.' },
+      { q: 'Does SecureTrust Cyber do SD-WAN?', a: 'Our focus is security: SASE, SIEM and patch. We integrate with your connectivity rather than replacing your SD-WAN.' },
     ],
   }),
 ];

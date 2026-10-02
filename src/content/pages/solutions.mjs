@@ -22,7 +22,7 @@ export default {
   blocks: [
     (ctx) => hero(ctx, {
       variant: 'centered', eyebrow: 'Solutions', headline: 'Security that fits how you work',
-      sub: 'Whether you are chasing a compliance deadline, securing a specific sector, or integrating with your stack — start here.',
+      sub: 'Whether you are chasing a compliance deadline, securing a specific sector, or integrating with your stack, start here.',
       primary: { label: 'Get a Demo', href: 'request-demo' },
     }),
     (ctx) => html`<section class="section"><div class="container">

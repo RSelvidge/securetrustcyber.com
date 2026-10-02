@@ -9,7 +9,7 @@ export const SITE = {
   legalName: 'SecureTrust Cyber',
   tagline: 'One Platform. Total Security.',
   description:
-    'A converged cloud platform for network, zero trust, cloud, data and AI security — ' +
+    'A converged cloud platform for network, zero trust, cloud, data and AI security, ' +
     'with SIEM and managed patch. One platform, total security.',
 
   // The live domain.

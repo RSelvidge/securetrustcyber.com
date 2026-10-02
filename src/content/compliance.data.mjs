@@ -34,7 +34,7 @@ export const COMPLIANCE = [
     sub: 'Meet the EU network and information security directive with risk management, supply-chain security and fast incident reporting.',
     meta: 'Meet NIS2 requirements for risk management, supply-chain security and incident reporting with SecureTrust Cyber.',
     chips: ['EU Directive 2022/2555'],
-    summary: 'NIS2 broadens cybersecurity obligations to essential and important entities across many sectors. It demands a risk-based approach to security, supply-chain assurance, and incident notification within 24 hours of awareness — with management held directly accountable.',
+    summary: 'NIS2 broadens cybersecurity obligations to essential and important entities across many sectors. It demands a risk-based approach to security, supply-chain assurance, and incident notification within 24 hours of awareness, with management held directly accountable.',
     controlMap: [
       { requirement: 'Risk-management measures (Art. 21)', answer: 'Continuous vulnerability and configuration visibility, plus automated patching, underpin a defensible risk program.', href: 'products/patch-management', product: 'Managed Patch Management' },
       { requirement: 'Network & information security policies (Art. 21)', answer: 'A centralized firewall and segmentation policy enforces consistent security across sites and clouds.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
@@ -60,10 +60,10 @@ export const COMPLIANCE = [
     chips: ['Annex A controls'],
     summary: 'ISO 27001 is the international standard for an information security management system (ISMS). It requires a risk-driven set of controls across Annex A, and continuous improvement. Certification demands evidence, not just intent.',
     controlMap: [
-      { requirement: 'A.8.8 — Technical vulnerability management', answer: 'Automated patch scheduling and risk-based prioritization close vulnerabilities systematically.', href: 'products/patch-management', product: 'Managed Patch Management' },
-      { requirement: 'A.8.2 — Privileged access rights', answer: 'Identity- and context-based least-privilege access to private resources.', href: 'products/ztna', product: 'Universal ZTNA' },
-      { requirement: 'A.8.16 — Monitoring activities', answer: 'Centralized log collection and real-time threat detection across the estate.', href: 'products/siem', product: 'SIEM Platform' },
-      { requirement: 'A.8.24 — Use of cryptography', answer: 'TLS inspection across internet, WAN and LAN, with device posture checks that verify encryption.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
+      { requirement: 'A.8.8: Technical vulnerability management', answer: 'Automated patch scheduling and risk-based prioritization close vulnerabilities systematically.', href: 'products/patch-management', product: 'Managed Patch Management' },
+      { requirement: 'A.8.2: Privileged access rights', answer: 'Identity- and context-based least-privilege access to private resources.', href: 'products/ztna', product: 'Universal ZTNA' },
+      { requirement: 'A.8.16: Monitoring activities', answer: 'Centralized log collection and real-time threat detection across the estate.', href: 'products/siem', product: 'SIEM Platform' },
+      { requirement: 'A.8.24: Use of cryptography', answer: 'TLS inspection across internet, WAN and LAN, with device posture checks that verify encryption.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
     ],
     evidence: [
       { title: 'Control evidence', body: 'Reports and logs that demonstrate each Annex A control.' },
@@ -72,7 +72,7 @@ export const COMPLIANCE = [
       { title: 'Audit trails', body: 'Admin and access records for the certification audit.' },
     ],
     faq: [
-      { q: 'Does SecureTrust Cyber make me ISO 27001 certified?', a: 'No — certification comes from an accredited auditor. The platform provides the controls and evidence that make certification achievable.' },
+      { q: 'Does SecureTrust Cyber make me ISO 27001 certified?', a: 'No, certification comes from an accredited auditor. The platform provides the controls and evidence that make certification achievable.' },
     ],
   }),
 
@@ -83,11 +83,11 @@ export const COMPLIANCE = [
     chips: ['CIS v8'],
     summary: 'The CIS Controls are a prioritized set of 18 safeguards that defend against the most common attacks. They are the practical backbone of most security programs and map well onto ISO 27001 and NIS2.',
     controlMap: [
-      { requirement: 'Control 1 — Inventory of enterprise assets', answer: 'Endpoint software and asset inventory, correlated with threat intelligence.', href: 'products/siem', product: 'SIEM Platform' },
-      { requirement: 'Control 7 — Continuous vulnerability management', answer: 'Automated patching with CVE/CVSS risk-based prioritization.', href: 'products/patch-management', product: 'Managed Patch Management' },
-      { requirement: 'Control 6 — Access control management', answer: 'Least-privilege access enforced by identity and device posture.', href: 'products/ztna', product: 'Universal ZTNA' },
-      { requirement: 'Control 9 — Email and web protections', answer: 'Secure Web Gateway and DNS Security block the most common web-borne vectors.', href: 'products/swg', product: 'Secure Web Gateway' },
-      { requirement: 'Control 4 — Secure configuration of assets', answer: 'Continuous configuration auditing against CIS benchmarks.', href: 'products/siem', product: 'SIEM Platform' },
+      { requirement: 'Control 1: Inventory of enterprise assets', answer: 'Endpoint software and asset inventory, correlated with threat intelligence.', href: 'products/siem', product: 'SIEM Platform' },
+      { requirement: 'Control 7: Continuous vulnerability management', answer: 'Automated patching with CVE/CVSS risk-based prioritization.', href: 'products/patch-management', product: 'Managed Patch Management' },
+      { requirement: 'Control 6: Access control management', answer: 'Least-privilege access enforced by identity and device posture.', href: 'products/ztna', product: 'Universal ZTNA' },
+      { requirement: 'Control 9: Email and web protections', answer: 'Secure Web Gateway and DNS Security block the most common web-borne vectors.', href: 'products/swg', product: 'Secure Web Gateway' },
+      { requirement: 'Control 4: Secure configuration of assets', answer: 'Continuous configuration auditing against CIS benchmarks.', href: 'products/siem', product: 'SIEM Platform' },
     ],
     evidence: [
       { title: 'Asset inventory', body: 'A live view of every device and application.' },
@@ -143,7 +143,7 @@ export const COMPLIANCE = [
       { title: 'Risk analysis data', body: 'Asset and vulnerability visibility for your risk analysis.' },
     ],
     faq: [
-      { q: 'Does SecureTrust Cyber sign a Business Associate Agreement?', a: 'For managed services, yes — contact us to execute a BAA.' },
+      { q: 'Does SecureTrust Cyber sign a Business Associate Agreement?', a: 'For managed services, yes. Contact us to execute a BAA.' },
     ],
   }),
 
@@ -198,14 +198,14 @@ export const COMPLIANCE = [
     sub: 'Meet the US Department of Defense CMMC 2.0 requirements for protecting CUI and FCI across all maturity levels.',
     meta: 'Meet CMMC 2.0 requirements for protecting Controlled Unclassified Information and Federal Contract Information.',
     chips: ['CMMC 2.0', 'NIST SP 800-171', 'NIST SP 800-172'],
-    summary: 'CMMC 2.0 requires defense contractors to protect Controlled Unclassified Information (CUI) and Federal Contract Information (FCI) at one of three maturity levels — Foundational, Advanced or Expert. The technical requirements map closely to NIST SP 800-171, and SecureTrust Cyber provides the controls and evidence to demonstrate them.',
+    summary: 'CMMC 2.0 requires defense contractors to protect Controlled Unclassified Information (CUI) and Federal Contract Information (FCI) at one of three maturity levels: Foundational, Advanced or Expert. The technical requirements map closely to NIST SP 800-171, and SecureTrust Cyber provides the controls and evidence to demonstrate them.',
     controlMap: [
-      { requirement: 'AC.L2 — Access control', answer: 'Identity- and context-based least-privilege access to systems holding CUI.', href: 'products/ztna', product: 'Universal ZTNA' },
-      { requirement: 'AU.L2 — Audit & accountability', answer: 'Centralized log collection and correlation produce a complete audit trail.', href: 'products/siem', product: 'SIEM Platform' },
-      { requirement: 'CM.L2 — Configuration management', answer: 'Continuous configuration assessment against CIS benchmarks.', href: 'products/siem', product: 'SIEM Platform' },
-      { requirement: 'SC.L2 — System & communications protection', answer: 'Microsegmentation and TLS inspection protect systems and data in transit.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
-      { requirement: 'SI.L2 — System & information integrity', answer: 'Inline IPS and DLP prevent unauthorized modification and exfiltration of CUI.', href: 'products/ips', product: 'Intrusion Prevention System' },
-      { requirement: 'RA.L2 — Risk assessment & vulnerability management', answer: 'Automated patching and vulnerability detection reduce exposure.', href: 'products/patch-management', product: 'Managed Patch Management' },
+      { requirement: 'AC.L2: Access control', answer: 'Identity- and context-based least-privilege access to systems holding CUI.', href: 'products/ztna', product: 'Universal ZTNA' },
+      { requirement: 'AU.L2: Audit & accountability', answer: 'Centralized log collection and correlation produce a complete audit trail.', href: 'products/siem', product: 'SIEM Platform' },
+      { requirement: 'CM.L2: Configuration management', answer: 'Continuous configuration assessment against CIS benchmarks.', href: 'products/siem', product: 'SIEM Platform' },
+      { requirement: 'SC.L2: System & communications protection', answer: 'Microsegmentation and TLS inspection protect systems and data in transit.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
+      { requirement: 'SI.L2: System & information integrity', answer: 'Inline IPS and DLP prevent unauthorized modification and exfiltration of CUI.', href: 'products/ips', product: 'Intrusion Prevention System' },
+      { requirement: 'RA.L2: Risk assessment & vulnerability management', answer: 'Automated patching and vulnerability detection reduce exposure.', href: 'products/patch-management', product: 'Managed Patch Management' },
     ],
     evidence: [
       { title: 'Access audit', body: 'Records of least-privilege access to CUI and FCI.' },
@@ -215,7 +215,7 @@ export const COMPLIANCE = [
     ],
     faq: [
       { q: 'What CMMC level do I need?', a: 'It depends on your contract. Level 1 (Foundational) covers FCI, Level 2 (Advanced) covers CUI, and Level 3 (Expert) covers the most sensitive programs. Your contracting officer specifies the required level.' },
-      { q: 'Does SecureTrust Cyber make me CMMC certified?', a: 'No — certification comes from a C3PAO (Level 2) or the government (Level 3). The platform provides the technical controls and evidence that make certification achievable.' },
+      { q: 'Does SecureTrust Cyber make me CMMC certified?', a: 'No, certification comes from a C3PAO (Level 2) or the government (Level 3). The platform provides the technical controls and evidence that make certification achievable.' },
     ],
   }),
 ];

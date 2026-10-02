@@ -59,7 +59,7 @@ export const PRODUCTS = [
     capabilities: [
       { title: 'Full traffic inspection', body: 'Inspect internet, WAN and LAN traffic without port or protocol blind spots.', bullets: ['Internet, WAN and LAN coverage', 'Application and user awareness', 'No protocol blind spots'] },
       { title: 'Microsegmentation', body: 'Restrict access between groups, VLANs, hosts, users, devices and applications to stop lateral movement.', bullets: ['Per-group and per-host rules', 'Zero-trust access control', 'Device-posture-aware policy'] },
-      { title: 'Centralized policy', body: 'Build rules from identity, device, application, location and context — once, for everywhere.', bullets: ['One rule set across sites and clouds', 'Elastic cloud processing', 'Full admin audit trail'] },
+      { title: 'Centralized policy', body: 'Build rules from identity, device, application, location and context, once, for everywhere.', bullets: ['One rule set across sites and clouds', 'Elastic cloud processing', 'Full admin audit trail'] },
     ],
     steps: [
       { title: 'Discover', body: 'Map users, sites, networks, apps and traffic flows.' },
@@ -78,7 +78,7 @@ export const PRODUCTS = [
     slug: 'ips', title: 'Intrusion Prevention System (IPS)', category: 'network-security',
     heroVariant: 'diagram', eyebrow: 'Network Security',
     headline: 'Stop attacks in real time',
-    sub: 'Cloud-delivered intrusion prevention that inspects internet, WAN and cloud traffic — including TLS — and blocks malicious activity inline.',
+    sub: 'Cloud-delivered intrusion prevention that inspects internet, WAN and cloud traffic, including TLS, and blocks malicious activity inline.',
     meta: 'Cloud-delivered intrusion prevention that inspects internet, WAN and cloud traffic and blocks known and emerging attacks in real time.',
     problemHeading: 'Signatures alone miss modern attacks',
     problemIntro: 'Evolving threats evade signature-based defenses and hide inside encrypted traffic.',
@@ -127,7 +127,7 @@ export const PRODUCTS = [
       { title: 'Unified event visibility', body: 'Log every DNS threat event in one searchable data lake and dashboard.', bullets: ['Centralized DNS events', 'Crypto-mining prevention', 'Investigation and reporting'] },
     ],
     faq: [
-      { q: 'What can DNS Security detect?', a: 'Phishing, impersonation, DNS tunneling, crypto-mining and malicious domains — including threats hiding in permitted DNS traffic.' },
+      { q: 'What can DNS Security detect?', a: 'Phishing, impersonation, DNS tunneling, crypto-mining and malicious domains, including threats hiding in permitted DNS traffic.' },
       { q: 'Does it slow down lookups?', a: 'No. Inspection happens in real time in the cloud without adding latency.' },
     ],
   }),
@@ -136,7 +136,7 @@ export const PRODUCTS = [
     slug: 'swg', title: 'Secure Web Gateway (SWG)', category: 'network-security',
     heroVariant: 'centered', eyebrow: 'Network Security',
     headline: 'Filter the web. Protect every user.',
-    sub: 'Control web access from the cloud — block malicious destinations and enforce one consistent policy across users, devices and locations.',
+    sub: 'Control web access from the cloud, block malicious destinations and enforce one consistent policy across users, devices and locations.',
     meta: 'Secure Web Gateway that blocks web threats and enforces one policy across users, devices and locations.',
     problemHeading: 'The web is the riskiest surface',
     problemIntro: 'Users browse from anywhere, on any device, and every click is a potential compromise.',
@@ -150,7 +150,7 @@ export const PRODUCTS = [
     capabilities: [
       { title: 'Malicious-domain blocking', body: 'An always-current blacklist blocks phishing, compromised, malicious and parked sites.', bullets: ['80+ website categories', 'Always-current blacklist', 'Parked and compromised sites'] },
       { title: 'Flexible policy actions', body: 'Choose Allow, Block or Prompt, with Safe Search and content restrictions built in.', bullets: ['Safe Search enforcement', 'Per-user and per-device rules', 'Custom block and prompt pages'] },
-      { title: 'Encrypted-session inspection', body: 'Inspect internet traffic — including encrypted sessions — and log normalized events for review.', bullets: ['TLS inspection', 'Searchable event data lake', 'Reporting and audit support'] },
+      { title: 'Encrypted-session inspection', body: 'Inspect internet traffic, including encrypted sessions, and log normalized events for review.', bullets: ['TLS inspection', 'Searchable event data lake', 'Reporting and audit support'] },
     ],
     faq: [
       { q: 'Does it cover remote workers?', a: 'Yes. One policy applies consistently across users, devices and locations, including remote work.' },
@@ -163,7 +163,7 @@ export const PRODUCTS = [
     slug: 'ztna', title: 'Universal Zero Trust Network Access', category: 'zero-trust-cloud',
     heroVariant: 'split', eyebrow: 'Zero Trust',
     headline: 'One access policy. Every user, everywhere.',
-    sub: 'Identity- and context-based least-privilege access to private resources, with continuous posture checks — and a better experience than VPN.',
+    sub: 'Identity- and context-based least-privilege access to private resources, with continuous posture checks, and a better experience than VPN.',
     meta: 'Universal Zero Trust Network Access with identity- and context-based least-privilege access and continuous device posture checks.',
     problemHeading: 'VPNs grant too much trust',
     problemIntro: 'Broad perimeter access means a single compromised credential unlocks the whole network.',
@@ -177,7 +177,7 @@ export const PRODUCTS = [
     capabilities: [
       { title: 'Single risk-based policy', body: 'Control access by identity, device posture, geography, application risk and compliance context.', bullets: ['Identity- and context-based access', 'Application-risk policy', 'Compliance-aware decisions'] },
       { title: 'Continuous device posture', body: 'Check OS, antivirus, encryption, firewall and location at connection and throughout the session.', bullets: ['Posture checks mid-session', 'BYOD via browser extension', 'Continuous enforcement'] },
-      { title: 'Clientless application access', body: 'Publish private apps through a browser portal for users and third parties — no client required.', bullets: ['Clientless access', 'Windows, macOS, iOS, Android, Linux', 'Private-backbone performance'] },
+      { title: 'Clientless application access', body: 'Publish private apps through a browser portal for users and third parties, no client required.', bullets: ['Clientless access', 'Windows, macOS, iOS, Android, Linux', 'Private-backbone performance'] },
     ],
     proof: { stats: [
       { value: '0', label: 'trust assumed by default' },
@@ -212,7 +212,7 @@ export const PRODUCTS = [
       { title: 'Tenant restriction & least privilege', body: 'Allow only enterprise-sanctioned tenants, and block apps lacking MFA, SSO or compliance.', bullets: ['Tenant restriction', 'Action-level control', 'Managed and unmanaged devices'] },
     ],
     faq: [
-      { q: 'How is CASB different from SWG?', a: 'SWG filters web traffic; CASB governs cloud apps — discover, score risk and control actions inside SaaS.' },
+      { q: 'How is CASB different from SWG?', a: 'SWG filters web traffic; CASB governs cloud apps: discover, score risk and control actions inside SaaS.' },
       { q: 'Does it cover Shadow AI?', a: 'Yes. It discovers GenAI services, assesses their risk and enforces granular access controls.' },
     ],
   }),
@@ -238,7 +238,7 @@ export const PRODUCTS = [
       { title: 'Generative AI safeguards', body: 'Scan ChatGPT and other GenAI traffic inline and govern upload and download activity.', bullets: ['GenAI traffic scanning', 'Inline and API controls', 'Centralized DLP visibility'] },
     ],
     faq: [
-      { q: 'What channels does DLP cover?', a: 'Private apps, SaaS, email, web and generative AI — inspected inline and out-of-band.' },
+      { q: 'What channels does DLP cover?', a: 'Private apps, SaaS, email, web and generative AI, inspected inline and out-of-band.' },
       { q: 'Can it detect data inside images?', a: 'Yes, via OCR on supported images and documents.' },
     ],
   }),
@@ -284,7 +284,7 @@ export const PRODUCTS = [
       { icon: 'scale', title: 'Audit gaps', body: 'Compliance evidence lives in spreadsheets, not in the systems being monitored.' },
     ],
     capHeading: 'Four pillars of security operations',
-    capIntro: 'Log analysis, vulnerability detection, configuration assessment and compliance — in one platform.',
+    capIntro: 'Log analysis, vulnerability detection, configuration assessment and compliance, in one platform.',
     capabilities: [
       { title: 'Security log analysis', body: 'Aggregate logs from endpoints, network devices, cloud and apps, and detect anomalies in real time.', bullets: ['Comprehensive log collection', 'Decoders and correlation rules', 'Contextual alerting'] },
       { title: 'Vulnerability detection', body: 'Collect software inventories, match them against vulnerability databases, and prioritize risk.', bullets: ['Endpoint software inventory', 'Threat-intelligence correlation', 'Risk-based prioritization'] },
@@ -296,7 +296,7 @@ export const PRODUCTS = [
       { value: '1', label: 'unified security + compliance platform' },
     ] },
     faq: [
-      { q: 'What does the SIEM collect from?', a: 'Endpoints, network devices, cloud workloads and applications — unified into one platform.' },
+      { q: 'What does the SIEM collect from?', a: 'Endpoints, network devices, cloud workloads and applications, unified into one platform.' },
       { q: 'Does it do vulnerability management?', a: 'Yes. It inventories software, correlates it with vulnerability databases and prioritizes CVEs.' },
       { q: 'Can it produce compliance evidence?', a: 'Yes. It maps findings to specific controls and generates auditor-ready reports.' },
     ],
@@ -329,7 +329,7 @@ export const PRODUCTS = [
     ] },
     faq: [
       { q: 'Which operating systems are covered?', a: 'Windows, macOS and Linux, plus third-party application patching where supported.' },
-      { q: 'Is it fully automated?', a: 'Yes — automated schedules and policies handle updates, with technician oversight for exceptions.' },
+      { q: 'Is it fully automated?', a: 'Yes, automated schedules and policies handle updates, with technician oversight for exceptions.' },
       { q: 'How do I prove compliance?', a: 'Status visibility and operational reporting provide compliance evidence for review.' },
     ],
   }),

@@ -22,7 +22,7 @@
 
         retentionField.hidden = !isComplete;
         if (!Number.isInteger(count) || count < 1) {
-          output.textContent = '—';
+          output.textContent = '$0';
           detail.textContent = 'Enter at least one device to calculate an estimate.';
           return;
         }

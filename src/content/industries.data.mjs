@@ -53,10 +53,10 @@ export const INDUSTRIES = [
     ],
     controlHeading: 'Meeting HIPAA and beyond',
     controlMap: [
-      { requirement: 'HIPAA Security Rule — Access Control (45 CFR §164.312(a)(1))', answer: 'Identity- and context-based least-privilege access restricts who can see patient data.', href: 'products/ztna', product: 'Universal ZTNA' },
-      { requirement: 'HIPAA — Audit Controls (§164.312(b))', answer: 'Centralized log collection and correlation produce a complete audit trail.', href: 'products/siem', product: 'SIEM Platform' },
-      { requirement: 'HIPAA — Transmission Security (§164.312(e)(1))', answer: 'DLP and TLS inspection protect ePHI in transit across web, SaaS and email.', href: 'products/dlp', product: 'Data Loss Prevention' },
-      { requirement: 'HIPAA — Risk Analysis (§164.308(a)(1)(ii)(A))', answer: 'Continuous vulnerability and configuration visibility supports a defensible risk analysis.', href: 'products/patch-management', product: 'Managed Patch Management' },
+      { requirement: 'HIPAA Security Rule: Access Control (45 CFR §164.312(a)(1))', answer: 'Identity- and context-based least-privilege access restricts who can see patient data.', href: 'products/ztna', product: 'Universal ZTNA' },
+      { requirement: 'HIPAA: Audit Controls (§164.312(b))', answer: 'Centralized log collection and correlation produce a complete audit trail.', href: 'products/siem', product: 'SIEM Platform' },
+      { requirement: 'HIPAA: Transmission Security (§164.312(e)(1))', answer: 'DLP and TLS inspection protect ePHI in transit across web, SaaS and email.', href: 'products/dlp', product: 'Data Loss Prevention' },
+      { requirement: 'HIPAA: Risk Analysis (§164.308(a)(1)(ii)(A))', answer: 'Continuous vulnerability and configuration visibility supports a defensible risk analysis.', href: 'products/patch-management', product: 'Managed Patch Management' },
     ],
     outcomeIntro: 'Fewer breaches, faster recovery, and audit-ready compliance.',
     outcomes: [
@@ -89,10 +89,10 @@ export const INDUSTRIES = [
     ],
     controlHeading: 'Mapping to DORA',
     controlMap: [
-      { requirement: 'DORA — ICT risk management (Art. 6)', answer: 'Continuous vulnerability and configuration visibility forms the basis of a sound risk framework.', href: 'products/patch-management', product: 'Managed Patch Management' },
-      { requirement: 'DORA — Incident reporting (Art. 19)', answer: 'Real-time log analysis and threat detection ensure incidents are detected and reported within the deadline.', href: 'products/siem', product: 'SIEM Platform' },
-      { requirement: 'DORA — Digital operational resilience testing (Art. 24)', answer: 'Inline attack prevention and virtual patching validate that your controls hold under attack.', href: 'products/ips', product: 'Intrusion Prevention System' },
-      { requirement: 'DORA — Third-party risk (Art. 28)', answer: 'Least-privilege access governs how third parties touch your systems.', href: 'products/ztna', product: 'Universal ZTNA' },
+      { requirement: 'DORA: ICT risk management (Art. 6)', answer: 'Continuous vulnerability and configuration visibility forms the basis of a sound risk framework.', href: 'products/patch-management', product: 'Managed Patch Management' },
+      { requirement: 'DORA: Incident reporting (Art. 19)', answer: 'Real-time log analysis and threat detection ensure incidents are detected and reported within the deadline.', href: 'products/siem', product: 'SIEM Platform' },
+      { requirement: 'DORA: Digital operational resilience testing (Art. 24)', answer: 'Inline attack prevention and virtual patching validate that your controls hold under attack.', href: 'products/ips', product: 'Intrusion Prevention System' },
+      { requirement: 'DORA: Third-party risk (Art. 28)', answer: 'Least-privilege access governs how third parties touch your systems.', href: 'products/ztna', product: 'Universal ZTNA' },
     ],
     outcomeIntro: 'Resilience, security, and the evidence regulators ask for.',
     outcomes: [
@@ -122,9 +122,9 @@ export const INDUSTRIES = [
     ],
     controlHeading: 'Protecting OT and IT',
     controlMap: [
-      { requirement: 'IEC 62443 — Network segmentation', answer: 'Microsegmentation isolates OT from IT, containing any breach.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
-      { requirement: 'IEC 62443 — Patch management', answer: 'Automated patching closes vulnerabilities without manual effort.', href: 'products/patch-management', product: 'Managed Patch Management' },
-      { requirement: 'IEC 62443 — Application control', answer: 'Cloud app and tenant governance restricts unauthorized access.', href: 'products/casb', product: 'CASB' },
+      { requirement: 'IEC 62443: Network segmentation', answer: 'Microsegmentation isolates OT from IT, containing any breach.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
+      { requirement: 'IEC 62443: Patch management', answer: 'Automated patching closes vulnerabilities without manual effort.', href: 'products/patch-management', product: 'Managed Patch Management' },
+      { requirement: 'IEC 62443: Application control', answer: 'Cloud app and tenant governance restricts unauthorized access.', href: 'products/casb', product: 'CASB' },
     ],
     outcomeIntro: 'Uninterrupted production and a hardened plant floor.',
     outcomes: [
@@ -152,9 +152,9 @@ export const INDUSTRIES = [
     ],
     controlHeading: 'NERC CIP and NIS2 alignment',
     controlMap: [
-      { requirement: 'NERC CIP-005 — Electronic security perimeter', answer: 'Microsegmentation creates a defensible boundary around critical assets.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
-      { requirement: 'NERC CIP-007 — System security management', answer: 'Automated patching and configuration assessment keep systems current.', href: 'products/patch-management', product: 'Managed Patch Management' },
-      { requirement: 'NERC CIP-004 — Personnel & training / access', answer: 'Least-privilege access governs who touches critical systems.', href: 'products/ztna', product: 'Universal ZTNA' },
+      { requirement: 'NERC CIP-005: Electronic security perimeter', answer: 'Microsegmentation creates a defensible boundary around critical assets.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
+      { requirement: 'NERC CIP-007: System security management', answer: 'Automated patching and configuration assessment keep systems current.', href: 'products/patch-management', product: 'Managed Patch Management' },
+      { requirement: 'NERC CIP-004: Personnel & training / access', answer: 'Least-privilege access governs who touches critical systems.', href: 'products/ztna', product: 'Universal ZTNA' },
     ],
     outcomeIntro: 'Resilience for systems that cannot fail.',
     outcomes: [
@@ -182,9 +182,9 @@ export const INDUSTRIES = [
     ],
     controlHeading: 'Meeting public-sector standards',
     controlMap: [
-      { requirement: 'CIS Controls — Inventory & control of enterprise assets', answer: 'Continuous asset and software inventory gives a complete, current view.', href: 'products/siem', product: 'SIEM Platform' },
-      { requirement: 'CIS Controls — Access control management', answer: 'Least-privilege access protects sensitive systems.', href: 'products/ztna', product: 'Universal ZTNA' },
-      { requirement: 'CIS Controls — Email & web protections', answer: 'Secure Web Gateway and DNS Security block web-borne threats.', href: 'products/swg', product: 'Secure Web Gateway' },
+      { requirement: 'CIS Controls: Inventory & control of enterprise assets', answer: 'Continuous asset and software inventory gives a complete, current view.', href: 'products/siem', product: 'SIEM Platform' },
+      { requirement: 'CIS Controls: Access control management', answer: 'Least-privilege access protects sensitive systems.', href: 'products/ztna', product: 'Universal ZTNA' },
+      { requirement: 'CIS Controls: Email & web protections', answer: 'Secure Web Gateway and DNS Security block web-borne threats.', href: 'products/swg', product: 'Secure Web Gateway' },
     ],
     outcomeIntro: 'Protected services and citizen trust.',
     outcomes: [
@@ -212,9 +212,9 @@ export const INDUSTRIES = [
     ],
     controlHeading: 'Security for open campuses',
     controlMap: [
-      { requirement: 'Cyber Essentials — Patch management', answer: 'Automated patching keeps student and staff devices current.', href: 'products/patch-management', product: 'Managed Patch Management' },
-      { requirement: 'Cyber Essentials — Access control', answer: 'Least-privilege access limits who reaches sensitive systems.', href: 'products/ztna', product: 'Universal ZTNA' },
-      { requirement: 'GDPR — Protecting personal data', answer: 'DLP safeguards student records and research data.', href: 'products/dlp', product: 'Data Loss Prevention' },
+      { requirement: 'Cyber Essentials: Patch management', answer: 'Automated patching keeps student and staff devices current.', href: 'products/patch-management', product: 'Managed Patch Management' },
+      { requirement: 'Cyber Essentials: Access control', answer: 'Least-privilege access limits who reaches sensitive systems.', href: 'products/ztna', product: 'Universal ZTNA' },
+      { requirement: 'GDPR: Protecting personal data', answer: 'DLP safeguards student records and research data.', href: 'products/dlp', product: 'Data Loss Prevention' },
     ],
     outcomeIntro: 'A safe campus that stays open.',
     outcomes: [
@@ -242,9 +242,9 @@ export const INDUSTRIES = [
     ],
     controlHeading: 'PCI DSS alignment',
     controlMap: [
-      { requirement: 'PCI DSS Req 5 — Protect against malware', answer: 'IPS and DNS Security block malware and malicious domains inline.', href: 'products/ips', product: 'Intrusion Prevention System' },
-      { requirement: 'PCI DSS Req 7 — Restrict access', answer: 'Least-privilege access limits who reaches cardholder data.', href: 'products/ztna', product: 'Universal ZTNA' },
-      { requirement: 'PCI DSS Req 3 — Protect stored data', answer: 'DLP detects and blocks exposure of cardholder data.', href: 'products/dlp', product: 'Data Loss Prevention' },
+      { requirement: 'PCI DSS Req 5: Protect against malware', answer: 'IPS and DNS Security block malware and malicious domains inline.', href: 'products/ips', product: 'Intrusion Prevention System' },
+      { requirement: 'PCI DSS Req 7: Restrict access', answer: 'Least-privilege access limits who reaches cardholder data.', href: 'products/ztna', product: 'Universal ZTNA' },
+      { requirement: 'PCI DSS Req 3: Protect stored data', answer: 'DLP detects and blocks exposure of cardholder data.', href: 'products/dlp', product: 'Data Loss Prevention' },
     ],
     outcomeIntro: 'Protected payments and a smooth customer experience.',
     outcomes: [
@@ -264,7 +264,7 @@ export const INDUSTRIES = [
     sub: 'Security that keeps pace with your product velocity, from engineering to production.',
     meta: 'Cybersecurity for technology companies that keeps pace with product velocity without slowing it down.',
     chips: ['ISO 27001', 'SOC 2', 'CIS Controls'],
-    threatIntro: 'Technology companies move fast, ship constantly and hold customer data — a tempting combination for attackers.',
+    threatIntro: 'Technology companies move fast, ship constantly and hold customer data, a tempting combination for attackers.',
     threats: [
       { title: 'Supply-chain attacks', body: 'Attackers poison dependencies and cloud apps. Cloud governance and monitoring catch the result.' },
       { title: 'Cloud sprawl', body: 'Fast-moving teams create shadow cloud assets. CASB visibility brings them under control.' },
@@ -272,9 +272,9 @@ export const INDUSTRIES = [
     ],
     controlHeading: 'ISO 27001 and SOC 2 alignment',
     controlMap: [
-      { requirement: 'ISO 27001 — A.8.8 Vulnerability management', answer: 'Automated patching closes vulnerabilities across the estate.', href: 'products/patch-management', product: 'Managed Patch Management' },
-      { requirement: 'ISO 27001 — A.8.2 Privileged access', answer: 'Least-privilege access protects production and customer data.', href: 'products/ztna', product: 'Universal ZTNA' },
-      { requirement: 'SOC 2 — CC6 Logical access', answer: 'Identity- and context-based access controls secure logical access to systems.', href: 'products/ztna', product: 'Universal ZTNA' },
+      { requirement: 'ISO 27001: A.8.8 Vulnerability management', answer: 'Automated patching closes vulnerabilities across the estate.', href: 'products/patch-management', product: 'Managed Patch Management' },
+      { requirement: 'ISO 27001: A.8.2 Privileged access', answer: 'Least-privilege access protects production and customer data.', href: 'products/ztna', product: 'Universal ZTNA' },
+      { requirement: 'SOC 2: CC6 Logical access', answer: 'Identity- and context-based access controls secure logical access to systems.', href: 'products/ztna', product: 'Universal ZTNA' },
     ],
     outcomeIntro: 'Velocity without compromise.',
     outcomes: [
@@ -302,9 +302,9 @@ export const INDUSTRIES = [
     ],
     controlHeading: 'Sector-specific frameworks',
     controlMap: [
-      { requirement: 'NIS2 — Risk management measures', answer: 'Continuous visibility and patching form the core of a defensible risk program.', href: 'products/patch-management', product: 'Managed Patch Management' },
-      { requirement: 'ISA/IEC 62443 — Zones & conduits', answer: 'Microsegmentation enforces zones and conduits across OT.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
-      { requirement: 'NERC CIP — Access management', answer: 'Least-privilege access governs who touches critical systems.', href: 'products/ztna', product: 'Universal ZTNA' },
+      { requirement: 'NIS2: Risk management measures', answer: 'Continuous visibility and patching form the core of a defensible risk program.', href: 'products/patch-management', product: 'Managed Patch Management' },
+      { requirement: 'ISA/IEC 62443: Zones & conduits', answer: 'Microsegmentation enforces zones and conduits across OT.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
+      { requirement: 'NERC CIP: Access management', answer: 'Least-privilege access governs who touches critical systems.', href: 'products/ztna', product: 'Universal ZTNA' },
     ],
     outcomeIntro: 'Resilience in the face of nation-state threat.',
     outcomes: [
@@ -332,9 +332,9 @@ export const INDUSTRIES = [
     ],
     controlHeading: 'The essentials, done for you',
     controlMap: [
-      { requirement: 'Cyber Essentials — Firewalls & secure configuration', answer: 'Firewall-as-a-Service provides a managed perimeter.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
-      { requirement: 'Cyber Essentials — Patch management', answer: 'Managed patching keeps everything current without effort.', href: 'products/patch-management', product: 'Managed Patch Management' },
-      { requirement: 'Cyber Essentials — Access control', answer: 'Least-privilege access protects your accounts.', href: 'products/ztna', product: 'Universal ZTNA' },
+      { requirement: 'Cyber Essentials: Firewalls & secure configuration', answer: 'Firewall-as-a-Service provides a managed perimeter.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
+      { requirement: 'Cyber Essentials: Patch management', answer: 'Managed patching keeps everything current without effort.', href: 'products/patch-management', product: 'Managed Patch Management' },
+      { requirement: 'Cyber Essentials: Access control', answer: 'Least-privilege access protects your accounts.', href: 'products/ztna', product: 'Universal ZTNA' },
     ],
     outcomeIntro: 'Protection that runs itself.',
     outcomes: [

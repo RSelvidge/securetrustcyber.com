@@ -69,7 +69,7 @@ export function dashboard({ title = 'SecureTrust Console', kpis = [], bars = [],
     <!-- chart area (left) -->
     <rect x="176" y="198" width="280" height="82" rx="10" fill="rgba(255,255,255,.04)" stroke="${LINE}"/>
     ${barChart(190, 210, 252, 58, barData)}
-    <text x="190" y="266" font-family="Inter, sans-serif" font-size="10" fill="${MUTED}">Threats — last 30 days</text>
+    <text x="190" y="266" font-family="Inter, sans-serif" font-size="10" fill="${MUTED}">Threats: last 30 days</text>
     <!-- activity list (right) -->
     <rect x="470" y="198" width="162" height="82" rx="10" fill="rgba(255,255,255,.04)" stroke="${LINE}"/>
     <text x="482" y="220" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#fff">Recent events</text>
