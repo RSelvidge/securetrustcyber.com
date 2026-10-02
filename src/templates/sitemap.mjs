@@ -20,7 +20,7 @@ export default function sitemap(ctx, page) {
       <div class="container">
         <h1 class="section__title">Sitemap</h1>
         <div class="grid grid--3" style="margin-top:var(--space-xl)">
-          ${join(GROUPS.map(([label, fn]) => html`
+          ${join(GROUPS.filter(([, fn]) => PAGES.some((p) => !p.draft && fn(p))).map(([label, fn]) => html`
             <div>
               <h2 style="font-size:var(--step-1);margin-bottom:var(--space-s)">${label}</h2>
               <ul role="list" class="stack stack--s">

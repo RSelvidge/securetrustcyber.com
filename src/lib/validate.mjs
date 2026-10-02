@@ -5,6 +5,7 @@
 import { PAGES as REGISTRY } from '../site.registry.mjs';
 import { SITE } from '../site.config.mjs';
 import path from 'node:path';
+import { escape } from './html.mjs';
 
 const EXTERNAL_DOMAINS = [
   'fonts.googleapis.com', 'fonts.gstatic.com', 'www.g2.com', 'www.capterra.com',
@@ -16,6 +17,40 @@ const EXTERNAL_DOMAINS = [
 ];
 
 const SITE_HOST = new URL(SITE.origin).host;
+
+/** Every inner page must have a usable, accessible breadcrumb and matching metadata. */
+export function breadcrumbs(rendered) {
+  const errors = [];
+  const known = new Set(rendered.map(({ page }) => page.slug));
+  for (const { page, markup } of rendered) {
+    const navs = [...markup.matchAll(/<nav\b[^>]*aria-label="Breadcrumb"[^>]*>([\s\S]*?)<\/nav>/g)];
+    if (!page.slug) {
+      if (navs.length) errors.push('Homepage must not have a redundant breadcrumb');
+      continue;
+    }
+    const fail = (reason) => errors.push(`"${page.slug}" breadcrumb: ${reason}`);
+    if (navs.length !== 1) { fail('expected one navigation trail'); continue; }
+    const nav = navs[0][1];
+    const items = [...nav.matchAll(/<li>([\s\S]*?)<\/li>/g)].map((m) => m[1]);
+    const homeHref = path.posix.relative(path.posix.dirname(`${page.slug}.html`), 'index.html');
+    if (!items[0]?.includes(`<a href="${homeHref}">Home</a>`)) fail('Home does not link to the homepage');
+    if ((nav.match(/aria-current="page"/g) ?? []).length !== 1 ||
+        items.at(-1) !== `<span aria-current="page">${escape(page.title)}</span>`) fail('current page label is incorrect');
+    if (items.slice(0, -1).some((item) => !item.includes('<a href="'))) fail('ancestor is not a usable link');
+    const lists = [...markup.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+      .map((m) => JSON.parse(m[1])).filter((data) => data['@type'] === 'BreadcrumbList');
+    if (lists.length !== 1) { fail('expected one metadata trail'); continue; }
+    const trail = lists[0].itemListElement;
+    if (trail.length !== items.length) fail('metadata and navigation differ');
+    trail.forEach((item, i) => {
+      if (item.position !== i + 1 || !items[i]?.includes(`>${escape(item.name)}<`)) fail('metadata label or position differs');
+      const slug = item.item === SITE.origin + '/' ? '' : item.item.replace(SITE.origin + '/', '').replace(/\.html$/, '');
+      if (!known.has(slug)) fail(`metadata points to missing page ${slug}`);
+    });
+    if (trail[0]?.item !== SITE.origin + '/' || trail.at(-1)?.item !== `${SITE.origin}/${page.slug}.html`) fail('metadata URL is incorrect');
+  }
+  return errors;
+}
 
 function isExternalUrl(href) {
   return /^(https?:|mailto:|tel:|#)/i.test(href) || href.startsWith('//');

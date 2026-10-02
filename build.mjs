@@ -54,7 +54,7 @@ async function loadPages() {
     if (!exp) throw new Error(`No default export in ${path.relative(ROOT, f)}`);
     pages.push(...(Array.isArray(exp) ? exp : [exp]));
   }
-  return pages;
+  return pages.filter((page) => !page.draft);
 }
 
 // slug '' -> index.html ; 'products/edr' -> products/edr.html
@@ -127,7 +127,7 @@ export async function build() {
     rendered.push({ page, out, markup: toString(doc) });
   }
 
-  errors.push(...validate.links(rendered, registryMap), ...validate.html(rendered, pages));
+  errors.push(...validate.links(rendered, registryMap), ...validate.html(rendered, pages), ...validate.breadcrumbs(rendered));
   if (errors.length) fail(errors);
 
   for (const { out, markup } of rendered) {

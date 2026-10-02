@@ -1,6 +1,8 @@
 // src/content/products.data.mjs — the 10 real SecureTrust Cyber capabilities,
 // written from the product datasheets.
 
+import { PRODUCT_IMAGES } from './product-images.data.mjs';
+
 const demo = { label: 'Get a Demo', href: 'request-demo' };
 
 const buildProduct = (p) => ({
@@ -21,7 +23,14 @@ const buildProduct = (p) => ({
     chips: p.chips ?? [],
   },
   problem: { heading: p.problemHeading, intro: p.problemIntro, items: p.problem },
-  capabilities: { heading: p.capHeading, intro: p.capIntro, items: p.capabilities },
+  capabilities: {
+    heading: p.capHeading,
+    intro: p.capIntro,
+    items: p.capabilities.map((item, index) => ({
+      ...item,
+      image: item.image ?? PRODUCT_IMAGES[p.slug]?.[index],
+    })),
+  },
   howItWorks: p.steps ? { heading: 'How it works', steps: p.steps } : undefined,
   platform: p.platform === false ? undefined : {},
   proof: p.proof,
@@ -81,9 +90,9 @@ export const PRODUCTS = [
     capHeading: 'Detection beyond signatures',
     capIntro: 'AI/ML models, heuristics and 250+ threat feeds find known and emerging attacks.',
     capabilities: [
-      { title: 'AI/ML threat detection', body: 'Real-time models detect domain squatting, DGAs, brand impersonation and other evasive threats.', bullets: ['Domain squatting and DGA detection', 'Brand impersonation', 'Behavioral analysis'] },
-      { title: 'Ransomware kill-chain defense', body: 'Block malicious downloads and command-and-control, and detect lateral movement across the WAN.', bullets: ['Malicious download blocking', 'C&C domain blocking', 'Lateral-movement detection'] },
-      { title: 'Virtual patching', body: 'Deploy mitigations for high-risk emerging CVEs while impacted systems are patched.', bullets: ['Emerging-CVE mitigation', '250+ threat intelligence feeds', 'Global geo-fencing'] },
+      { title: 'AI/ML threat detection', body: 'Real-time models detect domain squatting, DGAs, brand impersonation and other evasive threats.', bullets: ['Domain squatting and DGA detection', 'Brand impersonation', 'Behavioral analysis'], image: { src: 'img/ips-connected-city.jpg', alt: 'City skyline with glowing blue network connections', width: 1400, height: 650 } },
+      { title: 'Ransomware kill-chain defense', body: 'Block malicious downloads and command-and-control, and detect lateral movement across the WAN.', bullets: ['Malicious download blocking', 'C&C domain blocking', 'Lateral-movement detection'], image: { src: 'img/ips-threat-network.jpg', alt: 'Orange network pathways and interconnected digital nodes', width: 1400, height: 700 } },
+      { title: 'Virtual patching', body: 'Deploy mitigations for high-risk emerging CVEs while impacted systems are patched.', bullets: ['Emerging-CVE mitigation', '250+ threat intelligence feeds', 'Global geo-fencing'], image: { src: 'img/ips-virtual-patching.jpg', alt: 'Person working on a laptop with digital technology graphics', width: 1400, height: 502 } },
     ],
     proof: { stats: [
       { value: '250+', label: 'threat intelligence feeds' },

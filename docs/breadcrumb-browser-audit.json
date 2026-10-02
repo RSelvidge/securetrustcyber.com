@@ -1,0 +1,951 @@
+{
+  "date": "2026-09-30",
+  "pagesChecked": 81,
+  "pages": [
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Sitemap"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/sitemap.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "About SecureTrust Cyber",
+        "Contact Sales"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/company/contact.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Partner Overview"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/partners/index.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Trust Center"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/trust-center.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Pricing & Bundles"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/pricing.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 0,
+      "labels": [],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/index.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All Products"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/products.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All Products",
+        "Firewall-as-a-Service (FWaaS)"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/products/fwaas.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All Products",
+        "Intrusion Prevention System (IPS)"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/products/ips.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All Products",
+        "DNS Security"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/products/dns-security.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All Products",
+        "Secure Web Gateway (SWG)"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/products/swg.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All Products",
+        "Universal Zero Trust Network Access"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/products/ztna.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All Products",
+        "Cloud Access Security Broker (CASB)"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/products/casb.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All Products",
+        "Data Loss Prevention (DLP)"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/products/dlp.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All Products",
+        "AI Security for End Users"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/products/ai-security.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All Products",
+        "SIEM Platform"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/products/siem.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All Products",
+        "Managed Patch Management"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/products/patch-management.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/solutions.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "NIS2 Compliance"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compliance/nis2.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "ISO 27001 Compliance"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compliance/iso-27001.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "CIS Controls Compliance"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compliance/cis-controls.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "Cyber Essentials Compliance"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compliance/cyber-essentials.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "HIPAA Compliance"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compliance/hipaa.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "DORA Compliance"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compliance/dora.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "Essential Eight Compliance"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compliance/essential-eight.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "CMMC Compliance"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compliance/cmmc.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "Healthcare Cybersecurity"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/industries/healthcare.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "Financial Services Cybersecurity"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/industries/financial-services.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "Manufacturing Cybersecurity"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/industries/manufacturing.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "Energy & Utilities Cybersecurity"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/industries/energy-utilities.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "Government Cybersecurity"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/industries/government.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "Education Cybersecurity"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/industries/education.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "Retail Cybersecurity"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/industries/retail.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "Technology Cybersecurity"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/industries/technology.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "Critical Infrastructure Cybersecurity"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/industries/critical-infrastructure.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "Small & Mid-Sized Business Cybersecurity"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/industries/smb.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "SecureTrust Cyber vs Zscaler"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compare/vs-zscaler.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "SecureTrust Cyber vs Netskope"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compare/vs-netskope.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "SecureTrust Cyber vs Palo Alto Prisma SASE"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compare/vs-palo-alto-prisma.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "SecureTrust Cyber vs Cloudflare"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compare/vs-cloudflare.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "SecureTrust Cyber vs Perimeter 81"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compare/vs-perimeter-81.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "SecureTrust Cyber vs Forcepoint"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compare/vs-forcepoint.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "SecureTrust Cyber vs Cisco Secure Access"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compare/vs-cisco-secure-access.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "SecureTrust Cyber vs Symantec (Broadcom)"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compare/vs-symantec.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "SecureTrust Cyber vs iboss"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compare/vs-iboss.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Solutions",
+        "SecureTrust Cyber vs Versa Networks"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/compare/vs-versa.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All API Integrations"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/integrations/api-integrations.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "ConnectWise RMM"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/integrations/connectwise-rmm.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Autotask PSA"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/integrations/autotask-psa.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "HaloPSA"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/integrations/halopsa.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Cisco Meraki Firewall"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/integrations/cisco-meraki.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Palo Alto"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/integrations/palo-alto.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Partner Overview",
+        "Become a Channel Partner"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/partners/become-a-partner.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Partner Overview",
+        "Partner Portal"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/partners/partner-portal.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Resources"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/resources/index.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Resources",
+        "Product Demos"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/resources/demos.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Resources",
+        "Whitepapers"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/resources/whitepapers.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Resources",
+        "Customer Stories"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/resources/customer-stories.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Resources",
+        "Solution Briefs & Data Sheets"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/resources/solution-briefs.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Resources",
+        "Webinars"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/resources/webinars.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Blog"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/blog.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "About SecureTrust Cyber"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/company/about.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "About SecureTrust Cyber",
+        "Press Center"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/company/press.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "About SecureTrust Cyber",
+        "Awards & Accolades"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/company/awards.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "About SecureTrust Cyber",
+        "Careers"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/company/careers.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Privacy Policy"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/legal/privacy-policy.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Cookie Policy"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/legal/cookie-policy.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "License Agreement"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/legal/license-agreement.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Terms of Service"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/legal/terms-of-service.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Book a Demo"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/request-demo.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Page Not Found"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/404.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Design System"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/_styleguide.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Blog",
+        "Patch management best practices: close the window before attackers do"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/blog/patch-management-best-practices.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Blog",
+        "NIS2 compliance: a practical guide for 2026"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/blog/nis2-compliance-guide.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Blog",
+        "EDR vs XDR: what is the difference and which do you need?"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/blog/edr-vs-xdr.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All Products",
+        "Network Security"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/products/category/network-security.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All Products",
+        "Zero Trust & Cloud Security"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/products/category/zero-trust-cloud.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "All Products",
+        "Security Operations"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/products/category/security-operations.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Blog",
+        "Ransomware protection in layers: prevention, detection, recovery"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/blog/ransomware-protection.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Blog",
+        "Zero trust architecture: from buzzword to a practical roadmap"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/blog/zero-trust-architecture.html"
+    },
+    {
+      "aligned": true,
+      "currentCount": 1,
+      "home": "http://127.0.0.1:4173/index.html",
+      "labels": [
+        "Home",
+        "Blog",
+        "Phishing prevention: why email is still the front door"
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:4173/blog/phishing-prevention.html"
+    }
+  ]
+}

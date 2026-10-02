@@ -2,6 +2,7 @@
 // tokens and components as the site. noindex, excluded from sitemap.
 
 import { html, join, raw } from '../lib/html.mjs';
+import { breadcrumbs } from '../components/breadcrumbs.mjs';
 import { icon, iconNames } from '../lib/icons.mjs';
 
 const COLORS = [
@@ -18,6 +19,7 @@ const SPACES = ['--space-3xs', '--space-2xs', '--space-xs', '--space-s', '--spac
 
 export default function styleguide(ctx, page) {
   return html`
+    ${breadcrumbs(ctx, page)}
     <section class="section">
       <div class="container">
         <h1 class="section__title">Design system</h1>

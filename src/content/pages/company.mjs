@@ -83,7 +83,7 @@ const contact = {
   type: 'form',
   title: 'Contact Sales',
   metaTitle: 'Contact SecureTrust Cyber',
-  metaDescription: 'Contact the SecureTrust Cyber team for sales, support or partnership inquiries.',
+  metaDescription: 'Contact the SecureTrust Cyber team for sales or support inquiries.',
   eyebrow: 'Contact',
   intro: 'Tell us a little about what you are trying to secure, and a member of the team will get back to you within one business day.',
   submitLabel: 'Send message',

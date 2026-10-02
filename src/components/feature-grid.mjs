@@ -30,7 +30,7 @@ export function featureGrid(ctx, opts = {}) {
                 </ul>` : ''}
               </div>
               <div class="feature-alt__media reveal">
-                ${it.media ?? mediaFallback(it.title)}
+                ${it.image ? html`<img class="feature-alt__image${it.image.fit === 'contain' ? ' feature-alt__image--contain' : ''}" src="${ctx.url.asset(it.image.src)}" alt="${it.image.alt}" width="${it.image.width}" height="${it.image.height}" loading="lazy" decoding="async">` : (it.media ?? mediaFallback(it.title))}
               </div>
             </div>`))}
         </div>

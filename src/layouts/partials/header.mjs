@@ -13,9 +13,7 @@ export const header = (ctx) => {
   <div class="utility-bar">
     <div class="container utility-bar__inner">
       <a class="utility-bar__link" href="${ctx.url('company/contact')}">Support</a>
-      <a class="utility-bar__link" href="${ctx.url('partners/index')}">Partners</a>
       <a class="utility-bar__link" href="${ctx.url('trust-center')}">Trust Center</a>
-      <span class="utility-bar__lang">EN · DA · DE</span>
       <a class="utility-bar__link" href="${ctx.url('pricing')}">${ctx.site.cta.pricing}</a>
     </div>
   </div>

@@ -24,7 +24,7 @@ export function breadcrumbList(ctx, crumbs) {
       '@type': 'ListItem',
       position: i + 1,
       name: c.name,
-      item: c.slug ? `${ctx.site.origin}/${c.slug}.html` : ctx.site.origin + '/',
+      item: (c.slug ?? ctx.slug) ? `${ctx.site.origin}/${c.slug ?? ctx.slug}.html` : ctx.site.origin + '/',
     })),
   });
 }

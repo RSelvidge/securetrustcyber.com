@@ -70,18 +70,12 @@ export default function index(ctx, page) {
 function twoPath(ctx, d) {
   const two = d.twoPath ?? {};
   return html`<section class="section section--muted">
-    <div class="container grid grid--2">
+    <div class="container">
       <div class="feature-card reveal">
         <span class="feature-card__icon">${icon('building')}</span>
         <h3>${two.enterprise?.title ?? 'Modern enterprise security'}</h3>
         <p>${two.enterprise?.body ?? ''}</p>
         <a class="feature-card__link" href="${ctx.url('solutions')}">Explore for enterprises ${icon('arrowRight')}</a>
-      </div>
-      <div class="feature-card reveal">
-        <span class="feature-card__icon">${icon('users')}</span>
-        <h3>${two.partner?.title ?? 'Partner with us'}</h3>
-        <p>${two.partner?.body ?? ''}</p>
-        <a class="feature-card__link" href="${ctx.url('partners/index')}">Become a partner ${icon('arrowRight')}</a>
       </div>
     </div>
   </section>`;

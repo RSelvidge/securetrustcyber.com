@@ -1,9 +1,11 @@
 // src/templates/notfound.mjs — 404 page.
 
 import { html } from '../lib/html.mjs';
+import { breadcrumbs } from '../components/breadcrumbs.mjs';
 
 export default function notfound(ctx, page) {
   return html`
+    ${breadcrumbs(ctx, page)}
     <section class="section section--deep" style="min-height:60vh;display:grid;place-items:center">
       <div class="container text-center">
         <p class="eyebrow" style="color:var(--color-accent)">Error 404</p>

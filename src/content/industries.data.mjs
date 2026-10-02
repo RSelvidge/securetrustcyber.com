@@ -47,9 +47,9 @@ export const INDUSTRIES = [
     chips: ['HIPAA', 'HITECH', 'NIS2'],
     threatIntro: 'Healthcare is a prime target: attackers know a hospital cannot afford downtime, and patient data is valuable.',
     threats: [
-      { title: 'Ransomware against care', body: 'Attacks encrypt clinical systems and force hospitals to divert patients. Inline intrusion prevention stops ransomware before it spreads.' },
-      { title: 'Connected medical devices', body: 'Infusion pumps and imaging devices run old, unpatchable software. Network segmentation and firewall controls reduce the risk they carry.' },
-      { title: 'Insider data exposure', body: 'More people need access to records than in any other industry, making least-privilege access and audit essential.' },
+      { title: 'Ransomware against care', body: 'Attacks encrypt clinical systems and force hospitals to divert patients. Inline intrusion prevention stops ransomware before it spreads.', image: { src: 'img/healthcare-ransomware.png', alt: 'Healthcare staff beside a laptop displaying a ransomware lock symbol', width: 646, height: 382 } },
+      { title: 'Connected medical devices', body: 'Infusion pumps and imaging devices run old, unpatchable software. Network segmentation and firewall controls reduce the risk they carry.', image: { src: 'img/healthcare-medical-devices.jpg', alt: 'CT scanner and monitoring equipment in a medical imaging room', width: 1400, height: 933 } },
+      { title: 'Insider data exposure', body: 'More people need access to records than in any other industry, making least-privilege access and audit essential.', image: { src: 'img/healthcare-insider-exposure.png', alt: 'Insider threat survey: remote and hybrid workforces 75%, AI and automation in cybersecurity 69%, cloud collaboration and data sharing 66%, advanced social engineering 53%', width: 663, height: 284, fit: 'contain' } },
     ],
     controlHeading: 'Meeting HIPAA and beyond',
     controlMap: [
@@ -83,9 +83,9 @@ export const INDUSTRIES = [
     chips: ['DORA', 'PCI DSS', 'ISO 27001'],
     threatIntro: 'Financial institutions face motivated, well-funded attackers and relentless regulatory scrutiny.',
     threats: [
-      { title: 'Account takeover', body: 'Stolen credentials are the weapon of choice. Zero-trust access and identity-based policy stop abuse before money moves.' },
-      { title: 'Data and payment fraud', body: 'Sensitive data exfiltration and payment fraud are stopped by DLP and cloud app governance.' },
-      { title: 'Third-party risk', body: 'Vendors are an extension of your attack surface. Least-privilege access keeps supply-chain risk visible and governed.' },
+      { title: 'Account takeover', body: 'Stolen credentials are the weapon of choice. Zero-trust access and identity-based policy stop abuse before money moves.', image: { src: 'img/financial-account-takeover.png', alt: 'Person using a laptop with login credentials and security lock graphics', width: 678, height: 363, fit: 'contain' } },
+      { title: 'Data and payment fraud', body: 'Sensitive data exfiltration and payment fraud are stopped by DLP and cloud app governance.', image: { src: 'img/financial-payment-fraud.png', alt: 'Fraud prevention graphic with credit card, identity, and data protection symbols', width: 650, height: 414, fit: 'contain' } },
+      { title: 'Third-party risk', body: 'Vendors are an extension of your attack surface. Least-privilege access keeps supply-chain risk visible and governed.', image: { src: 'img/financial-third-party-risk.png', alt: 'Cartoon of a business meeting reviewing a tangled diagram of third-party connections', width: 642, height: 406, fit: 'contain' } },
     ],
     controlHeading: 'Mapping to DORA',
     controlMap: [

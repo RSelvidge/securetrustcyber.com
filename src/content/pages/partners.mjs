@@ -75,4 +75,5 @@ const portal = {
   ],
 };
 
-export default [overview, become, portal];
+// Preserved for the future program; draft pages are excluded from published output.
+export default [overview, become, portal].map((page) => ({ ...page, draft: true }));

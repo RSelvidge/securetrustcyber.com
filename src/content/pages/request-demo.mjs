@@ -8,7 +8,6 @@ export default {
   title: 'Book a Demo',
   metaTitle: 'Book a Demo | SecureTrust Cyber',
   metaDescription: 'Choose a time for a SecureTrust Cyber demo using Microsoft Bookings.',
-  breadcrumbs: false,
   cta: false,
   blocks: [
     (ctx) => hero(ctx, {

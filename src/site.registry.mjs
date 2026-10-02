@@ -257,16 +257,19 @@ export const PAGES = [
 
   /* ================= Partners (menu: partners) ================= */
   page('partners/index', 'Partner Overview', {
+    draft: true,
     group: 'partners', order: 0, icon: 'users',
     blurb: 'Grow your MSP with our platform.',
     mega: { menu: 'partners', col: 0 },
   }),
   page('partners/become-a-partner', 'Become a Channel Partner', {
+    draft: true,
     group: 'partners', order: 1, icon: 'arrowRight',
     blurb: 'Join the partner program.',
     mega: { menu: 'partners', col: 0 },
   }),
   page('partners/partner-portal', 'Partner Portal', {
+    draft: true,
     group: 'partners', order: 2, icon: 'lock',
     blurb: 'Log in to your partner console.',
     mega: { menu: 'partners', col: 0 },

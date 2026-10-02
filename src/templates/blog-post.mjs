@@ -8,8 +8,8 @@ export default function blogPost(ctx, page) {
   const body = String(page.body ?? '').replace(/(src|href)=(['"])\/assets\//g, (_, attr, quote) => `${attr}=${quote}${ctx.url.asset('')}`);
   return html`
     ${breadcrumbs(ctx, page)}
-    <article class="section">
-      <div class="container container--s">
+    <article class="section blog-article">
+      <div class="container container--m">
         <header>
           <p class="eyebrow">${page.category}</p>
           <h1 class="section__title" style="margin-bottom:var(--space-s)">${page.title}</h1>

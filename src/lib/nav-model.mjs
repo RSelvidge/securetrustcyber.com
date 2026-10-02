@@ -8,7 +8,7 @@ const live = () => PAGES.filter((p) => !p.draft);
 
 const toLink = (p) => ({ slug: p.slug, title: p.title, blurb: p.blurb ?? '', icon: p.icon ?? null });
 
-/** Mega-menu model: 5 menus, each with ordered columns and an optional promo. */
+/** Mega-menu model: active menus with ordered columns and an optional promo. */
 export function navModel() {
   return MENUS.map((menu) => {
     const items = live().filter((p) => p.mega?.menu === menu.id);
@@ -24,7 +24,7 @@ export function navModel() {
     })).filter((c) => c.items.length > 0);
 
     return { ...menu, columns, promo: PROMOS[menu.id] ?? null };
-  });
+  }).filter((menu) => menu.columns.length > 0);
 }
 
 /** Footer model: 4 columns derived from the same registry, different selector. */
