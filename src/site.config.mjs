@@ -31,7 +31,7 @@ export const SITE = {
 
   // Global CTA labels, referenced by every template so copy stays consistent.
   cta: {
-    demo: 'Get a Demo',
+    demo: 'Talk to an Expert',
     pricing: 'Get Pricing',
     trial: 'Book a Demo',
     contact: 'Contact Sales',

@@ -23,7 +23,7 @@ const buildCompetitor = (c) => ({
     eyebrow: 'How do they compare?',
     headline: `SecureTrust Cyber vs ${c.name}`,
     sub: c.heroSub,
-    primary: { label: 'Get a Demo', href: 'request-demo' },
+    primary: { label: 'Talk to an Expert', href: 'request-demo' },
     secondary: { label: 'Compare more', href: 'solutions' },
     media: c.name,
   },

@@ -67,7 +67,7 @@ const awards = {
   metaTitle: 'Awards & Accolades | SecureTrust Cyber',
   metaDescription: 'Industry awards and recognition for SecureTrust Cyber.',
   blocks: [
-    (ctx) => hero(ctx, { variant: 'compact', eyebrow: 'Recognition', headline: 'Awards & accolades', sub: 'Recognition from across the security industry.', primary: { label: 'Get a Demo', href: 'request-demo' } }),
+    (ctx) => hero(ctx, { variant: 'compact', eyebrow: 'Recognition', headline: 'Awards & accolades', sub: 'Recognition from across the security industry.', primary: { label: 'Talk to an Expert', href: 'request-demo' } }),
     (ctx) => featureGrid(ctx, {
       heading: 'Recent recognition',
       items: [

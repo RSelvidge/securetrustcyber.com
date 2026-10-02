@@ -6,7 +6,7 @@ export function dualCta(ctx, opts = {}) {
   const {
     heading = 'One Platform. Total Security.',
     body = '',
-    primary = { label: 'Get a Demo', href: 'request-demo' },
+    primary = { label: 'Talk to an Expert', href: 'request-demo' },
     secondary = { label: 'Pricing & Bundles', href: 'pricing' },
   } = opts;
 

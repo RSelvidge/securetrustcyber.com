@@ -23,7 +23,7 @@ export default {
     (ctx) => hero(ctx, {
       variant: 'centered', eyebrow: 'Solutions', headline: 'Security that fits how you work',
       sub: 'Whether you are chasing a compliance deadline, securing a specific sector, or integrating with your stack, start here.',
-      primary: { label: 'Get a Demo', href: 'request-demo' },
+      primary: { label: 'Talk to an Expert', href: 'request-demo' },
     }),
     (ctx) => html`<section class="section"><div class="container">
       <div class="grid grid--2">

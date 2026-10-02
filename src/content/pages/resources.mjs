@@ -16,7 +16,7 @@ const index = {
     (ctx) => hero(ctx, {
       variant: 'centered', eyebrow: 'Resources', headline: 'Learn, compare, deploy',
       sub: 'Everything you need to evaluate and get the most from the platform.',
-      primary: { label: 'Get a Demo', href: 'request-demo' },
+      primary: { label: 'Talk to an Expert', href: 'request-demo' },
     }),
     (ctx) => featureGrid(ctx, {
       heading: 'Explore resources',
@@ -40,7 +40,7 @@ const list = (slug, title, meta, eyebrow, heading, body) => ({
   metaTitle: `${title} | SecureTrust Cyber`,
   metaDescription: meta,
   blocks: [
-    (ctx) => hero(ctx, { variant: 'compact', eyebrow, headline: heading, sub: body, primary: { label: 'Get a Demo', href: 'request-demo' } }),
+    (ctx) => hero(ctx, { variant: 'compact', eyebrow, headline: heading, sub: body, primary: { label: 'Talk to an Expert', href: 'request-demo' } }),
   ],
 });
 

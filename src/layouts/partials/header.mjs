@@ -20,8 +20,7 @@ export const header = (ctx) => {
 
   <div class="container nav-bar">
     <a class="brand" href="${ctx.url('')}" aria-label="${ctx.site.name} home">
-      ${LOGO_SVG}
-      <span class="brand__wordmark">${WORDMARK}<span style="color:var(--color-accent)">Cyber</span></span>
+      <img class="brand__logo" src="${ctx.url.asset('img/logo.png')}" alt="${ctx.site.name}" width="380" height="128">
     </a>
 
     <nav class="primary-nav" aria-label="Primary">

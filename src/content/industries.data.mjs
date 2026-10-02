@@ -12,7 +12,7 @@ const buildIndustry = (ind) => ({
     eyebrow: ind.eyebrow ?? 'Industry Solutions',
     headline: ind.headline,
     sub: ind.sub,
-    primary: { label: 'Get a Demo', href: 'request-demo' },
+    primary: { label: 'Talk to an Expert', href: 'request-demo' },
     secondary: { label: 'See the platform', href: 'products' },
     media: ind.title,
     chips: ind.chips ?? [],

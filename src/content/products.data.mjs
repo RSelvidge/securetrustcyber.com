@@ -3,7 +3,7 @@
 
 import { PRODUCT_IMAGES } from './product-images.data.mjs';
 
-const demo = { label: 'Get a Demo', href: 'request-demo' };
+const demo = { label: 'Talk to an Expert', href: 'request-demo' };
 
 const buildProduct = (p) => ({
   slug: `products/${p.slug}`,

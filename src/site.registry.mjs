@@ -393,7 +393,7 @@ export const PROMOS = {
   resources: {
     title: 'See it for yourself',
     body: 'A 30-minute guided demo, tailored to your estate.',
-    cta: { label: 'Get a demo', slug: 'request-demo' },
+    cta: { label: 'Talk to an Expert', slug: 'request-demo' },
   },
   company: {
     title: 'Join the team',

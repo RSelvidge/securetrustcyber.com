@@ -22,7 +22,7 @@ const categoryPage = (cat) => {
         eyebrow: 'Product category',
         headline: cat.title,
         sub: cat.blurb,
-        primary: { label: 'Get a Demo', href: 'request-demo' },
+        primary: { label: 'Talk to an Expert', href: 'request-demo' },
         secondary: { label: 'All products', href: 'products' },
       }),
       (ctx) => featureGrid(ctx, {
@@ -52,7 +52,7 @@ const allProducts = {
     (ctx) => hero(ctx, {
       variant: 'centered', eyebrow: 'The platform', headline: 'Every layer. One platform.',
       sub: 'Explore the ten natively integrated modules that make up SecureTrust Cyber.',
-      primary: { label: 'Get a Demo', href: 'request-demo' },
+      primary: { label: 'Talk to an Expert', href: 'request-demo' },
     }),
     (ctx) => html`<section class="section"><div class="container">
       <div class="grid grid--3">
