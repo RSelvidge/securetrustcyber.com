@@ -5,7 +5,7 @@ import { breadcrumbs } from '../components/breadcrumbs.mjs';
 import { dualCta } from '../components/dual-cta.mjs';
 
 export default function blogPost(ctx, page) {
-  const body = String(page.body ?? '').replace(/(src|href)=(['"])\/assets\//g, (_, attr, quote) => `${attr}=${quote}${ctx.url.asset('')}`);
+  const body = String(page.body ?? '').replace(/(src|href)=(['"])\/assets\//g, (_, attr, quote) => `${attr}=${quote}${'../'.repeat(ctx.url.depth)}assets/`);
   return html`
     ${breadcrumbs(ctx, page)}
     <article class="section blog-article">

@@ -3,7 +3,8 @@
 // double-clicks open. Editing requires re-running `node build.mjs`.
 
 import { mkdir, writeFile, readdir, readFile, rm, cp } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -78,6 +79,17 @@ async function copyCloudflare() {
   if (existsSync(src)) await cp(src, DIST, { recursive: true, force: true });
 }
 
+// Short content hash of a built asset, used as a cache-busting ?v= query.
+const versions = new Map();
+function assetVersion(p) {
+  const key = String(p).replace(/^\/+/, '');
+  if (!versions.has(key)) {
+    const file = path.join(DIST, 'assets', key);
+    versions.set(key, existsSync(file) ? createHash('sha1').update(readFileSync(file)).digest('hex').slice(0, 8) : '0');
+  }
+  return versions.get(key);
+}
+
 /* ---------- sitemap ---------- */
 function buildSitemap(pages) {
   const urls = pages
@@ -117,7 +129,9 @@ export async function build() {
     const linkAttrs = (target) => target === 'talk-to-an-expert' || target === SITE.bookingUrl
       ? raw(' target="_blank" rel="noopener noreferrer"')
       : raw('');
-    url.asset = relativeUrl.asset;
+    // /assets/* is served "immutable" for a year (cloudflare/_headers), so every
+    // asset URL carries a content hash: a changed file gets a new URL.
+    url.asset = (p) => `${relativeUrl.asset(p)}?v=${assetVersion(p)}`;
     url.self = relativeUrl.self;
     url.depth = relativeUrl.depth;
     const ctx = { slug: page.slug, out, url, linkAttrs, registry: registryMap, site: SITE };
