@@ -24,7 +24,7 @@ export const mobileDrawer = (ctx) => {
         </ul>
       </details>`))}
     <div style="margin-top:var(--space-l)">
-      <a class="btn btn--primary btn--block"${ctx.linkAttrs('request-demo')} href="${ctx.url('request-demo')}">${ctx.site.cta.demo}</a>
+      <a class="btn btn--primary btn--block"${ctx.linkAttrs('talk-to-an-expert')} href="${ctx.url('talk-to-an-expert')}">${ctx.site.cta.demo}</a>
     </div>
   </div>
 </dialog>`;

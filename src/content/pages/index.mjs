@@ -16,7 +16,7 @@ export default {
       headline: 'Security that closes the gap',
       rotating: ['between network and cloud', 'between identity and data', 'between user and application'],
       sub: 'A converged cloud platform that unifies firewall, web, zero trust, cloud, data and AI security, with SIEM and managed patch on top. One platform, total security.',
-      primary: { label: 'Book a live demo', href: 'request-demo' },
+      primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' },
       secondary: { label: 'See the platform', href: 'products' },
     },
 

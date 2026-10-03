@@ -10,18 +10,17 @@ const index = {
   slug: 'resources/index',
   type: 'page',
   title: 'Resources',
-  metaTitle: 'Resources, Demos and Guides | SecureTrust Cyber',
-  metaDescription: 'Product demos, whitepapers, customer stories, webinars and guides from SecureTrust Cyber.',
+  metaTitle: 'Resources and Guides | SecureTrust Cyber',
+  metaDescription: 'Whitepapers, customer stories, webinars and guides from SecureTrust Cyber.',
   blocks: [
     (ctx) => hero(ctx, {
       variant: 'centered', eyebrow: 'Resources', headline: 'Learn, compare, deploy',
       sub: 'Everything you need to evaluate and get the most from the platform.',
-      primary: { label: 'Talk to an Expert', href: 'request-demo' },
+      primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' },
     }),
     (ctx) => featureGrid(ctx, {
       heading: 'Explore resources',
       items: [
-        { icon: 'play', title: 'Product demos', body: 'See the platform in action, module by module.', href: 'resources/demos' },
         { icon: 'file', title: 'Whitepapers', body: 'In-depth research on the threats that matter.', href: 'resources/whitepapers' },
         { icon: 'users', title: 'Customer stories', body: 'How teams like yours use SecureTrust Cyber.', href: 'resources/customer-stories' },
         { icon: 'file', title: 'Solution briefs', body: 'The technical detail on every module.', href: 'resources/solution-briefs' },
@@ -40,7 +39,7 @@ const list = (slug, title, meta, eyebrow, heading, body) => ({
   metaTitle: `${title} | SecureTrust Cyber`,
   metaDescription: meta,
   blocks: [
-    (ctx) => hero(ctx, { variant: 'compact', eyebrow, headline: heading, sub: body, primary: { label: 'Talk to an Expert', href: 'request-demo' } }),
+    (ctx) => hero(ctx, { variant: 'compact', eyebrow, headline: heading, sub: body, primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' } }),
   ],
 });
 
@@ -71,8 +70,6 @@ const trustCenter = {
 
 export default [
   index,
-  list('resources/demos', 'Product Demos', 'Watch product demos of the SecureTrust Cyber platform.',
-    'Demos', 'See the platform in action', 'Watch guided demos of each module and the unified platform.'),
   list('resources/whitepapers', 'Whitepapers', 'In-depth whitepapers on cybersecurity topics from SecureTrust Cyber.',
     'Whitepapers', 'Research that goes deep', 'In-depth analysis of the threats and frameworks that shape security.'),
   list('resources/customer-stories', 'Customer Stories', 'How customers use SecureTrust Cyber across industries.',

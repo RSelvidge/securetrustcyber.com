@@ -12,10 +12,12 @@ const buildIndustry = (ind) => ({
     eyebrow: ind.eyebrow ?? 'Industry Solutions',
     headline: ind.headline,
     sub: ind.sub,
-    primary: { label: 'Talk to an Expert', href: 'request-demo' },
+    primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' },
     secondary: { label: 'See the platform', href: 'products' },
     media: ind.title,
     chips: ind.chips ?? [],
+    bg: ind.heroImage,
+    textSide: ind.heroTextSide,
   },
   threats: {
     heading: `The ${ind.title.toLowerCase()} threat landscape`,
@@ -76,40 +78,40 @@ export const INDUSTRIES = [
   }),
 
   buildIndustry({
-    slug: 'financial-services', title: 'Financial Services', heroVariant: 'diagram', eyebrow: 'Financial Services',
+    slug: 'financial-services', title: 'Financial Services', heroVariant: 'diagram', eyebrow: 'Financial Services', heroImage: 'img/heroes/financial-services.jpg',
     headline: 'Resilience your regulators expect',
-    sub: 'Meet DORA, protect customer assets and keep the lights on through the worst that attackers can throw at you.',
-    meta: 'Financial services cybersecurity that meets DORA and protects customer assets and critical systems.',
-    chips: ['DORA', 'PCI DSS', 'ISO 27001'],
+    sub: 'Meet FFIEC expectations, protect customer assets and keep the lights on through the worst that attackers can throw at you.',
+    meta: 'Financial services cybersecurity that meets FFIEC expectations and protects customer assets and critical systems.',
+    chips: ['FFIEC', 'PCI DSS', 'ISO 27001'],
     threatIntro: 'Financial institutions face motivated, well-funded attackers and relentless regulatory scrutiny.',
     threats: [
       { title: 'Account takeover', body: 'Stolen credentials are the weapon of choice. Zero-trust access and identity-based policy stop abuse before money moves.', image: { src: 'img/financial-account-takeover.png', alt: 'Person using a laptop with login credentials and security lock graphics', width: 678, height: 363, fit: 'contain' } },
       { title: 'Data and payment fraud', body: 'Sensitive data exfiltration and payment fraud are stopped by DLP and cloud app governance.', image: { src: 'img/financial-payment-fraud.png', alt: 'Fraud prevention graphic with credit card, identity, and data protection symbols', width: 650, height: 414, fit: 'contain' } },
       { title: 'Third-party risk', body: 'Vendors are an extension of your attack surface. Least-privilege access keeps supply-chain risk visible and governed.', image: { src: 'img/financial-third-party-risk.png', alt: 'Cartoon of a business meeting reviewing a tangled diagram of third-party connections', width: 642, height: 406, fit: 'contain' } },
     ],
-    controlHeading: 'Mapping to DORA',
+    controlHeading: 'Mapping to the FFIEC IT Examination Handbook',
     controlMap: [
-      { requirement: 'DORA: ICT risk management (Art. 6)', answer: 'Continuous vulnerability and configuration visibility forms the basis of a sound risk framework.', href: 'products/patch-management', product: 'Managed Patch Management' },
-      { requirement: 'DORA: Incident reporting (Art. 19)', answer: 'Real-time log analysis and threat detection ensure incidents are detected and reported within the deadline.', href: 'products/siem', product: 'SIEM Platform' },
-      { requirement: 'DORA: Digital operational resilience testing (Art. 24)', answer: 'Inline attack prevention and virtual patching validate that your controls hold under attack.', href: 'products/ips', product: 'Intrusion Prevention System' },
-      { requirement: 'DORA: Third-party risk (Art. 28)', answer: 'Least-privilege access governs how third parties touch your systems.', href: 'products/ztna', product: 'Universal ZTNA' },
+      { requirement: 'FFIEC Information Security: Risk identification and mitigation', answer: 'Continuous vulnerability and configuration visibility forms the basis of a sound risk framework.', href: 'products/patch-management', product: 'Managed Patch Management' },
+      { requirement: 'FFIEC Information Security: Incident detection and response', answer: 'Real-time log analysis and threat detection ensure incidents are detected, escalated and reported to regulators on time.', href: 'products/siem', product: 'SIEM Platform' },
+      { requirement: 'FFIEC Business Continuity Management: Resilience and testing', answer: 'Inline attack prevention and virtual patching validate that your controls hold under attack.', href: 'products/ips', product: 'Intrusion Prevention System' },
+      { requirement: 'FFIEC Outsourcing Technology Services: Third-party risk', answer: 'Least-privilege access governs how third parties touch your systems.', href: 'products/ztna', product: 'Universal ZTNA' },
     ],
     outcomeIntro: 'Resilience, security, and the evidence regulators ask for.',
     outcomes: [
-      { icon: 'scale', title: 'Regulatory ready', body: 'Evidence for DORA, PCI and ISO on demand.' },
+      { icon: 'scale', title: 'Regulatory ready', body: 'Evidence for FFIEC, PCI and ISO on demand.' },
       { icon: 'key', title: 'Stop fraud', body: 'Block account takeover and data theft.' },
       { icon: 'radar', title: 'Faster response', body: 'Detect and contain incidents in minutes.' },
       { icon: 'shield', title: 'Supply-chain control', body: 'See and govern third-party access.' },
     ],
     caseStudy: { logo: 'Helix Capital', quote: 'SecureTrust gave us a single view of risk across banking, trading and payments.', name: 'James Okoro', role: 'CISO' },
     faq: [
-      { q: 'Does it help with DORA specifically?', a: 'Yes. The control map above shows how each capability supports a specific DORA article.' },
+      { q: 'Does it help with FFIEC examinations?', a: 'Yes. The control map above shows how each capability supports the FFIEC IT Examination Handbook booklets examiners use.' },
       { q: 'Can it integrate with our existing GRC tooling?', a: 'Yes, via the API integration layer.' },
     ],
   }),
 
   buildIndustry({
-    slug: 'manufacturing', title: 'Manufacturing', heroVariant: 'terminal', eyebrow: 'Manufacturing',
+    slug: 'manufacturing', title: 'Manufacturing', heroVariant: 'terminal', eyebrow: 'Manufacturing', heroImage: 'img/heroes/manufacturing.jpg',
     headline: 'Keep the line running',
     sub: 'Protect OT and IT together so a cyber incident never stops production.',
     meta: 'Manufacturing cybersecurity that protects OT and IT together so production never stops.',
@@ -139,7 +141,7 @@ export const INDUSTRIES = [
   }),
 
   buildIndustry({
-    slug: 'energy-utilities', title: 'Energy & Utilities', heroVariant: 'split', eyebrow: 'Energy & Utilities',
+    slug: 'energy-utilities', title: 'Energy & Utilities', heroVariant: 'split', eyebrow: 'Energy & Utilities', heroImage: 'img/heroes/energy-utilities.jpg', heroTextSide: 'right',
     headline: 'Defend critical national infrastructure',
     sub: 'Protect the systems that power everything else, from grid to generation.',
     meta: 'Cybersecurity for energy and utilities that protects critical national infrastructure from attack.',
@@ -199,7 +201,7 @@ export const INDUSTRIES = [
   }),
 
   buildIndustry({
-    slug: 'education', title: 'Education', heroVariant: 'diagram', eyebrow: 'Education',
+    slug: 'education', title: 'Education', heroVariant: 'diagram', eyebrow: 'Education', heroImage: 'img/heroes/education.jpg', heroTextSide: 'right',
     headline: 'Protect students, staff and research',
     sub: 'Secure sprawling, open campus networks without slowing down learning or research.',
     meta: 'Cybersecurity for education that protects students, staff and research on open campus networks.',

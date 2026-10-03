@@ -113,8 +113,8 @@ export async function build() {
   for (const page of pages) {
     const out = outputPathFor(page.slug);
     const relativeUrl = makeUrl(out);
-    const url = (target = '') => target === 'request-demo' ? SITE.bookingUrl : relativeUrl(target);
-    const linkAttrs = (target) => target === 'request-demo' || target === SITE.bookingUrl
+    const url = (target = '') => target === 'talk-to-an-expert' ? SITE.bookingUrl : relativeUrl(target);
+    const linkAttrs = (target) => target === 'talk-to-an-expert' || target === SITE.bookingUrl
       ? raw(' target="_blank" rel="noopener noreferrer"')
       : raw('');
     url.asset = relativeUrl.asset;

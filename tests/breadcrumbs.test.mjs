@@ -8,7 +8,7 @@ const pages = [
   ['', 'Home'], ['products', 'All Products'], ['products/ips', 'Intrusion Prevention System (IPS)'],
   ['products/category/network-security', 'Network Security'], ['solutions', 'All Solutions'],
   ['industries/healthcare', 'Healthcare Cybersecurity'], ['resources/index', 'Resources'],
-  ['resources/demos', 'Product Demos'], ['partners/index', 'Partner Overview'],
+  ['resources/whitepapers', 'Whitepapers'], ['partners/index', 'Partner Overview'],
   ['partners/partner-portal', 'Partner Portal'], ['company/about', 'About'],
   ['company/contact', 'Contact'], ['legal/privacy-policy', 'Privacy Policy'],
   ['blog', 'Blog'], ['blog/ransomware', 'Ransomware & recovery'],
@@ -29,7 +29,7 @@ test('preserves product names and acronyms and links back to the product overvie
 });
 test('section directory indexes become working overview links without duplicate Index crumbs', () => {
   assert.deepEqual(labels(render('resources/index')), ['Home', 'Resources']);
-  assert.match(render('resources/demos'), /href="\.\.\/resources\/index\.html">Resources/);
+  assert.match(render('resources/whitepapers'), /href="\.\.\/resources\/index\.html">Resources/);
   assert.match(render('partners/partner-portal'), /href="\.\.\/partners\/index\.html">Partner Overview/);
 });
 test('industries link to Solutions, while structural category and legal folders are skipped', () => {

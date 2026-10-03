@@ -68,7 +68,7 @@ export const header = (ctx) => {
     </nav>
 
     <div class="nav-bar__actions">
-      <a class="btn btn--primary nav-bar__cta"${ctx.linkAttrs('request-demo')} href="${ctx.url('request-demo')}">${ctx.site.cta.demo}</a>
+      <a class="btn btn--primary nav-bar__cta"${ctx.linkAttrs('talk-to-an-expert')} href="${ctx.url('talk-to-an-expert')}">${ctx.site.cta.demo}</a>
       <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open menu" aria-expanded="false">
         ${icon('menu')}
       </button>

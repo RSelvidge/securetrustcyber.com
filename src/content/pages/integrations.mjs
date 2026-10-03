@@ -14,7 +14,7 @@ const integration = (i) => ({
     (ctx) => hero(ctx, {
       variant: 'centered', eyebrow: 'Integration', headline: i.title,
       sub: i.sub,
-      primary: { label: 'Talk to an Expert', href: 'request-demo' },
+      primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' },
       secondary: { label: 'All integrations', href: 'integrations/api-integrations' },
     }),
     (ctx) => prose(ctx, { heading: i.h2, body: i.body }),

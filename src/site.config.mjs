@@ -33,7 +33,7 @@ export const SITE = {
   cta: {
     demo: 'Talk to an Expert',
     pricing: 'Get Pricing',
-    trial: 'Book a Demo',
+    trial: 'Talk to an Expert',
     contact: 'Contact Sales',
   },
 

@@ -11,7 +11,7 @@ const buildCompliance = (c) => ({
     eyebrow: 'Compliance',
     headline: `${c.title} compliance, simplified`,
     sub: c.sub,
-    primary: { label: 'Talk to an Expert', href: 'request-demo' },
+    primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' },
     secondary: { label: 'See the platform', href: 'products' },
     media: c.title,
     chips: c.chips ?? [],

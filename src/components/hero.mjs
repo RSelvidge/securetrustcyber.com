@@ -19,6 +19,8 @@ export function hero(ctx, opts = {}) {
     media = 'SecureTrust Console',
     chips = [],
     compact = false,
+    bg = null, // background photo under a navy overlay; replaces the side mock
+    textSide = 'left', // 'right' puts the text over the right of the photo
   } = opts;
 
   const rotate = rotating.length
@@ -36,7 +38,7 @@ export function hero(ctx, opts = {}) {
     ? html`<div class="hero__chips">${join(chips.map((c) => html`<span class="chip">${c}</span>`))}</div>`
     : '';
 
-  const mediaBlock = variant === 'terminal'
+  const mediaBlock = bg ? '' : variant === 'terminal'
     ? html`<div class="hero__media">${terminal()}</div>`
     : (variant === 'split' || variant === 'diagram')
       ? html`<div class="hero__media"><div class="mock">${dashboard({ title: media })}</div></div>`
@@ -51,7 +53,7 @@ export function hero(ctx, opts = {}) {
       ${chipRow}
     </div>`;
 
-  return html`<section class="hero hero--${variant}${compact ? ' hero--compact' : ''}">
+  return html`<section class="hero hero--${variant}${compact ? ' hero--compact' : ''}${bg ? ' hero--photo' : ''}${bg && textSide === 'right' ? ' hero--text-right' : ''}"${bg ? html` style="background-image: var(--hero-overlay), url('${ctx.url.asset(bg)}')"` : ''}>
     <div class="container hero__inner">${body}${mediaBlock}</div>
   </section>`;
 }

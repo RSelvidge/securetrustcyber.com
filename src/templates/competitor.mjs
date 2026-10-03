@@ -55,7 +55,7 @@ export default function competitor(ctx, page) {
         <h2 class="section__title" style="color:var(--white)">${page.migration.heading}</h2>
         <p style="color:var(--color-text-inverse-muted);max-width:56ch;margin-top:var(--space-m)">${page.migration.body}</p>
         <div style="margin-top:var(--space-l)">
-          <a class="btn btn--primary"${ctx.linkAttrs('request-demo')} href="${ctx.url('request-demo')}">Talk to a migration expert</a>
+          <a class="btn btn--primary"${ctx.linkAttrs('talk-to-an-expert')} href="${ctx.url('talk-to-an-expert')}">Talk to a migration expert</a>
         </div>
       </div>
     </section>` : ''}

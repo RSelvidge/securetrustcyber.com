@@ -278,12 +278,7 @@ export const PAGES = [
   /* ================= Resources (menu: resources) ================= */
   page('resources/index', 'All Resources', {
     group: 'resources', order: -10, icon: 'file',
-    blurb: 'Demos, guides, webinars and more.',
-    mega: { menu: 'resources', col: 0 }, footer: 'resources',
-  }),
-  page('resources/demos', 'Product Demos', {
-    group: 'resources', order: 0, icon: 'play',
-    blurb: 'See the platform in action.',
+    blurb: 'Guides, webinars and more.',
     mega: { menu: 'resources', col: 0 }, footer: 'resources',
   }),
   page('resources/whitepapers', 'Whitepapers', {
@@ -348,7 +343,7 @@ export const PAGES = [
   page('pricing', 'Pricing & Bundles', {
     group: 'core', order: 0, icon: 'chart', footer: 'company',
   }),
-  page('request-demo', 'Request a Demo', {
+  page('talk-to-an-expert', 'Talk to an Expert', {
     group: 'core', order: 1, icon: 'play', footer: 'company',
   }),
 
@@ -392,8 +387,8 @@ export const PROMOS = {
   },
   resources: {
     title: 'See it for yourself',
-    body: 'A 30-minute guided demo, tailored to your estate.',
-    cta: { label: 'Talk to an Expert', slug: 'request-demo' },
+    body: 'A 30-minute conversation with a security expert about your environment.',
+    cta: { label: 'Talk to an Expert', slug: 'talk-to-an-expert' },
   },
   company: {
     title: 'Join the team',

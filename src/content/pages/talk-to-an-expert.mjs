@@ -1,13 +1,13 @@
-// src/content/pages/request-demo.mjs — book a demo through Microsoft Bookings.
+// src/content/pages/talk-to-an-expert.mjs — book time with an expert through Microsoft Bookings.
 
 import { hero } from '../../components/hero.mjs';
 
 export default {
-  slug: 'request-demo',
+  slug: 'talk-to-an-expert',
   type: 'page',
-  title: 'Book a Demo',
-  metaTitle: 'Book a Demo | SecureTrust Cyber',
-  metaDescription: 'Choose a time for a SecureTrust Cyber demo using Microsoft Bookings.',
+  title: 'Talk to an Expert',
+  metaTitle: 'Talk to an Expert | SecureTrust Cyber',
+  metaDescription: 'Choose a time to talk with a SecureTrust Cyber security expert using Microsoft Bookings.',
   cta: false,
   blocks: [
     (ctx) => hero(ctx, {

@@ -1,4 +1,4 @@
-// src/templates/form.mjs — demo/contact form pages. Front-end validation only;
+// src/templates/form.mjs — contact form pages. Front-end validation only;
 // data-endpoint="TODO" marks where to wire a real backend.
 
 import { html } from '../lib/html.mjs';
@@ -43,7 +43,7 @@ export default function form(ctx, page) {
             <label class="field__label" for="f-message">What are you looking to secure?</label>
             <textarea class="field__input" id="f-message" name="message" rows="4"></textarea>
           </div>
-          <button class="btn btn--primary btn--lg btn--block" type="submit">${page.submitLabel ?? 'Request a demo'}</button>
+          <button class="btn btn--primary btn--lg btn--block" type="submit">${page.submitLabel ?? 'Submit'}</button>
         </form>
       </div>
     </section>

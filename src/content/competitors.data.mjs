@@ -23,7 +23,7 @@ const buildCompetitor = (c) => ({
     eyebrow: 'How do they compare?',
     headline: `SecureTrust Cyber vs ${c.name}`,
     sub: c.heroSub,
-    primary: { label: 'Talk to an Expert', href: 'request-demo' },
+    primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' },
     secondary: { label: 'Compare more', href: 'solutions' },
     media: c.name,
   },
@@ -39,7 +39,7 @@ const buildCompetitor = (c) => ({
     rows: CAPABILITIES.map((cap) => ({ capability: cap, us: true, them: c.themHas.includes(cap) })),
   },
   faq: c.faq,
-  cta: { heading: 'See the difference for yourself', body: 'A 30-minute demo against your own environment.' },
+  cta: { heading: 'See the difference for yourself', body: 'A 30-minute conversation with an expert about your own environment.' },
 });
 
 // Shared pain points: the recurring gaps across the SASE/SSE market.

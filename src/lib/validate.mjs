@@ -127,7 +127,7 @@ export function links(rendered, registryMap) {
 }
 
 // Resolve a relative href (from a page at `pageSlug`) back to an absolute slug,
-// e.g. page "products/edr" + "../../request-demo.html" -> "request-demo".
+// e.g. page "products/edr" + "../../talk-to-an-expert.html" -> "talk-to-an-expert".
 function resolveHref(pageSlug, href) {
   const h = href.split('#')[0].split('?')[0];
   if (!h) return null; // fragment-only

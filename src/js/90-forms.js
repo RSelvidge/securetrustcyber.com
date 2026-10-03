@@ -1,4 +1,4 @@
-/* 90-forms.js — front-end validation for demo/contact forms. Does not submit
+/* 90-forms.js — front-end validation for contact forms. Does not submit
    (data-endpoint="TODO" marks where to wire a real backend). */
 (function (STC) {
   'use strict';
