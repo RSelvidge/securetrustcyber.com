@@ -589,3 +589,19 @@
 }
 /* tall enough to show the whole banner image (they're about 2.4:1), capped so it never fills the screen */
 .hero--photo { display: grid; align-content: center; min-height: min(calc(100vw / 2.4), 85vh); }
+
+/* product datasheet download strip under the hero */
+.datasheet-band { background: var(--color-bg-subtle, #f3f6fc); border-bottom: 1px solid rgba(10,26,101,.08); padding-block: var(--space-s); }
+.datasheet-band__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-m); flex-wrap: wrap; }
+.datasheet-band__text { display: inline-flex; align-items: center; gap: var(--space-s); color: var(--color-text-muted); font-size: var(--step--1); }
+.datasheet-band__text > svg { width: 28px; height: 28px; flex: none; color: var(--blue-600); }
+.datasheet-band__text strong { display: block; color: var(--navy-800); font-size: var(--step-0); }
+.datasheet-band .btn svg, .datasheet-card .btn svg { width: 18px; height: 18px; }
+
+/* datasheet library on the Solution Briefs & Data Sheets page */
+.datasheet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: var(--space-m); }
+.datasheet-card { display: flex; flex-direction: column; gap: var(--space-xs); padding: var(--space-m); border: 1px solid rgba(10,26,101,.1); border-radius: 12px; background: var(--white); }
+.datasheet-card__eyebrow { color: var(--blue-600); font-size: var(--step--1); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.datasheet-card h3 { color: var(--navy-800); font-size: var(--step-1); }
+.datasheet-card p { color: var(--color-text-muted); flex: 1; }
+.datasheet-card__links { display: flex; gap: var(--space-s); align-items: center; flex-wrap: wrap; margin-top: var(--space-xs); }

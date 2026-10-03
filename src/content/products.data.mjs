@@ -21,6 +21,8 @@ const buildProduct = (p) => ({
     secondary: { label: 'See pricing', href: 'pricing' },
     media: p.title,
     chips: p.chips ?? [],
+    bg: p.heroImage,
+    textSide: p.heroTextSide,
   },
   problem: { heading: p.problemHeading, intro: p.problemIntro, items: p.problem },
   capabilities: {
@@ -42,7 +44,7 @@ const buildProduct = (p) => ({
 export const PRODUCTS = [
   /* ============ Network Security ============ */
   buildProduct({
-    slug: 'fwaas', title: 'Firewall-as-a-Service (FWaaS)', category: 'network-security',
+    slug: 'fwaas', title: 'Firewall-as-a-Service (FWaaS)', category: 'network-security', heroImage: 'img/heroes/fwaas.jpg', heroTextSide: 'right',
     heroVariant: 'split', eyebrow: 'Network Security',
     headline: 'Cloud-delivered firewall for every user, site and network',
     sub: 'Consolidate branch, data center and LAN firewalls into one cloud-native service that inspects internet, WAN and LAN traffic with application and user context.',

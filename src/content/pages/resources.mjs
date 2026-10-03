@@ -5,6 +5,32 @@ import { hero } from '../../components/hero.mjs';
 import { featureGrid } from '../../components/feature-grid.mjs';
 import { prose } from '../../components/prose.mjs';
 import { PAGES } from '../../site.registry.mjs';
+import { PRODUCTS } from '../products.data.mjs';
+import { icon } from '../../lib/icons.mjs';
+import { datasheetPath } from '../../lib/datasheets.mjs';
+
+const solutionBriefs = {
+  slug: 'resources/solution-briefs',
+  type: 'page',
+  title: 'Solution Briefs & Data Sheets',
+  metaTitle: 'Solution Briefs & Data Sheets | SecureTrust Cyber',
+  metaDescription: 'Download the datasheet for every SecureTrust Cyber module: capabilities, deployment and common questions.',
+  blocks: [
+    (ctx) => hero(ctx, { variant: 'compact', eyebrow: 'Data sheets', headline: 'The technical detail', sub: 'A two-page datasheet for every module in the platform. Download, share with your team, or send to procurement.', primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' } }),
+    (ctx) => html`<section class="section"><div class="container">
+      <div class="datasheet-grid">${join(PRODUCTS.map((p) => html`
+        <article class="datasheet-card">
+          <span class="datasheet-card__eyebrow">${p.hero.eyebrow}</span>
+          <h3>${p.title}</h3>
+          <p>${p.hero.headline}</p>
+          <div class="datasheet-card__links">
+            <a class="btn btn--navy" href="${ctx.url.asset(datasheetPath(p.slug))}" download>${icon('download')} Datasheet (PDF)</a>
+            <a href="${ctx.url(p.slug)}">Product page</a>
+          </div>
+        </article>`))}</div>
+    </div></section>`,
+  ],
+};
 
 const index = {
   slug: 'resources/index',
@@ -74,8 +100,7 @@ export default [
     'Whitepapers', 'Research that goes deep', 'In-depth analysis of the threats and frameworks that shape security.'),
   list('resources/customer-stories', 'Customer Stories', 'How customers use SecureTrust Cyber across industries.',
     'Customer stories', 'Real teams, real outcomes', 'See how organizations across sectors secure their estates with SecureTrust Cyber.'),
-  list('resources/solution-briefs', 'Solution Briefs & Data Sheets', 'Technical briefs and data sheets for every SecureTrust Cyber module.',
-    'Solution briefs', 'The technical detail', 'Specifications and capabilities for every module in the platform.'),
+  solutionBriefs,
   list('resources/webinars', 'Webinars', 'Live and on-demand webinars from SecureTrust Cyber.',
     'Webinars', 'Learn from the experts', 'Live sessions and recordings on security strategy and platform deep dives.'),
   trustCenter,

@@ -42,7 +42,7 @@ const buildIndustry = (ind) => ({
 
 export const INDUSTRIES = [
   buildIndustry({
-    slug: 'healthcare', title: 'Healthcare', heroVariant: 'split', eyebrow: 'Healthcare',
+    slug: 'healthcare', title: 'Healthcare', heroVariant: 'split', eyebrow: 'Healthcare', heroImage: 'img/heroes/healthcare.jpg', heroTextSide: 'right',
     headline: 'Security that keeps care running',
     sub: 'Protect patient data and clinical systems from ransomware and breaches, while meeting HIPAA obligations.',
     meta: 'Healthcare cybersecurity that protects patient data and clinical systems from ransomware while meeting HIPAA.',
