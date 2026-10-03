@@ -90,7 +90,9 @@
   border-radius: var(--radius-s);
   transition: color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
 }
-.primary-nav__trigger:hover { background: var(--slate-100); }
+.primary-nav__trigger:hover { background: rgba(255,255,255,.1); }
+.primary-nav__link { text-decoration: none; }
+.mobile-drawer__link { display: block; padding: var(--space-s) 0; font-weight: var(--weight-medium); color: var(--navy-800); text-decoration: none; border-bottom: 1px solid var(--slate-100, #eef1f6); }
 .primary-nav__trigger .chev {
   width: 14px; height: 14px;
   transition: transform var(--dur) var(--ease);

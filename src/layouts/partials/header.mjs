@@ -64,6 +64,9 @@ export const header = (ctx) => {
               </div>
             </div>
           </li>`))}
+        <li class="primary-nav__item">
+          <a class="primary-nav__trigger primary-nav__link" href="${ctx.url('pricing')}"${ctx.slug === 'pricing' ? ' aria-current="page"' : ''}>Pricing</a>
+        </li>
       </ul>
     </nav>
 

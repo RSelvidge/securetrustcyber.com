@@ -23,6 +23,7 @@ export const mobileDrawer = (ctx) => {
             <li><a href="${ctx.url(it.slug)}">${it.title}</a></li>`))}
         </ul>
       </details>`))}
+    <a class="mobile-drawer__link" href="${ctx.url('pricing')}">Pricing</a>
     <div style="margin-top:var(--space-l)">
       <a class="btn btn--primary btn--block"${ctx.linkAttrs('talk-to-an-expert')} href="${ctx.url('talk-to-an-expert')}">${ctx.site.cta.demo}</a>
     </div>
