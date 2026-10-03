@@ -605,3 +605,11 @@
 .datasheet-card h3 { color: var(--navy-800); font-size: var(--step-1); }
 .datasheet-card p { color: var(--color-text-muted); flex: 1; }
 .datasheet-card__links { display: flex; gap: var(--space-s); align-items: center; flex-wrap: wrap; margin-top: var(--space-xs); }
+.form__error {
+  padding: var(--space-m);
+  border-radius: var(--radius-s);
+  background: rgba(200,40,40,.08);
+  color: #8a1c1c;
+}
+.form__error a { color: inherit; font-weight: var(--weight-bold); }
+.form [type="submit"]:disabled { opacity: .7; cursor: progress; }

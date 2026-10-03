@@ -1,5 +1,5 @@
-/* 90-forms.js — front-end validation for contact forms. Does not submit
-   (data-endpoint="TODO" marks where to wire a real backend). */
+/* 90-forms.js: validates contact forms, then posts them to the endpoint in
+   data-endpoint (Web3Forms), which emails the submission to the sales inbox. */
 (function (STC) {
   'use strict';
 
@@ -7,7 +7,7 @@
     STC.util.$$('form[data-validate]').forEach(function (form) {
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-        if (validate(form)) showSuccess(form);
+        if (validate(form)) send(form);
       });
     });
   }
@@ -33,15 +33,49 @@
     return valid;
   }
 
-  function showSuccess(form) {
-    var success = form.querySelector('[data-success]') || document.createElement('div');
-    success.setAttribute('data-success', '');
-    success.className = 'form__success';
-    success.textContent = 'Thanks, your request has been recorded. A solutions engineer will be in touch shortly.';
-    form.reset();
-    var first = form.firstElementChild;
-    if (first) form.insertBefore(success, first);
-    else form.appendChild(success);
+  function send(form) {
+    var button = form.querySelector('[type="submit"]');
+    var label = button ? button.textContent : '';
+    var key = form.elements.access_key && form.elements.access_key.value;
+    if (!key) {
+      notice(form, 'error', 'Our form is being set up. Please email us directly and we will get back to you within one business day.');
+      return;
+    }
+    if (button) { button.disabled = true; button.textContent = 'Sending…'; }
+
+    fetch(form.getAttribute('data-endpoint'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(form))),
+    })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return r.ok && d.success !== false; }); })
+      .catch(function () { return false; })
+      .then(function (ok) {
+        if (button) { button.disabled = false; button.textContent = label; }
+        if (ok) {
+          form.reset();
+          notice(form, 'success', 'Thanks, your request is in. A member of our team will be in touch within one business day.');
+        } else {
+          notice(form, 'error', 'Sorry, your request could not be sent. Please try again, or email us directly.');
+        }
+      });
+  }
+
+  function notice(form, kind, text) {
+    var box = form.querySelector('[data-form-notice]') || document.createElement('div');
+    box.setAttribute('data-form-notice', '');
+    box.setAttribute('role', kind === 'error' ? 'alert' : 'status');
+    box.className = kind === 'error' ? 'form__error' : 'form__success';
+    box.textContent = text;
+    var email = form.getAttribute('data-email');
+    if (kind === 'error' && email) {
+      var a = document.createElement('a');
+      a.href = 'mailto:' + email;
+      a.textContent = ' ' + email;
+      box.appendChild(a);
+    }
+    if (!box.parentNode) form.insertBefore(box, form.firstElementChild);
+    box.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   }
 
   STC.forms = { init: init };

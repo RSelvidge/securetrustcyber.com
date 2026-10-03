@@ -19,8 +19,13 @@ export const SITE = {
   // Address is placeholder copy — replace before going live.
   address: 'Replace with your registered address',
   vat: 'VAT: replace',
-  email: 'hello@securetrustcyber.com',
+  email: 'info@securetrust.io',
   phone: 'Replace with your phone number',
+
+  // Contact Sales form delivery (Web3Forms). The key decides which inbox
+  // receives submissions; it is public by design, so it is safe to commit.
+  // Get one at https://web3forms.com with the address that should receive leads.
+  formAccessKey: '17809f52-ff64-4454-bc6d-c7d3de0dc9bb',
 
   socials: [
     { name: 'LinkedIn', href: 'https://www.linkedin.com/', icon: 'linkedin' },

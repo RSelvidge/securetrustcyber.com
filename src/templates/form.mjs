@@ -1,5 +1,5 @@
-// src/templates/form.mjs — contact form pages. Front-end validation only;
-// data-endpoint="TODO" marks where to wire a real backend.
+// src/templates/form.mjs: contact form pages. Submissions go to Web3Forms
+// (data-endpoint), which emails them to the inbox tied to SITE.formAccessKey.
 
 import { html } from '../lib/html.mjs';
 import { breadcrumbs } from '../components/breadcrumbs.mjs';
@@ -15,7 +15,11 @@ export default function form(ctx, page) {
           <h1 class="section__title">${page.title}</h1>
           <p class="section__intro" style="margin-top:var(--space-m)">${page.intro}</p>
         </div>
-        <form class="form" data-validate data-endpoint="TODO" novalidate>
+        <form class="form" data-validate data-endpoint="https://api.web3forms.com/submit" data-email="${ctx.site.email}" novalidate>
+          <input type="hidden" name="access_key" value="${ctx.site.formAccessKey ?? ''}">
+          <input type="hidden" name="subject" value="New ${page.title} request from ${ctx.site.origin.replace(/^https?:\/\//, '')}">
+          <input type="hidden" name="from_name" value="${ctx.site.name} website">
+          <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="field">
             <label class="field__label" for="f-name">Full name</label>
             <input class="field__input" id="f-name" name="name" type="text" required autocomplete="name">
