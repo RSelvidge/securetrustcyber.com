@@ -6,7 +6,7 @@ import { icon } from '../../lib/icons.mjs';
 import { PAGES } from '../../site.registry.mjs';
 
 const groups = [
-  { id: 'compliance', title: 'Compliance', blurb: 'Meet NIS2, ISO 27001, HIPAA and more.', icon: 'scale' },
+  { id: 'compliance', title: 'Compliance', blurb: 'Meet HIPAA, ISO 27001 and more.', icon: 'scale' },
   { id: 'industries', title: 'Industries', blurb: 'Security built for your sector.', icon: 'building' },
   { id: 'competitors', title: 'Compare', blurb: 'See how SecureTrust Cyber stacks up.', icon: 'x' },
   { id: 'integrations', title: 'Integrations', blurb: 'Connect to the tools you run.', icon: 'bolt' },

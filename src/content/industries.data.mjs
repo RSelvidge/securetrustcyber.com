@@ -46,7 +46,7 @@ export const INDUSTRIES = [
     headline: 'Security that keeps care running',
     sub: 'Protect patient data and clinical systems from ransomware and breaches, while meeting HIPAA obligations.',
     meta: 'Healthcare cybersecurity that protects patient data and clinical systems from ransomware while meeting HIPAA.',
-    chips: ['HIPAA', 'HITECH', 'NIS2'],
+    chips: ['HIPAA', 'HITECH'],
     threatIntro: 'Healthcare is a prime target: attackers know a hospital cannot afford downtime, and patient data is valuable.',
     threats: [
       { title: 'Ransomware against care', body: 'Attacks encrypt clinical systems and force hospitals to divert patients. Inline intrusion prevention stops ransomware before it spreads.', image: { src: 'img/healthcare-ransomware.png', alt: 'Healthcare staff beside a laptop displaying a ransomware lock symbol', width: 646, height: 382 } },
@@ -115,7 +115,7 @@ export const INDUSTRIES = [
     headline: 'Keep the line running',
     sub: 'Protect OT and IT together so a cyber incident never stops production.',
     meta: 'Manufacturing cybersecurity that protects OT and IT together so production never stops.',
-    chips: ['IEC 62443', 'NIS2'],
+    chips: ['IEC 62443'],
     threatIntro: 'Manufacturing runs on a mix of legacy OT and modern IT, and downtime costs millions per hour.',
     threats: [
       { title: 'OT/IT convergence', body: 'Industrial control systems are increasingly networked, exposing them to IT-borne attacks. Segmentation and firewall controls contain the risk.' },
@@ -145,14 +145,14 @@ export const INDUSTRIES = [
     headline: 'Defend critical national infrastructure',
     sub: 'Protect the systems that power everything else, from grid to generation.',
     meta: 'Cybersecurity for energy and utilities that protects critical national infrastructure from attack.',
-    chips: ['NIS2', 'NERC CIP', 'CIS Controls'],
+    chips: ['NERC CIP', 'CIS Controls'],
     threatIntro: 'Energy is a top target for nation-state actors, where an incident can cascade beyond the organization.',
     threats: [
       { title: 'Nation-state attacks', body: 'Sophisticated, persistent adversaries target the grid. AI/ML detection and continuous monitoring are essential.' },
       { title: 'Legacy SCADA', body: 'Operational systems outlive their support windows. Segmentation and access control compensate for the gap.' },
       { title: 'Supply-chain compromise', body: 'Vendors with access to OT are a path in. Least-privilege access governs that access.' },
     ],
-    controlHeading: 'NERC CIP and NIS2 alignment',
+    controlHeading: 'NERC CIP alignment',
     controlMap: [
       { requirement: 'NERC CIP-005: Electronic security perimeter', answer: 'Microsegmentation creates a defensible boundary around critical assets.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
       { requirement: 'NERC CIP-007: System security management', answer: 'Automated patching and configuration assessment keep systems current.', href: 'products/patch-management', product: 'Managed Patch Management' },
@@ -163,7 +163,7 @@ export const INDUSTRIES = [
       { icon: 'shield', title: 'Grid resilience', body: 'Keep critical systems running under attack.' },
       { icon: 'radar', title: 'Adversary visibility', body: 'Spot nation-state activity early.' },
       { icon: 'key', title: 'Controlled access', body: 'Govern who touches OT.' },
-      { icon: 'scale', title: 'Compliance', body: 'NERC CIP and NIS2 evidence.' },
+      { icon: 'scale', title: 'Compliance', body: 'NERC CIP evidence.' },
     ],
     faq: [
       { q: 'Can it protect air-gapped OT?', a: 'Yes. Segmentation and access control secure even isolated operational networks.' },
@@ -175,7 +175,7 @@ export const INDUSTRIES = [
     headline: 'Security for the public sector',
     sub: 'Protect citizen data and public services against well-resourced adversaries.',
     meta: 'Government cybersecurity that protects citizen data and public services against sophisticated threats.',
-    chips: ['NIS2', 'CIS Controls', 'ISO 27001'],
+    chips: ['CIS Controls', 'ISO 27001'],
     threatIntro: 'Public sector bodies hold sensitive citizen data and face both criminal and state-sponsored threats.',
     threats: [
       { title: 'Citizen data at risk', body: 'Breaches of public records erode trust. DLP and access control protect the data.' },
@@ -295,7 +295,7 @@ export const INDUSTRIES = [
     headline: 'Resilience for systems that cannot fail',
     sub: 'Defense in depth for the sectors where an outage has national consequences.',
     meta: 'Cybersecurity for critical infrastructure where an outage has national consequences.',
-    chips: ['NIS2', 'NERC CIP', 'ISA/IEC 62443'],
+    chips: ['NERC CIP', 'ISA/IEC 62443'],
     threatIntro: 'Critical infrastructure faces the most capable adversaries and the highest-stakes consequences.',
     threats: [
       { title: 'Nation-state campaigns', body: 'Persistent, well-resourced attackers probe these networks daily. AI/ML detection and monitoring are essential.' },
@@ -304,7 +304,6 @@ export const INDUSTRIES = [
     ],
     controlHeading: 'Sector-specific frameworks',
     controlMap: [
-      { requirement: 'NIS2: Risk management measures', answer: 'Continuous visibility and patching form the core of a defensible risk program.', href: 'products/patch-management', product: 'Managed Patch Management' },
       { requirement: 'ISA/IEC 62443: Zones & conduits', answer: 'Microsegmentation enforces zones and conduits across OT.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
       { requirement: 'NERC CIP: Access management', answer: 'Least-privilege access governs who touches critical systems.', href: 'products/ztna', product: 'Universal ZTNA' },
     ],
@@ -313,7 +312,7 @@ export const INDUSTRIES = [
       { icon: 'shield', title: 'Contained blasts', body: 'Limit the damage of any breach.' },
       { icon: 'radar', title: 'Adversary awareness', body: 'See sophisticated activity early.' },
       { icon: 'key', title: 'Governed access', body: 'Control every privileged action.' },
-      { icon: 'scale', title: 'Regulatory alignment', body: 'NIS2, NERC CIP, IEC 62443.' },
+      { icon: 'scale', title: 'Regulatory alignment', body: 'NERC CIP, IEC 62443.' },
     ],
     faq: [
       { q: 'Can it secure air-gapped and legacy OT?', a: 'Yes, through segmentation and access control.' },

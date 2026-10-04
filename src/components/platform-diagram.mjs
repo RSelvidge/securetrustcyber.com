@@ -9,7 +9,7 @@ const OPERATIONS = [
   ['products/siem', 'SIEM Platform', '24x7 detection, investigation and compliance reporting'],
   ['products/patch-management', 'Managed Patch Management', 'Automated, technician-backed remediation'],
 ];
-const COMPLIANCE = ['HIPAA', 'PCI DSS', 'ISO 27001', 'NIST CSF', 'CIS Controls', 'SOC 2', 'CMMC', 'FFIEC', 'NIS2', 'GDPR'];
+const COMPLIANCE = ['HIPAA', 'PCI DSS', 'ISO 27001', 'NIST CSF', 'CIS Controls', 'SOC 2', 'CMMC', 'FFIEC', 'GDPR'];
 
 export function platformDiagram(ctx, opts = {}) {
   const { heading = 'One platform. Every surface.', light = true, scene = '', intro } = opts;

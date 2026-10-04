@@ -24,7 +24,7 @@ export default {
     introText: 'Firewall-as-a-Service, IPS, DNS Security, SWG, ZTNA, CASB, DLP, AI Security, SIEM and managed patch, delivered from one cloud.',
     introCards: [
       { icon: 'layers', title: 'Converged cloud security', body: 'Network, web, zero trust, cloud, data and AI security in one platform, no appliance sprawl.', href: 'products' },
-      { icon: 'scale', title: 'Built for compliance', body: 'Native control maps for NIS2, CIS Controls, ISO 27001, HIPAA and DORA.', href: 'compliance/nis2' },
+      { icon: 'scale', title: 'Built for compliance', body: 'Native control maps for HIPAA, ISO 27001, CIS Controls and DORA.', href: 'compliance/hipaa' },
       { icon: 'grid', title: 'Consolidate tools. Eliminate gaps.', body: 'Replace VPN, firewalls, SWG, CASB and DLP point products with a single platform.', href: 'solutions' },
     ],
 

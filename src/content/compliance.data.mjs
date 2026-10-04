@@ -30,30 +30,6 @@ const buildCompliance = (c) => ({
 
 export const COMPLIANCE = [
   buildCompliance({
-    slug: 'nis2', title: 'NIS2', heroVariant: 'compact',
-    sub: 'Meet the EU network and information security directive with risk management, supply-chain security and fast incident reporting.',
-    meta: 'Meet NIS2 requirements for risk management, supply-chain security and incident reporting with SecureTrust Cyber.',
-    chips: ['EU Directive 2022/2555'],
-    summary: 'NIS2 broadens cybersecurity obligations to essential and important entities across many sectors. It demands a risk-based approach to security, supply-chain assurance, and incident notification within 24 hours of awareness, with management held directly accountable.',
-    controlMap: [
-      { requirement: 'Risk-management measures (Art. 21)', answer: 'Continuous vulnerability and configuration visibility, plus automated patching, underpin a defensible risk program.', href: 'products/patch-management', product: 'Managed Patch Management' },
-      { requirement: 'Network & information security policies (Art. 21)', answer: 'A centralized firewall and segmentation policy enforces consistent security across sites and clouds.', href: 'products/fwaas', product: 'Firewall-as-a-Service' },
-      { requirement: 'Supply-chain security (Art. 21.2.d)', answer: 'Least-privilege access governs how vendors and third parties reach private resources.', href: 'products/ztna', product: 'Universal ZTNA' },
-      { requirement: '24-hour early warning (Art. 23)', answer: 'Real-time log analysis and threat detection produce the signal you need to notify within the deadline.', href: 'products/siem', product: 'SIEM Platform' },
-    ],
-    evidence: [
-      { title: 'Continuous visibility', body: 'A live view of traffic, assets, vulnerabilities and configurations.' },
-      { title: 'Incident timelines', body: 'Correlated security events that reconstruct any incident for reporting.' },
-      { title: 'Access evidence', body: 'Zero-trust policy and posture data showing who accessed what.' },
-      { title: 'Patch coverage reports', body: 'Proof that your estate is current and maintained.' },
-    ],
-    faq: [
-      { q: 'Is my organization in scope for NIS2?', a: 'NIS2 covers essential and important entities across energy, transport, health, digital infrastructure and more. If in doubt, assume you are in scope and check the thresholds.' },
-      { q: 'Does SecureTrust Cyber cover all NIS2 requirements?', a: 'It provides the technical controls and evidence for most; governance and policy remain your responsibility.' },
-    ],
-  }),
-
-  buildCompliance({
     slug: 'iso-27001', title: 'ISO 27001', heroVariant: 'centered',
     sub: 'Build and prove an information security management system with controls that map to Annex A.',
     meta: 'Build and prove an ISO 27001 information security management system with controls mapped to Annex A.',
@@ -81,7 +57,7 @@ export const COMPLIANCE = [
     sub: 'Align to the 18 CIS Critical Security Controls with safeguards that map directly to platform capabilities.',
     meta: 'Align to the 18 CIS Critical Security Controls with safeguards mapped to SecureTrust Cyber capabilities.',
     chips: ['CIS v8'],
-    summary: 'The CIS Controls are a prioritized set of 18 safeguards that defend against the most common attacks. They are the practical backbone of most security programs and map well onto ISO 27001 and NIS2.',
+    summary: 'The CIS Controls are a prioritized set of 18 safeguards that defend against the most common attacks. They are the practical backbone of most security programs and map well onto ISO 27001.',
     controlMap: [
       { requirement: 'Control 1: Inventory of enterprise assets', answer: 'Endpoint software and asset inventory, correlated with threat intelligence.', href: 'products/siem', product: 'SIEM Platform' },
       { requirement: 'Control 7: Continuous vulnerability management', answer: 'Automated patching with CVE/CVSS risk-based prioritization.', href: 'products/patch-management', product: 'Managed Patch Management' },

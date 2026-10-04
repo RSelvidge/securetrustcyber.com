@@ -78,11 +78,6 @@ export const PAGES = [
   }),
 
   // — Compliance (col 0)
-  page('compliance/nis2', 'NIS2', {
-    group: 'compliance', order: 0, icon: 'scale',
-    blurb: 'Meet the EU network-security directive.',
-    mega: { menu: 'solutions', col: 0 }, footer: 'solutions',
-  }),
   page('compliance/iso-27001', 'ISO 27001', {
     group: 'compliance', order: 1, icon: 'scale',
     blurb: 'Build and prove an ISMS.',
