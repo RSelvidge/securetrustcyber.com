@@ -34,7 +34,7 @@ const buildProduct = (p) => ({
     })),
   },
   howItWorks: p.steps ? { heading: 'How it works', steps: p.steps } : undefined,
-  platform: p.platform === false ? undefined : {},
+  platform: p.platform === false ? undefined : (p.platform ?? {}),
   proof: p.proof,
   quote: p.quote,
   faq: p.faq,
@@ -44,7 +44,11 @@ const buildProduct = (p) => ({
 export const PRODUCTS = [
   /* ============ Network Security ============ */
   buildProduct({
-    slug: 'fwaas', title: 'Firewall-as-a-Service (FWaaS)', category: 'network-security', heroImage: 'img/heroes/fwaas.jpg', heroTextSide: 'right',
+    slug: 'fwaas', title: 'Firewall-as-a-Service (FWaaS)', category: 'network-security',
+    platform: {
+      scene: 'fwaas', heading: 'A firewall in every tunnel.',
+      intro: 'Every user and every device has its own tunnel, and every tunnel starts with Firewall-as-a-Service. Unwanted traffic is dropped at the edge, while legitimate traffic keeps flowing to your apps.',
+    },
     heroVariant: 'split', eyebrow: 'Network Security',
     headline: 'Cloud-delivered firewall for every user, site and network',
     sub: 'Consolidate branch, data center and LAN firewalls into one cloud-native service that inspects internet, WAN and LAN traffic with application and user context.',
@@ -78,6 +82,7 @@ export const PRODUCTS = [
 
   buildProduct({
     slug: 'ips', title: 'Intrusion Prevention System (IPS)', category: 'network-security',
+      platform: { scene: 'ips', heading: 'Exploits stopped inside every tunnel.', intro: 'Every user and every device has its own tunnel, and every tunnel is inspected by Intrusion Prevention. Exploit attempts are detected and stopped in flight, so they never reach the user or the device.' },
     heroVariant: 'diagram', eyebrow: 'Network Security',
     headline: 'Stop attacks in real time',
     sub: 'Cloud-delivered intrusion prevention that inspects internet, WAN and cloud traffic, including TLS, and blocks malicious activity inline.',
@@ -110,6 +115,7 @@ export const PRODUCTS = [
 
   buildProduct({
     slug: 'dns-security', title: 'DNS Security', category: 'network-security',
+      platform: { scene: 'dns', heading: 'Bad domains never resolve.', intro: 'Every tunnel carries its own DNS control. Requests for malicious, phishing and newly registered domains are stopped before a connection is made, while legitimate lookups resolve instantly.' },
     heroVariant: 'terminal', eyebrow: 'Network Security',
     headline: 'Secure the protocol attackers hide in',
     sub: 'Inspect DNS requests in real time, block malicious destinations before connection, and detect phishing, tunneling and crypto-mining hidden in DNS traffic.',
@@ -136,6 +142,7 @@ export const PRODUCTS = [
 
   buildProduct({
     slug: 'swg', title: 'Secure Web Gateway (SWG)', category: 'network-security',
+      platform: { scene: 'swg', heading: 'Risky websites stopped at the gateway.', intro: 'Every user and device browses through its own Secure Web Gateway. Malicious sites and downloads are blocked inline, while approved sites load normally.' },
     heroVariant: 'centered', eyebrow: 'Network Security',
     headline: 'Filter the web. Protect every user.',
     sub: 'Control web access from the cloud, block malicious destinations and enforce one consistent policy across users, devices and locations.',
@@ -163,6 +170,7 @@ export const PRODUCTS = [
   /* ============ Zero Trust & Cloud Security ============ */
   buildProduct({
     slug: 'ztna', title: 'Universal Zero Trust Network Access', category: 'zero-trust-cloud',
+      platform: { scene: 'ztna', heading: 'No trust, no tunnel.', intro: 'Access starts with identity and device posture. An unverified user or device is denied at the tunnel, and every verified one gets a private connection to only the apps it is allowed to use.' },
     heroVariant: 'split', eyebrow: 'Zero Trust',
     headline: 'One access policy. Every user, everywhere.',
     sub: 'Identity- and context-based least-privilege access to private resources, with continuous posture checks, and a better experience than VPN.',
@@ -195,6 +203,7 @@ export const PRODUCTS = [
 
   buildProduct({
     slug: 'casb', title: 'Cloud Access Security Broker (CASB)', category: 'zero-trust-cloud',
+    platform: { scene: 'casb', heading: 'Shadow IT stopped at the tunnel.', intro: 'Every user and device reaches cloud apps through its own tunnel, and the CASB control sees every request. Risky and unsanctioned apps are blocked, while approved apps keep working.' },
     heroVariant: 'diagram', eyebrow: 'Cloud Security',
     headline: 'See every cloud app. Govern every action.',
     sub: 'Discover sanctioned and unsanctioned cloud apps, score their risk with ML, and enforce least-privilege controls across users, devices and services.',
@@ -221,6 +230,10 @@ export const PRODUCTS = [
 
   buildProduct({
     slug: 'dlp', title: 'Data Loss Prevention (DLP)', category: 'zero-trust-cloud',
+    platform: {
+      scene: 'dlp', heading: 'Sensitive data stays where it belongs.',
+      intro: 'Every user and every device has its own tunnel, and every tunnel passes through Data Loss Prevention. When sensitive data tries to leave, it is blocked at the control, without touching anyone else\'s traffic.',
+    },
     heroVariant: 'terminal', eyebrow: 'Data Protection',
     headline: 'Protect sensitive data. Everywhere it goes.',
     sub: 'Classify sensitive data and enforce consistent protection across users, locations, private apps, SaaS, email and generative AI.',
@@ -247,6 +260,7 @@ export const PRODUCTS = [
 
   buildProduct({
     slug: 'ai-security', title: 'AI Security for End Users', category: 'zero-trust-cloud',
+    platform: { scene: 'ai', heading: 'AI use, without the data leak.', intro: 'Every tunnel carries its own AI Security control. Sensitive prompts and files are caught and redacted before they reach an AI tool, so people can use AI safely.' },
     heroVariant: 'centered', eyebrow: 'AI Security',
     headline: 'Confident AI adoption without losing control',
     sub: 'Discover shadow AI, understand AI risk, and enforce policy on prompts, responses, uploads and agent actions.',
@@ -274,6 +288,7 @@ export const PRODUCTS = [
   /* ============ Security Operations ============ */
   buildProduct({
     slug: 'siem', title: 'SIEM Platform', category: 'security-operations',
+    platform: { scene: 'siem', heading: 'Every tunnel feeds one picture.', intro: 'Each tunnel streams its events to the SIEM. Signals from many users and devices are correlated into a single attack story, so the threat is spotted and contained quickly.' },
     heroVariant: 'split', eyebrow: 'Security Operations',
     headline: 'Security log analysis, vulnerability detection and compliance in one',
     sub: 'Aggregate logs from endpoints, network and cloud, detect threats in real time, audit configurations against CIS benchmarks, and prove compliance.',
@@ -306,6 +321,7 @@ export const PRODUCTS = [
 
   buildProduct({
     slug: 'patch-management', title: 'Managed Patch Management', category: 'security-operations',
+    platform: { scene: 'patch', heading: 'Vulnerabilities closed automatically.', intro: 'Every device gets the patches it needs, delivered through its own tunnel. Vulnerabilities are closed on schedule and compliance is reported, without chasing users.' },
     heroVariant: 'diagram', eyebrow: 'Security Operations',
     headline: 'Reduce exposure. Improve patch compliance.',
     sub: 'Managed patch operations that combine centralized visibility, automated scheduling, policy control and technician oversight across your endpoints.',
