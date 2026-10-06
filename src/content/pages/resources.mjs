@@ -16,7 +16,7 @@ const solutionBriefs = {
   metaTitle: 'Solution Briefs & Data Sheets | SecureTrust Cyber',
   metaDescription: 'Download the datasheet for every SecureTrust Cyber module: capabilities, deployment and common questions.',
   blocks: [
-    (ctx) => hero(ctx, { variant: 'compact', eyebrow: 'Data sheets', headline: 'The technical detail', sub: 'A two-page datasheet for every module in the platform. Download, share with your team, or send to procurement.', primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' } }),
+    (ctx) => hero(ctx, { variant: 'compact', eyebrow: 'Data sheets', headline: 'The technical detail', sub: 'A three-page datasheet for every module in the platform. Download, share with your team, or send to procurement.', primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' } }),
     (ctx) => html`<section class="section"><div class="container">
       <div class="datasheet-grid">${join(PRODUCTS.map((p) => html`
         <article class="datasheet-card">

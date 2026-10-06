@@ -24,7 +24,7 @@ export default function product(ctx, page) {
 
     <section class="datasheet-band">
       <div class="container datasheet-band__inner">
-        <span class="datasheet-band__text">${icon('file')} <span><strong>${page.title} datasheet</strong> Two-page overview of capabilities, deployment and FAQs (PDF)</span></span>
+        <span class="datasheet-band__text">${icon('file')} <span><strong>${page.title} datasheet</strong> Three-page overview of capabilities, key challenges and FAQs (PDF)</span></span>
         <a class="btn btn--navy" href="${ctx.url.asset(datasheetPath(page.slug))}" download>${icon('download')} Download datasheet</a>
       </div>
     </section>
