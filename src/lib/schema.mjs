@@ -5,14 +5,39 @@ import { raw } from './html.mjs';
 
 const script = (obj) => raw(`<script type="application/ld+json">${JSON.stringify(obj)}</script>`);
 
+const orgId = (ctx) => `${ctx.site.origin}/#organization`;
+const pageUrl = (ctx, page) => ctx.site.origin + '/' + (page.slug ? page.slug + '.html' : '');
+
+// sameAs only takes real profile URLs; skip the bare-homepage placeholders in site.config.
+const profiles = (ctx) =>
+  ctx.site.socials.map((s) => s.href).filter((h) => new URL(h).pathname.replace(/\/$/, '') !== '');
+
 export function organization(ctx) {
+  const sameAs = profiles(ctx);
   return script({
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': orgId(ctx),
     name: ctx.site.name,
-    url: ctx.site.origin,
-    logo: `${ctx.site.origin}/assets/img/og-default.svg`,
-    sameAs: ctx.site.socials.map((s) => s.href),
+    legalName: ctx.site.legalName,
+    url: ctx.site.origin + '/',
+    description: ctx.site.description,
+    logo: { '@type': 'ImageObject', url: `${ctx.site.origin}/assets/img/og-default.svg` },
+    email: ctx.site.email,
+    contactPoint: { '@type': 'ContactPoint', contactType: 'sales', email: ctx.site.email, availableLanguage: 'English' },
+    ...(sameAs.length && { sameAs }),
+  });
+}
+
+export function webSite(ctx) {
+  return script({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${ctx.site.origin}/#website`,
+    url: ctx.site.origin + '/',
+    name: ctx.site.name,
+    inLanguage: 'en',
+    publisher: { '@id': orgId(ctx) },
   });
 }
 
@@ -45,8 +70,12 @@ export function webPage(ctx, page) {
   return script({
     '@context': 'https://schema.org',
     '@type': 'WebPage',
+    '@id': pageUrl(ctx, page) + '#webpage',
     name: page.title,
     description: page.metaDescription,
-    url: ctx.site.origin + '/' + (page.slug ? page.slug + '.html' : ''),
+    url: pageUrl(ctx, page),
+    inLanguage: 'en',
+    isPartOf: { '@id': `${ctx.site.origin}/#website` },
+    publisher: { '@id': orgId(ctx) },
   });
 }

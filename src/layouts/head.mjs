@@ -1,7 +1,7 @@
 // src/layouts/head.mjs — document <head>: meta, OG, canonical, JSON-LD, css, no-js switch.
 
 import { html, raw } from '../lib/html.mjs';
-import { organization, webPage } from '../lib/schema.mjs';
+import { organization, webPage, webSite } from '../lib/schema.mjs';
 
 export const head = (ctx, page) => html`
 <meta charset="utf-8">
@@ -25,6 +25,7 @@ ${page.noindex ? raw('<meta name="robots" content="noindex">') : ''}
 <link rel="stylesheet" href="${ctx.url.asset('css/style.css')}">
 <script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
 ${organization(ctx)}
+${ctx.slug === '' ? webSite(ctx) : ''}
 ${webPage(ctx, page)}
 ${page.jsonLd ?? ''}
 `;
