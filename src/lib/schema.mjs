@@ -22,7 +22,7 @@ export function organization(ctx) {
     legalName: ctx.site.legalName,
     url: ctx.site.origin + '/',
     description: ctx.site.description,
-    logo: { '@type': 'ImageObject', url: `${ctx.site.origin}/assets/img/og-default.svg` },
+    logo: { '@type': 'ImageObject', url: `${ctx.site.origin}/assets/img/logo.png` },
     email: ctx.site.email,
     contactPoint: { '@type': 'ContactPoint', contactType: 'sales', email: ctx.site.email, availableLanguage: 'English' },
     ...(sameAs.length && { sameAs }),
