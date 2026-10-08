@@ -704,3 +704,56 @@
 @keyframes scene-fall { 0% { transform: translateY(0); opacity: 0; } 12% { opacity: 1; } 80% { opacity: 1; } 100% { transform: translateY(var(--fall)); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .scene__pkt, .scene__fall { animation: none; } }
 
+
+/* ---------- product stack (home) — sticky cards that pile up as you scroll ---------- */
+.product-stack__list {
+  --peek: 0.75rem;
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: var(--space-xl);
+  view-timeline-name: --product-stack;
+}
+.product-stack__item {
+  position: sticky;
+  top: calc(7rem + var(--i) * var(--peek));
+}
+.product-stack__card {
+  display: grid; grid-template-columns: 5fr 7fr; align-items: center; gap: var(--space-xl);
+  height: min(32rem, calc(100svh - 9rem - var(--count) * var(--peek)));
+  padding: var(--space-xl);
+  background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-l);
+  box-shadow: var(--shadow-3);
+  overflow: hidden;
+  transform-origin: top center;
+}
+.product-stack__body { display: grid; gap: var(--space-s); align-content: center; }
+.product-stack__body h3 { font-size: var(--step-2); }
+.product-stack__body > p:not(.eyebrow) { color: var(--color-text-muted); }
+.product-stack__num {
+  display: inline-grid; place-items: center; min-width: 2rem; padding: 0.125rem 0.5rem;
+  border-radius: var(--radius-pill); background: var(--navy-800); color: var(--white);
+}
+.product-stack__bullets { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2xs); }
+.product-stack__bullets li { display: flex; gap: var(--space-2xs); align-items: center; }
+.product-stack__bullets svg { width: 18px; height: 18px; color: var(--color-link); flex: none; }
+.product-stack__media { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-m); }
+
+/* Each card shrinks back as the next one covers it (SentinelOne's range trick). */
+@supports (animation-timeline: view()) {
+  .product-stack__item:not(:last-child) .product-stack__card {
+    animation: product-stack-shrink linear both;
+    animation-timeline: --product-stack;
+    animation-range: exit-crossing calc(var(--i) / var(--count) * 100%) exit-crossing calc((var(--i) + 1) / var(--count) * 100%);
+  }
+}
+@keyframes product-stack-shrink { to { transform: scale(calc(1 - (var(--count) - var(--i)) * 0.02)); filter: brightness(.94); } }
+@media (prefers-reduced-motion: reduce) { .product-stack__card { animation: none !important; } }
+
+@media (max-width: 60rem) {
+  .product-stack__card {
+    grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); align-items: start;
+    height: calc(100svh - 7rem - var(--count) * var(--peek));
+    padding: var(--space-m); gap: var(--space-m);
+  }
+  .product-stack__body > p:not(.eyebrow) { display: none; }
+  .product-stack__item { top: calc(5.5rem + var(--i) * var(--peek)); }
+}

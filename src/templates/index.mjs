@@ -14,15 +14,10 @@ import { dualCta } from '../components/dual-cta.mjs';
 import { icon } from '../lib/icons.mjs';
 import { PAGES } from '../site.registry.mjs';
 import { POSTS } from '../content/posts.data.mjs';
+import { PRODUCTS } from '../content/products.data.mjs';
 
 export default function index(ctx, page) {
   const d = page.data ?? {};
-
-  // Product cards: derive from the registry (all real capabilities, in order).
-  const productCards = PAGES
-    .filter((p) => p.group === 'products' && p.category)
-    .sort((a, b) => a.order - b.order)
-    .slice(0, 9);
 
   // Industry stories: first three industries.
   const industries = PAGES
@@ -49,7 +44,7 @@ export default function index(ctx, page) {
 
     ${twoPath(ctx, d)}
 
-    ${productCarousel(ctx, productCards)}
+    ${productStack(ctx, PRODUCTS)}
 
     ${statRow(ctx, { variant: 'inverse', eyebrow: 'At global scale', stats: d.stats ?? [] })}
 
@@ -81,22 +76,35 @@ function twoPath(ctx, d) {
   </section>`;
 }
 
-function productCarousel(ctx, products) {
-  return html`<section class="section">
+// Stacked product cards: each card sticks under the header and the next one
+// slides over it (pattern from SentinelOne's "immersive features").
+// ponytail: CSS-only; browsers without scroll timelines get the stack, not the shrink.
+function productStack(ctx, products) {
+  return html`<section class="section section--muted product-stack">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head section-head--center">
         <p class="eyebrow">The platform</p>
         <h2 class="section__title">Industry-leading solutions from one platform</h2>
       </div>
-      <div class="grid grid--3">
-        ${join(products.map((p) => html`
-          <a class="post-card" href="${ctx.url(p.slug)}">
-            <span class="feature-card__icon" style="color:var(--color-link)">${icon(p.icon)}</span>
-            <h3>${p.title}</h3>
-            <p class="post-card__dek">${p.blurb}</p>
-            <span class="feature-card__link" style="margin-top:0">Explore solution ${icon('arrowRight')}</span>
-          </a>`))}
-      </div>
+      <ol class="product-stack__list" style="--count:${products.length}">
+        ${join(products.map((p, i) => {
+          const img = p.capabilities.items[0]?.image;
+          return html`<li class="product-stack__item" style="--i:${i}">
+            <article class="product-stack__card">
+              <div class="product-stack__body">
+                <p class="eyebrow"><span class="product-stack__num">${String(i + 1).padStart(2, '0')}</span> ${p.title}</p>
+                <h3>${p.hero.headline}</h3>
+                <p>${p.hero.sub}</p>
+                <ul class="product-stack__bullets">
+                  ${join(p.capabilities.items.map((c) => html`<li>${icon('check')} ${c.title}</li>`))}
+                </ul>
+                <a class="feature-card__link" href="${ctx.url(p.slug)}">Explore ${p.title} ${icon('arrowRight')}</a>
+              </div>
+              ${img ? html`<img class="product-stack__media" src="${ctx.url.asset(img.src)}" alt="${img.alt}" width="${img.width}" height="${img.height}" loading="lazy" decoding="async">` : ''}
+            </article>
+          </li>`;
+        }))}
+      </ol>
     </div>
   </section>`;
 }
