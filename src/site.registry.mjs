@@ -338,6 +338,9 @@ export const PAGES = [
   page('pricing', 'Pricing & Bundles', {
     group: 'core', order: 0, icon: 'chart', footer: 'company',
   }),
+  page('clinicproof', 'ClinicProof for Dental Practices', {
+    group: 'core', order: 2, icon: 'shield',
+  }),
   page('talk-to-an-expert', 'Talk to an Expert', {
     group: 'core', order: 1, icon: 'play', footer: 'company',
   }),
