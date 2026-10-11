@@ -2,28 +2,55 @@
 // Not in the mega-menu: a campaign/landing page reached by direct link.
 // Copy deliberately avoids claiming HIPAA compliance, metrics or customers.
 
-import { hero } from '../../components/hero.mjs';
+import { html, join } from '../../lib/html.mjs';
+import { icon } from '../../lib/icons.mjs';
 import { featureGrid } from '../../components/feature-grid.mjs';
 import { timeline } from '../../components/timeline.mjs';
 import { faq } from '../../components/faq.mjs';
 
+
+// Illustrative check-up card shown in the hero; the rows are an example, not customer data.
+const CHECKUP = [
+  ['Workstation screens lock automatically', 'Verified', true],
+  ['Business associate agreements on file', 'Verified', true],
+  ['Staff access reviewed this quarter', 'Needs attention', false],
+  ['Backup restore tested', 'Verified', true],
+];
+
+const heroBlock = (ctx) => html`<section class="hero hero--split">
+  <div class="container hero__inner">
+    <div>
+      <p class="eyebrow hero__eyebrow">ClinicProof for dental practices</p>
+      <h1 class="hero__title">Know your controls work, not just that they exist</h1>
+      <p class="hero__sub">ClinicProof checks the safeguards your practice depends on, week after week, and keeps the proof organized so a HIPAA review never catches you guessing.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary btn--lg"${ctx.linkAttrs('talk-to-an-expert')} href="${ctx.url('talk-to-an-expert')}">Talk to an Expert ${icon('arrowRight')}</a>
+        <a class="btn btn--outline-inverse btn--lg"${ctx.linkAttrs('products')} href="${ctx.url('products')}">See the platform</a>
+      </div>
+      <div class="hero__chips">${join(['Small independent practices', 'HIPAA Security Rule', 'No IT team required'].map((c) => html`<span class="chip">${c}</span>`))}</div>
+    </div>
+    <div class="hero__media">
+      <div class="cp-card" role="group" aria-label="Example practice check-up">
+        <div class="cp-card__head">
+          <div><p class="cp-card__title">Practice check-up</p><p class="cp-card__sub">Illustrative example</p></div>
+          <span class="cp-card__badge">${icon('shield')}</span>
+        </div>
+        <ul class="cp-card__rows">${join(CHECKUP.map(([label, status, ok]) => html`<li class="cp-row${ok ? '' : ' cp-row--warn'}"><span>${label}</span><span class="cp-pill">${status}</span></li>`))}</ul>
+        <p class="cp-card__foot">Every result is dated and saved as evidence</p>
+      </div>
+    </div>
+  </div>
+</section>`;
+
 export default {
   slug: 'clinicproof',
   type: 'page',
+  bodyClass: 'page--clinicproof', // scopes the teal theme in css/08-clinicproof.css
   title: 'ClinicProof for Dental Practices',
   metaTitle: 'ClinicProof: Continuous HIPAA Control Verification for Dental Practices',
   metaDescription: 'ClinicProof continuously checks the security controls your dental practice relies on and keeps the evidence ready for a HIPAA review.',
   blocks: [
-    (ctx) => hero(ctx, {
-      variant: 'split',
-      eyebrow: 'ClinicProof for dental practices',
-      headline: 'Know your controls work, not just that they exist',
-      sub: 'ClinicProof checks the safeguards your practice depends on, week after week, and keeps the proof organized so a HIPAA review never catches you guessing.',
-      primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' },
-      secondary: { label: 'See the platform', href: 'products' },
-      media: 'ClinicProof',
-      chips: ['Small independent practices', 'HIPAA Security Rule', 'No IT team required'],
-    }),
+    heroBlock,
 
     (ctx) => featureGrid(ctx, {
       eyebrow: 'The problem',

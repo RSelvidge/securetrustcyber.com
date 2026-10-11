@@ -9,7 +9,7 @@ import { footer } from './partials/footer.mjs';
 export const base = (ctx, page, body) => html`<!doctype html>
 <html lang="en" class="no-js" data-page="${ctx.slug || 'home'}" data-type="${page.type}">
 <head>${head(ctx, page)}</head>
-<body class="page page--${page.type}">
+<body class="page page--${page.type}${page.bodyClass ? ' ' + page.bodyClass : ''}">
   <a class="skip-link" href="#main">Skip to main content</a>
   ${header(ctx)}
   ${mobileDrawer(ctx)}
