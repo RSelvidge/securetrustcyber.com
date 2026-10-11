@@ -54,3 +54,12 @@
 .cp-row--warn { background: #FFF4E5; }
 .cp-row--warn .cp-pill { background: #FFE2B8; color: #7A3E00; }
 .cp-card__foot { margin: var(--space-s) 0 0; font-size: var(--step--1); color: #35525F; }
+
+/* brighter teal for the dark bands, and a teal header to match */
+.page--clinicproof .site-header,
+.page--clinicproof .site-header.is-stuck { background: #0B5C56; }
+.page--clinicproof .utility-bar { background: #08413D; }
+.page--clinicproof .hero { background: linear-gradient(165deg, #0F766E 0%, #0B5C56 100%); }
+.page--clinicproof .hero__sub { color: rgba(255,255,255,.9); }
+.page--clinicproof .chip { color: rgba(255,255,255,.92); }
+.page--clinicproof .dual-cta { background: linear-gradient(160deg, #0F766E, #0B5C56); }
