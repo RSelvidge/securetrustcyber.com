@@ -63,3 +63,8 @@
 .page--clinicproof .hero__sub { color: rgba(255,255,255,.9); }
 .page--clinicproof .chip { color: rgba(255,255,255,.92); }
 .page--clinicproof .dual-cta { background: linear-gradient(160deg, #0F766E, #0B5C56); }
+
+/* announcement-style product name above the headline */
+.page--clinicproof .cp-announce { display: block; font-family: var(--font-display); font-weight: 700; font-size: var(--step-6); line-height: 1; letter-spacing: -0.03em; text-transform: none; color: #fff; margin: 0 0 var(--space-s); }
+.page--clinicproof .hero__eyebrow.cp-announce > span { display: block !important; width: auto; max-width: none; margin-top: .35em; font-size: var(--step-2); letter-spacing: 0; color: #7FD6CB; }
+.page--clinicproof .hero__title { font-size: var(--step-3); }

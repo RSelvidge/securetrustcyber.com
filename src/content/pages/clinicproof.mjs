@@ -20,7 +20,7 @@ const CHECKUP = [
 const heroBlock = (ctx) => html`<section class="hero hero--split">
   <div class="container hero__inner">
     <div>
-      <p class="eyebrow hero__eyebrow">ClinicProof for dental practices</p>
+      <p class="eyebrow hero__eyebrow cp-announce">ClinicProof <span>for dental practices</span></p>
       <h1 class="hero__title">Know your controls work, not just that they exist</h1>
       <p class="hero__sub">ClinicProof checks the safeguards your practice depends on, week after week, and keeps the proof organized so a HIPAA review never catches you guessing.</p>
       <div class="hero__actions">
