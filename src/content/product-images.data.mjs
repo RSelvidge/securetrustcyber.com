@@ -1,4 +1,6 @@
-// Capability photography. Sources and license records: docs/product-image-sources.json.
+// Capability visuals. Photo sources: docs/product-image-sources.json.
+// FWaaS generated artwork and prompts: docs/fwaas-image-prompts.md.
+// CASB generated artwork and prompts: docs/casb-image-prompts.md.
 // IPS keeps the three images supplied and approved by the site owner.
 const images = (slug, descriptions) => descriptions.map((alt, index) => ({
   src: `img/products/${slug}-${index + 1}.jpg`,
@@ -8,11 +10,11 @@ const images = (slug, descriptions) => descriptions.map((alt, index) => ({
 }));
 
 export const PRODUCT_IMAGES = {
-  fwaas: images('fwaas', [
-    'Network cables and server racks in a data center',
-    'Separate blue network cables connected to a switch',
-    'IT professional using a laptop beside server racks',
-  ]),
+  fwaas: [
+    { src: 'img/products/fwaas-inspection-v2.webp', alt: 'Illustration of office, laptop and cloud traffic passing through an inspection gateway, with harmful packets blocked', width: 1400, height: 788 },
+    { src: 'img/products/fwaas-microsegmentation-v2.webp', alt: 'Illustration of isolated user, application and database zones with controlled connections and a blocked lateral path', width: 1400, height: 788 },
+    { src: 'img/products/fwaas-centralized-policy-v2.webp', alt: 'Illustration of a central policy hub distributing consistent rules to an office, remote laptop, servers and cloud workloads', width: 1400, height: 788 },
+  ],
   'dns-security': images('dns-security', [
     'Padlock on a keyboard under red and green light',
     'Blue network cables connected to a router and switch',
@@ -28,11 +30,11 @@ export const PRODUCT_IMAGES = {
     'Laptop and smartphone on a wooden work desk',
     'Remote worker accessing a laptop from home',
   ]),
-  casb: images('casb', [
-    'Aisle of equipment racks in a data center',
-    'Person reviewing charts and data on a tablet',
-    'Padlock surrounded by computer keyboard keys',
-  ]),
+  casb: [
+    { src: 'img/products/casb-app-visibility-v2.webp', alt: 'Illustration of a scan revealing cloud applications connected to a laptop, including previously hidden apps', width: 1400, height: 788 },
+    { src: 'img/products/casb-risk-scoring-v2.webp', alt: 'Illustration of an analysis core assessing cloud applications with distinct low, medium and high risk gauges', width: 1400, height: 788 },
+    { src: 'img/products/casb-tenant-controls-v2.webp', alt: 'Illustration of identity-based policy allowing limited access to an approved cloud tenant and blocking an unsanctioned tenant', width: 1400, height: 788 },
+  ],
   dlp: images('dlp', [
     'Organized rows of labeled document binders',
     'Stacks of paper documents and file folders',
