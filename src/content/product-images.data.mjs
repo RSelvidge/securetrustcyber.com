@@ -2,6 +2,7 @@
 // FWaaS generated artwork and prompts: docs/fwaas-image-prompts.md.
 // CASB generated artwork and prompts: docs/casb-image-prompts.md.
 // DLP generated artwork and prompts: docs/dlp-image-prompts.md.
+// SIEM generated artwork and prompts: docs/siem-image-prompts.md.
 // IPS keeps the three images supplied and approved by the site owner.
 const images = (slug, descriptions) => descriptions.map((alt, index) => ({
   src: `img/products/${slug}-${index + 1}.jpg`,
@@ -46,11 +47,11 @@ export const PRODUCT_IMAGES = {
     'AI chat interface displayed on a computer screen',
     'Circuit board illustration with a digital brain',
   ]),
-  siem: images('siem', [
-    'Data visualization with colorful charts and graphs',
-    'Analyst working at a desk with three monitors',
-    'Person reviewing and writing on a business report',
-  ]),
+  siem: [
+    { src: 'img/products/siem-log-analysis-v2.webp', alt: 'Illustration of endpoint, network and cloud events being correlated into an investigation chain with an alert', width: 1400, height: 788 },
+    { src: 'img/products/siem-vulnerability-detection-v2.webp', alt: 'Illustration of software inventories matched against vulnerability records and ranked into risk priorities', width: 1400, height: 788 },
+    { src: 'img/products/siem-compliance-evidence-v2.webp', alt: 'Illustration of configuration checks, including an unresolved gap, mapped to supporting audit evidence', width: 1400, height: 788 },
+  ],
   'patch-management': images('patch-management', [
     'Laptop and monitor displaying software development tools',
     'Source code displayed on a laptop screen',
