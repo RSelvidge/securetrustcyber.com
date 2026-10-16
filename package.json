@@ -7,6 +7,7 @@
   "scripts": {
     "test": "node --test",
     "build": "node build.mjs",
-    "watch": "node build.mjs --watch"
+    "watch": "node build.mjs --watch",
+    "indexnow": "node tools/indexnow.mjs"
   }
 }

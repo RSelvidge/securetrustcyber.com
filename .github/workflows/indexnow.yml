@@ -1,0 +1,61 @@
+name: Notify IndexNow after production deployment
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  checks: read
+  actions: read
+
+concurrency:
+  group: indexnow-production
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Find last successfully notified version
+        id: baseline
+        env:
+          PUSH_BEFORE: ${{ github.event.before }}
+        shell: bash
+        run: |
+          BASE_SHA=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/indexnow.yml/runs?branch=master&status=success&per_page=1" --jq '.workflow_runs[0].head_sha // empty')
+          if [ -z "$BASE_SHA" ]; then
+            BASE_SHA="$PUSH_BEFORE"
+          fi
+          if [ -z "$BASE_SHA" ] || [ "$BASE_SHA" = "0000000000000000000000000000000000000000" ]; then
+            BASE_SHA=$(git rev-parse HEAD^)
+          fi
+          git cat-file -e "$BASE_SHA^{commit}"
+          echo "sha=$BASE_SHA" >> "$GITHUB_OUTPUT"
+      - name: Build previous production version
+        env:
+          BASE_SHA: ${{ steps.baseline.outputs.sha }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/indexnow-previous"
+          git archive "$BASE_SHA" | tar -x -C "$RUNNER_TEMP/indexnow-previous"
+          cd "$RUNNER_TEMP/indexnow-previous"
+          node build.mjs
+      - name: Build and test current version
+        run: |
+          npm run build
+          npm test
+      - name: Wait for successful Cloudflare deployment
+        run: node tools/wait-cloudflare.mjs
+      - name: Notify search engines of changed URLs
+        run: npm run indexnow -- --previous "$RUNNER_TEMP/indexnow-previous/dist"
