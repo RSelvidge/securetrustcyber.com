@@ -1,6 +1,7 @@
 // Capability visuals. Photo sources: docs/product-image-sources.json.
 // FWaaS generated artwork and prompts: docs/fwaas-image-prompts.md.
 // CASB generated artwork and prompts: docs/casb-image-prompts.md.
+// DLP generated artwork and prompts: docs/dlp-image-prompts.md.
 // IPS keeps the three images supplied and approved by the site owner.
 const images = (slug, descriptions) => descriptions.map((alt, index) => ({
   src: `img/products/${slug}-${index + 1}.jpg`,
@@ -35,11 +36,11 @@ export const PRODUCT_IMAGES = {
     { src: 'img/products/casb-risk-scoring-v2.webp', alt: 'Illustration of an analysis core assessing cloud applications with distinct low, medium and high risk gauges', width: 1400, height: 788 },
     { src: 'img/products/casb-tenant-controls-v2.webp', alt: 'Illustration of identity-based policy allowing limited access to an approved cloud tenant and blocking an unsanctioned tenant', width: 1400, height: 788 },
   ],
-  dlp: images('dlp', [
-    'Organized rows of labeled document binders',
-    'Stacks of paper documents and file folders',
-    'AI lettering on a teal circuit board',
-  ]),
+  dlp: [
+    { src: 'img/products/dlp-classification-v2.webp', alt: 'Illustration of documents being scanned and classified as personal, financial and confidential business data', width: 1400, height: 788 },
+    { src: 'img/products/dlp-exact-match-ocr-v2.webp', alt: 'Illustration of sensitive regions detected in a scanned document and matched against protected reference records', width: 1400, height: 788 },
+    { src: 'img/products/dlp-ai-safeguards-v2.webp', alt: 'Illustration of a DLP gateway withholding sensitive files and redacting a prompt while approved content reaches an AI service', width: 1400, height: 788 },
+  ],
   'ai-security': images('ai-security', [
     'Connected nodes forming a digital sphere',
     'AI chat interface displayed on a computer screen',
