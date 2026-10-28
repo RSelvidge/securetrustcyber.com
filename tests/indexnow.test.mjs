@@ -38,6 +38,22 @@ test('uses sitemap URLs, excludes noindex pages, and detects changed image conte
   assert.deepEqual(changedUrls(previous, current), input.urls);
 });
 
+test('maps extensionless and directory sitemap URLs to built HTML while supporting previous sitemaps', async (t) => {
+  const directory = await mkdtemp(path.join(os.tmpdir(), 'indexnow-clean-urls-'));
+  t.after(() => rm(directory, { recursive: true, force: true }));
+  await mkdir(path.join(directory, 'resources'));
+  await writeFile(path.join(directory, 'index.html'), 'Home');
+  await writeFile(path.join(directory, 'resources/index.html'), 'Resources');
+  await writeFile(path.join(directory, 'resources/webinars.html'), 'Webinars');
+  const currentUrls = [`${origin}/`, `${origin}/resources/`, `${origin}/resources/webinars`];
+  await writeFile(path.join(directory, 'sitemap.xml'), `<urlset>${currentUrls.map(url => `<loc>${url}</loc>`).join('')}</urlset>`);
+  const current = await pageHashes(directory, origin);
+  assert.deepEqual([...current.keys()], currentUrls);
+  await writeFile(path.join(directory, 'sitemap.xml'), `<urlset><loc>${origin}/resources/webinars.html</loc></urlset>`);
+  const previous = await pageHashes(directory, origin);
+  assert.equal(previous.get(`${origin}/resources/webinars.html`), current.get(`${origin}/resources/webinars`));
+});
+
 test('verifies live ownership before submitting and distinguishes HTTP 202', async () => {
   const calls = [];
   const results = await submitUrls(input, { fetchFn: async (url, options) => {

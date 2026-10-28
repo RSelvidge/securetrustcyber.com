@@ -9,7 +9,7 @@ import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 import { raw, toString } from './src/lib/html.mjs';
-import { makeUrl } from './src/lib/url.mjs';
+import { makeUrl, publicUrl } from './src/lib/url.mjs';
 import { base } from './src/layouts/base.mjs';
 import * as validate from './src/lib/validate.mjs';
 import { SITE } from './src/site.config.mjs';
@@ -95,7 +95,7 @@ function buildSitemap(pages) {
   const urls = pages
     .filter((p) => p.sitemap !== false)
     .map((p) => {
-      const loc = p.slug === '' ? SITE.origin + '/' : `${SITE.origin}/${p.slug}.html`;
+      const loc = publicUrl(SITE.origin, p.slug);
       return `  <url><loc>${loc}</loc></url>`;
     })
     .join('\n');

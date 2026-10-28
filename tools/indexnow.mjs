@@ -24,7 +24,8 @@ export async function pageHashes(directory, origin) {
   const hashes = new Map();
   for (const url of urls) {
     const pathname = decodeURIComponent(new URL(url).pathname);
-    const file = path.resolve(directory, pathname === '/' ? 'index.html' : '.' + pathname);
+    const output = pathname.endsWith('/') ? pathname + 'index.html' : pathname.endsWith('.html') ? pathname : pathname + '.html';
+    const file = path.resolve(directory, '.' + output);
     const relative = path.relative(path.resolve(directory), file);
     if (relative.startsWith('..') || path.isAbsolute(relative) || !file.endsWith('.html')) {
       throw new Error('Sitemap URL does not map to a safe HTML file.');

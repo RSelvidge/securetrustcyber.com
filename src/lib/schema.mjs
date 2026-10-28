@@ -2,6 +2,7 @@
 // Uses ctx.site.origin for absolute URLs (read only by crawlers, harmless over file://).
 
 import { raw } from './html.mjs';
+import { publicUrl } from './url.mjs';
 
 const script = (obj) => raw(`<script type="application/ld+json">${JSON.stringify(obj)}</script>`);
 
@@ -24,7 +25,7 @@ export function breadcrumbList(ctx, crumbs) {
       '@type': 'ListItem',
       position: i + 1,
       name: c.name,
-      item: (c.slug ?? ctx.slug) ? `${ctx.site.origin}/${c.slug ?? ctx.slug}.html` : ctx.site.origin + '/',
+      item: publicUrl(ctx.site.origin, c.slug ?? ctx.slug),
     })),
   });
 }
@@ -47,6 +48,6 @@ export function webPage(ctx, page) {
     '@type': 'WebPage',
     name: page.title,
     description: page.metaDescription,
-    url: ctx.site.origin + '/' + (page.slug ? page.slug + '.html' : ''),
+    url: publicUrl(ctx.site.origin, page.slug),
   });
 }

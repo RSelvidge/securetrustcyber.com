@@ -6,6 +6,7 @@ import { PAGES as REGISTRY } from '../site.registry.mjs';
 import { SITE } from '../site.config.mjs';
 import path from 'node:path';
 import { escape } from './html.mjs';
+import { publicUrl } from './url.mjs';
 
 const EXTERNAL_DOMAINS = [
   'fonts.googleapis.com', 'fonts.gstatic.com', 'www.g2.com', 'www.capterra.com',
@@ -44,10 +45,9 @@ export function breadcrumbs(rendered) {
     if (trail.length !== items.length) fail('metadata and navigation differ');
     trail.forEach((item, i) => {
       if (item.position !== i + 1 || !items[i]?.includes(`>${escape(item.name)}<`)) fail('metadata label or position differs');
-      const slug = item.item === SITE.origin + '/' ? '' : item.item.replace(SITE.origin + '/', '').replace(/\.html$/, '');
-      if (!known.has(slug)) fail(`metadata points to missing page ${slug}`);
+      if (![...known].some((slug) => publicUrl(SITE.origin, slug) === item.item)) fail(`metadata points to missing page ${item.item}`);
     });
-    if (trail[0]?.item !== SITE.origin + '/' || trail.at(-1)?.item !== `${SITE.origin}/${page.slug}.html`) fail('metadata URL is incorrect');
+    if (trail[0]?.item !== SITE.origin + '/' || trail.at(-1)?.item !== publicUrl(SITE.origin, page.slug)) fail('metadata URL is incorrect');
   }
   return errors;
 }

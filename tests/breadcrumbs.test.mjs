@@ -45,8 +45,8 @@ test('metadata includes Home and uses the actual current page URL', () => {
   const markup = render('blog/ransomware');
   const data = JSON.parse(markup.match(/<script[^>]*>(.*?)<\/script>/s)[1]);
   assert.deepEqual(data.itemListElement.map((item) => [item.position, item.name, item.item]), [
-    [1, 'Home', 'https://example.com/'], [2, 'Blog', 'https://example.com/blog.html'],
-    [3, 'Ransomware & recovery', 'https://example.com/blog/ransomware.html'],
+    [1, 'Home', 'https://example.com/'], [2, 'Blog', 'https://example.com/blog'],
+    [3, 'Ransomware & recovery', 'https://example.com/blog/ransomware'],
   ]);
   assert.equal((markup.match(/aria-current="page"/g) ?? []).length, 1);
   assert.match(markup, /Ransomware &amp; recovery<\/span>/);

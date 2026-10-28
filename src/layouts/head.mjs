@@ -2,6 +2,7 @@
 
 import { html, raw } from '../lib/html.mjs';
 import { organization, webPage } from '../lib/schema.mjs';
+import { publicUrl } from '../lib/url.mjs';
 
 export const head = (ctx, page) => html`
 <meta charset="utf-8">
@@ -9,12 +10,12 @@ export const head = (ctx, page) => html`
 <title>${page.metaTitle ?? page.title}</title>
 <meta name="description" content="${page.metaDescription ?? ctx.site.description}">
 ${page.noindex ? raw('<meta name="robots" content="noindex">') : ''}
-<link rel="canonical" href="${ctx.site.origin}/${ctx.slug === '' ? '' : ctx.slug + '.html'}">
+<link rel="canonical" href="${publicUrl(ctx.site.origin, ctx.slug)}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="${ctx.site.name}">
 <meta property="og:title" content="${page.metaTitle ?? page.title}">
 <meta property="og:description" content="${page.metaDescription ?? ctx.site.description}">
-<meta property="og:url" content="${ctx.site.origin}/${ctx.slug === '' ? '' : ctx.slug + '.html'}">
+<meta property="og:url" content="${publicUrl(ctx.site.origin, ctx.slug)}">
 <meta property="og:image" content="${ctx.site.origin}/assets/img/og-default.svg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0A1A65">

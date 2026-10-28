@@ -4,6 +4,14 @@
 
 const EXTERNAL = /^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i;
 
+// Cloudflare Pages serves extensionless pages and directory indexes at /dir/.
+// Keep this separate from file-based links so local HTML previews still work.
+export function publicUrl(origin, slug = '') {
+  const clean = String(slug).replace(/^\/+|\/+$/g, '').replace(/\.html$/, '');
+  const pathname = clean === 'index' ? '' : clean.replace(/(?:^|\/)index$/, '/');
+  return origin.replace(/\/$/, '') + '/' + pathname;
+}
+
 export function makeUrl(outPath) {
   const posix = String(outPath).replace(/\\/g, '/');
   const depth = posix.split('/').length - 1; // 'index.html' -> 0
