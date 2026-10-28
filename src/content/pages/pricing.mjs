@@ -18,7 +18,7 @@ export default {
       name: 'SecureTrust Essentials',
       description: 'Core network security for growing businesses.',
       popular: false,
-      included: ['Firewall-as-a-Service', 'Intrusion Prevention System', 'DNS Security', 'Secure Web Gateway', 'Universal ZTNA'],
+      included: ['Firewall-as-a-Service', 'Intrusion Prevention System', 'DNS Security', 'Secure Web Gateway', 'Universal ZTNA', 'Managed Patch Management'],
       fit: 'Best for teams that need strong network and web protection without appliance sprawl.',
     },
     {
@@ -32,7 +32,7 @@ export default {
       name: 'SecureTrust Complete',
       description: 'The full platform, with security operations.',
       popular: false,
-      included: ['Everything in Advanced', 'Extended Detection and Response (XDR)', 'SIEM Platform', 'Managed Patch Management', 'Managed operations oversight'],
+      included: ['Everything in Advanced', 'Extended Detection and Response (XDR)', 'SIEM Platform', 'Managed operations oversight'],
       fit: 'Best for teams that want detection, compliance and patching fully managed.',
     },
   ],
