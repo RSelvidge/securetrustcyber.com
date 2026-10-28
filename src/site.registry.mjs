@@ -308,6 +308,11 @@ export const PAGES = [
   }),
 
   /* ================= Company (menu: company) ================= */
+  page('managed-security', 'Expert-Managed Security', {
+    group: 'company', order: -1, icon: 'shield',
+    blurb: 'Deployment, security operations and ongoing management, handled by experts.',
+    mega: { menu: 'company', col: 0 }, footer: 'company',
+  }),
   page('company/about', 'About', {
     group: 'company', order: 0, icon: 'building',
     blurb: 'Who we are and what we build.',

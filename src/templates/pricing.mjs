@@ -35,6 +35,8 @@ export default function pricing(ctx, page) {
       </div>
     </section>
 
+    <section class="section section--muted" aria-label="Expert-managed service"><div class="container"><div class="managed-pricing-link"><div><strong>Security managed for you. By experts.</strong><p>Our team handles deployment, configuration and ongoing management of your agreed services.</p></div><a class="btn btn--navy" href="${ctx.url('managed-security')}">See how we manage your security ${icon('arrowRight')}</a></div></div></section>
+
     <section class="section section--muted" id="pricing-calculator" aria-labelledby="pricing-calculator-title">
       <div class="container container--m">
         <div class="section-head">
