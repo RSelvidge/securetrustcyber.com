@@ -1,7 +1,7 @@
 // src/layouts/head.mjs — document <head>: meta, OG, canonical, JSON-LD, css, no-js switch.
 
 import { html, raw } from '../lib/html.mjs';
-import { organization, webPage } from '../lib/schema.mjs';
+import { organization, webPage, blogPosting } from '../lib/schema.mjs';
 import { publicUrl } from '../lib/url.mjs';
 
 export const head = (ctx, page) => html`
@@ -11,7 +11,7 @@ export const head = (ctx, page) => html`
 <meta name="description" content="${page.metaDescription ?? ctx.site.description}">
 ${page.noindex ? raw('<meta name="robots" content="noindex">') : ''}
 <link rel="canonical" href="${publicUrl(ctx.site.origin, ctx.slug)}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="${page.type === 'blog-post' ? 'article' : 'website'}">
 <meta property="og:site_name" content="${ctx.site.name}">
 <meta property="og:title" content="${page.metaTitle ?? page.title}">
 <meta property="og:description" content="${page.metaDescription ?? ctx.site.description}">
@@ -27,5 +27,6 @@ ${page.noindex ? raw('<meta name="robots" content="noindex">') : ''}
 <script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
 ${organization(ctx)}
 ${webPage(ctx, page)}
+${page.type === 'blog-post' ? blogPosting(ctx, page) : ''}
 ${page.jsonLd ?? ''}
 `;

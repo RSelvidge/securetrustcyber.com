@@ -30,6 +30,16 @@ export const SITE = {
     { name: 'X', href: 'https://x.com/', icon: 'x' },
   ],
 
+  // Article authors. Name must match a post's "author" field exactly.
+  authors: {
+    'Rich Selvidge': {
+      alternateName: 'Richard Selvidge',
+      jobTitle: 'President & CEO',
+      credentials: 'CISSP, ITIL',
+      page: 'company/about',
+    },
+  },
+
   // Global CTA labels, referenced by every template so copy stays consistent.
   cta: {
     demo: 'Talk to an Expert',

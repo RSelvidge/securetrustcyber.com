@@ -5,6 +5,7 @@ import { breadcrumbs } from '../components/breadcrumbs.mjs';
 import { dualCta } from '../components/dual-cta.mjs';
 
 export default function blogPost(ctx, page) {
+  const a = ctx.site.authors[page.author];
   const body = String(page.body ?? '').replace(/(src|href)=(['"])\/assets\//g, (_, attr, quote) => `${attr}=${quote}${'../'.repeat(ctx.url.depth)}assets/`);
   return html`
     ${breadcrumbs(ctx, page)}
@@ -14,7 +15,7 @@ export default function blogPost(ctx, page) {
           <p class="eyebrow">${page.category}</p>
           <h1 class="section__title" style="margin-bottom:var(--space-s)">${page.title}</h1>
           <p class="post-card__meta" style="margin-bottom:var(--space-l)">
-            <span>${page.date}</span> · <span>${page.read}</span> · <span>${page.author}</span>
+            <span>${page.date}</span> · <span>${page.read}</span> · <span>${a ? html`By <a href="${ctx.url(a.page)}">${page.author}, ${a.credentials}</a>` : page.author}</span>
           </p>
           <p class="prose prose--lead" style="color:var(--color-text-muted)">${page.dek}</p>
         </header>

@@ -51,3 +51,23 @@ export function webPage(ctx, page) {
     url: publicUrl(ctx.site.origin, page.slug),
   });
 }
+
+export function blogPosting(ctx, page) {
+  const a = ctx.site.authors[page.author];
+  const url = publicUrl(ctx.site.origin, page.slug);
+  return script({
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: page.title,
+    description: page.dek,
+    datePublished: page.date,
+    url,
+    mainEntityOfPage: url,
+    articleSection: page.category,
+    author: a
+      ? { '@type': 'Person', name: page.author, alternateName: a.alternateName, jobTitle: a.jobTitle,
+          url: publicUrl(ctx.site.origin, a.page), worksFor: { '@type': 'Organization', name: ctx.site.name, url: ctx.site.origin } }
+      : { '@type': 'Organization', name: page.author },
+    publisher: { '@type': 'Organization', name: ctx.site.name, url: ctx.site.origin },
+  });
+}
