@@ -151,7 +151,7 @@ export async function build() {
   }
 
   await writeFile(path.join(DIST, 'sitemap.xml'), buildSitemap(pages), 'utf8');
-  await writeFile(path.join(DIST, 'robots.txt'), 'User-agent: *\nAllow: /\n', 'utf8');
+  await writeFile(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE.origin}/sitemap.xml\n`, 'utf8');
 
   console.log(`\n  SecureTrust Cyber — built ${rendered.length} pages in ${Date.now() - t0}ms`);
   console.log(`  open: ${path.join(DIST, 'index.html')}\n`);
