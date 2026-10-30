@@ -22,11 +22,9 @@ export default function index(ctx, page) {
     .sort((a, b) => a.order - b.order)
     .slice(0, 9);
 
-  // Industry stories: first three industries.
-  const industries = PAGES
-    .filter((p) => p.group === 'industries')
-    .sort((a, b) => a.order - b.order)
-    .slice(0, 3);
+  // Focus cards: the pages named in d.focus.slugs, in that order.
+  const focus = d.focus ?? {};
+  const industries = (focus.slugs ?? []).map((s) => PAGES.find((p) => p.slug === s)).filter(Boolean);
 
   const relatedPosts = (d.relatedPosts ?? POSTS).slice(0, 3);
 
@@ -47,9 +45,9 @@ export default function index(ctx, page) {
 
     ${productCarousel(ctx, productCards)}
 
-    ${statRow(ctx, { variant: 'inverse', eyebrow: 'At global scale', stats: d.stats ?? [] })}
+    ${statRow(ctx, { variant: 'inverse', eyebrow: 'The platform at a glance', stats: d.stats ?? [] })}
 
-    ${industryStories(ctx, industries)}
+    ${industryStories(ctx, industries, focus)}
 
     ${comparison(ctx, d)}
 
@@ -67,7 +65,7 @@ function twoPath(ctx, d) {
         <span class="feature-card__icon">${icon('building')}</span>
         <h3>${two.enterprise?.title ?? 'Modern enterprise security'}</h3>
         <p>${two.enterprise?.body ?? ''}</p>
-        <a class="feature-card__link" href="${ctx.url('solutions')}">Explore for enterprises ${icon('arrowRight')}</a>
+        <a class="feature-card__link" href="${ctx.url(two.enterprise?.link?.href ?? 'solutions')}">${two.enterprise?.link?.label ?? 'Explore solutions'} ${icon('arrowRight')}</a>
       </div>
     </div>
   </section>`;
@@ -78,7 +76,7 @@ function productCarousel(ctx, products) {
     <div class="container">
       <div class="section-head">
         <p class="eyebrow">The platform</p>
-        <h2 class="section__title">Industry-leading solutions from one platform</h2>
+        <h2 class="section__title">Every safeguard, one platform</h2>
       </div>
       <div class="grid grid--3">
         ${join(products.map((p) => html`
@@ -93,12 +91,13 @@ function productCarousel(ctx, products) {
   </section>`;
 }
 
-function industryStories(ctx, industries) {
+function industryStories(ctx, industries, focus) {
+  if (!industries.length) return '';
   return html`<section class="section section--muted">
     <div class="container">
       <div class="section-head section-head--center">
-        <p class="eyebrow">Customer stories</p>
-        <h2 class="section__title">Built for your industry</h2>
+        <p class="eyebrow">${focus.eyebrow ?? ''}</p>
+        <h2 class="section__title">${focus.heading ?? ''}</h2>
       </div>
       <div class="grid grid--3">
         ${join(industries.map((ind) => html`
@@ -116,12 +115,12 @@ function comparison(ctx, d) {
   return html`<section class="section">
     <div class="container container--m">
       <div class="section-head section-head--center">
-        <p class="eyebrow">Why teams consolidate</p>
+        <p class="eyebrow">${d.comparison?.eyebrow ?? 'Why teams consolidate'}</p>
         <h2 class="section__title">${d.comparison?.heading ?? 'Fewer tools. No gaps.'}</h2>
         <p class="section__intro">${d.comparison?.body ?? ''}</p>
       </div>
       <div style="text-align:center">
-        <a class="btn btn--navy" href="${ctx.url('compare/vs-zscaler')}">Compare SecureTrust ${icon('arrowRight')}</a>
+        <a class="btn btn--navy" href="${ctx.url(d.comparison?.link?.href ?? 'compare/vs-zscaler')}">${d.comparison?.link?.label ?? 'Compare SecureTrust'} ${icon('arrowRight')}</a>
       </div>
     </div>
   </section>`;

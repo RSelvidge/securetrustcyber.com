@@ -117,13 +117,13 @@ export const PAGES = [
   // — Industries (col 1)
   page('industries/healthcare', 'Healthcare', {
     group: 'industries', order: 0, icon: 'heart',
-    blurb: 'HIPAA-aligned protection for clinical estates.',
+    blurb: 'Protection for medical and dental practices.',
     mega: { menu: 'solutions', col: 1 }, footer: 'solutions',
   }),
   page('industries/financial-services', 'Financial Services', {
     group: 'industries', order: 1, icon: 'chart',
     blurb: 'Resilience for banks and fintechs.',
-    mega: { menu: 'solutions', col: 1 }, footer: 'solutions',
+    mega: { menu: 'solutions', col: 1 },
   }),
   page('industries/manufacturing', 'Manufacturing', {
     group: 'industries', order: 2, icon: 'wrench',
@@ -339,7 +339,9 @@ export const PAGES = [
     group: 'core', order: 0, icon: 'chart', footer: 'company',
   }),
   page('clinicproof', 'ClinicProof for Dental Practices', {
-    group: 'core', order: 2, icon: 'shield',
+    group: 'core', order: 0.5, icon: 'shield',
+    blurb: 'Continuous HIPAA control checks for dental practices.',
+    mega: { menu: 'solutions', col: 1 }, footer: 'solutions',
   }),
   page('talk-to-an-expert', 'Talk to an Expert', {
     group: 'core', order: 1, icon: 'play', footer: 'company',
@@ -377,10 +379,14 @@ export const PROMOS = {
     body: 'A converged cloud platform for network, zero trust, cloud, data and AI security.',
     cta: { label: 'Explore the platform', slug: 'products' },
   },
-  solutions: null,
+  solutions: {
+    title: 'ClinicProof for dental practices',
+    body: 'Know your safeguards work week after week, with the evidence ready for a HIPAA review.',
+    cta: { label: 'See ClinicProof', slug: 'clinicproof' },
+  },
   partners: {
     title: 'Become a partner',
-    body: 'Join hundreds of MSPs and MSSPs growing with SecureTrust Cyber.',
+    body: 'Offer SecureTrust Cyber to your clients, with PSA and RMM integrations built in.',
     cta: { label: 'Become a partner', slug: 'partners/become-a-partner' },
   },
   resources: {

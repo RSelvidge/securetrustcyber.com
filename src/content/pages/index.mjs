@@ -4,28 +4,28 @@
 export default {
   slug: '',
   type: 'index',
-  title: 'Unified Security Platform',
-  metaTitle: 'SecureTrust Cyber: One Platform. Total Security.',
-  metaDescription: 'A converged cloud platform for network, zero trust, cloud, data and AI security, plus SIEM and managed patch. One platform, total security.',
+  title: 'Cybersecurity for Healthcare Practices',
+  metaTitle: 'SecureTrust Cyber: Cybersecurity for Medical and Dental Practices',
+  metaDescription: 'Expert-managed cybersecurity for small and mid-size medical and dental practices. Stop ransomware, protect patient data and keep HIPAA evidence ready.',
   sitemap: true,
   priority: 1.0,
   data: {
     hero: {
       variant: 'diagram',
-      eyebrow: 'Unified Security Platform',
-      headline: 'Security that closes the gap',
-      rotating: ['between network and cloud', 'between identity and data', 'between user and application'],
-      sub: 'A converged cloud platform that unifies firewall, web, zero trust, cloud, data and AI security, with SIEM and managed patch on top. One platform, total security.',
+      eyebrow: 'Cybersecurity for healthcare practices',
+      headline: 'Expert-managed security for',
+      rotating: ['dental practices', 'medical practices', 'specialty clinics'],
+      sub: 'SecureTrust Cyber protects small and mid-size practices from ransomware and data breaches. Our specialists run the security for you, from firewall to patching, and keep the evidence your HIPAA risk analysis needs.',
       primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' },
       secondary: { label: 'See the platform', href: 'products' },
     },
 
-    introHeading: 'One platform. Every surface covered.',
-    introText: 'Firewall-as-a-Service, IPS, DNS Security, SWG, ZTNA, CASB, DLP, AI Security, SIEM and managed patch, delivered from one cloud.',
+    introHeading: 'Strong protection, without an IT security team',
+    introText: 'Most practices have no one whose job is security. SecureTrust Cyber gives you one platform, managed by specialists, that covers your network, internet access, patient data and patching.',
     introCards: [
-      { icon: 'layers', title: 'Converged cloud security', body: 'Network, web, zero trust, cloud, data and AI security in one platform, no appliance sprawl.', href: 'products' },
-      { icon: 'scale', title: 'Built for compliance', body: 'Native control maps for HIPAA, ISO 27001, CIS Controls and DORA.', href: 'compliance/hipaa' },
-      { icon: 'grid', title: 'Consolidate tools. Eliminate gaps.', body: 'Replace VPN, firewalls, SWG, CASB and DLP point products with a single platform.', href: 'solutions' },
+      { icon: 'lock', title: 'Stop ransomware before it spreads', body: 'Cloud firewall and intrusion prevention, backed by 250+ threat intelligence feeds, block attacks before they reach your systems.', href: 'products/ips' },
+      { icon: 'scale', title: 'Keep HIPAA evidence ready', body: 'Controls mapped to the HIPAA Security Rule, and ClinicProof checks that your safeguards keep working week after week.', href: 'clinicproof' },
+      { icon: 'users', title: 'Managed for you', body: 'Specialists deploy, monitor and maintain the platform, including patching on a 24-hour cycle, so your team can focus on patients.', href: 'managed-security' },
     ],
 
     tabs: {
@@ -61,8 +61,16 @@ export default {
     platform: { heading: 'Unified security & compliance platform', modules: ['FWaaS', 'SWG', 'CASB', 'ZTNA'] },
 
     twoPath: {
-      enterprise: { title: 'Modern enterprise security', body: 'Built for regulated organizations, with a focus on healthcare providers and the compliance evidence they need.' },
-      partner: { title: 'Partner with us', body: 'Join a partner program built for MSPs and MSSPs, with PSA and RMM integrations out of the box.' },
+      enterprise: {
+        title: 'Built for healthcare practices',
+        body: 'Dental offices, medical groups and specialty clinics face the same attacks as hospitals with a fraction of the staff. See how SecureTrust Cyber protects patient data and the systems your practice runs on.',
+        link: { label: 'Explore healthcare security', href: 'industries/healthcare' },
+      },
+    },
+
+    focus: {
+      eyebrow: 'Where we focus', heading: 'Built for healthcare',
+      slugs: ['industries/healthcare', 'clinicproof', 'compliance/hipaa'],
     },
 
     stats: [
@@ -72,10 +80,12 @@ export default {
       { value: '24/7', label: 'cloud-native enforcement' },
     ],
 
-    comparison: { heading: 'Fewer tools. No gaps.', body: 'Consolidating onto one platform lowers cost, cuts complexity and closes the seams between point products.' },
+    comparison: {
+      eyebrow: 'Why practices consolidate', heading: 'Fewer tools. No gaps.',
+      body: 'Many practices pay for a firewall, a VPN, antivirus add-ons and an IT contractor, and still have gaps between them. One managed platform is simpler to run and leaves nothing unowned.',
+      link: { label: 'How managed security works', href: 'managed-security' },
+    },
 
-
-
-    cta: { heading: 'One Platform. Total Security.', body: 'See the platform that closes the gap across your entire estate.' },
+    cta: { heading: 'One Platform. Total Security.', body: 'See how SecureTrust Cyber protects your patients, your systems and your HIPAA evidence.' },
   },
 };

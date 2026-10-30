@@ -9,8 +9,9 @@ export const SITE = {
   legalName: 'SecureTrust Cyber',
   tagline: 'One Platform. Total Security.',
   description:
-    'A converged cloud platform for network, zero trust, cloud, data and AI security, ' +
-    'with SIEM and managed patch. One platform, total security.',
+    'Expert-managed cybersecurity for small and mid-size medical and dental practices: ' +
+    'cloud firewall, zero trust access, data protection, SIEM and managed patching on one platform.',
+  foundingDate: '2018',
 
   // The live domain.
   origin: 'https://securetrustcyber.com',

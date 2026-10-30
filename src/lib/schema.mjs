@@ -12,6 +12,8 @@ export function organization(ctx) {
     '@type': 'Organization',
     name: ctx.site.name,
     url: ctx.site.origin,
+    description: ctx.site.description,
+    foundingDate: ctx.site.foundingDate,
     logo: `${ctx.site.origin}/assets/img/og-default.svg`,
     sameAs: ctx.site.socials.map((s) => s.href),
   });

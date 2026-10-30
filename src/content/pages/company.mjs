@@ -10,17 +10,17 @@ const about = {
   type: 'page',
   title: 'About SecureTrust Cyber',
   metaTitle: 'About SecureTrust Cyber',
-  metaDescription: 'SecureTrust Cyber builds a unified security platform for enterprises and MSPs. Learn who we are.',
+  metaDescription: 'SecureTrust Cyber provides expert-managed cybersecurity for small and mid-size medical and dental practices. Founded in Houston in 2018.',
   blocks: [
     (ctx) => hero(ctx, {
-      variant: 'split', eyebrow: 'About us', headline: 'One platform. One mission.',
-      sub: 'We believe security should close the gaps between tools, not create them. SecureTrust Cyber is built on that conviction.',
-      primary: { label: 'Join the team', href: 'company/careers' },
+      variant: 'split', eyebrow: 'About us', headline: 'Security built for healthcare practices',
+      sub: 'Small and mid-size practices hold the same patient data as hospitals, with a fraction of the IT staff. We built SecureTrust Cyber to close that gap.',
+      primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' },
       secondary: { label: 'Contact us', href: 'company/contact' },
     }),
     (ctx) => prose(ctx, {
-      eyebrow: 'Who we are', heading: 'Security that closes the gap',
-      body: '<p>SecureTrust Cyber unifies email, endpoint, network, identity and data security into a single platform with one agent and one console. We built it because we watched teams patch together a dozen point products, and still leave gaps.</p><p>Our platform correlates telemetry across every layer, so an attack that crosses email, endpoint and identity is seen as one story instead of three disconnected alerts.</p><p>Today we protect more than three million endpoints across thousands of organizations, from mid-sized businesses to critical infrastructure.</p>',
+      eyebrow: 'Who we are', heading: 'Why we focus on practices',
+      body: '<p>SecureTrust Cyber delivers cloud firewall, intrusion prevention, zero trust access, data loss prevention, SIEM and managed patching as one platform, run by security specialists. We focus on small and mid-size healthcare practices: dental offices, medical groups and specialty clinics that hold sensitive patient data but rarely have anyone dedicated to protecting it.</p><p>For those practices, the hard part is rarely buying a security tool. It is keeping every safeguard working, month after month, and being able to show it during a HIPAA risk analysis or an insurance renewal. That is the work we take on, so practice owners and their staff can focus on patients.</p>',
     }),
     (ctx) => featureGrid(ctx, {
       variant: 'alternating',

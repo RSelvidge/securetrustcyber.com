@@ -44,13 +44,13 @@ export const INDUSTRIES = [
   buildIndustry({
     slug: 'healthcare', title: 'Healthcare', heroVariant: 'split', eyebrow: 'Healthcare', heroImage: 'img/heroes/healthcare.jpg', heroTextSide: 'right',
     headline: 'Security that keeps care running',
-    sub: 'Protect patient data and clinical systems from ransomware and breaches, while meeting HIPAA obligations.',
-    meta: 'Healthcare cybersecurity that protects patient data and clinical systems from ransomware while meeting HIPAA.',
+    sub: 'Protect patient data and practice systems from ransomware and breaches, and keep the evidence your HIPAA risk analysis needs.',
+    meta: 'Cybersecurity for medical and dental practices: protect patient data and practice systems from ransomware and keep HIPAA evidence ready.',
     chips: ['HIPAA', 'HITECH'],
-    threatIntro: 'Healthcare is a prime target: attackers know a hospital cannot afford downtime, and patient data is valuable.',
+    threatIntro: 'Practices are a prime target: attackers know a clinic cannot afford to close its doors, and patient records are valuable.',
     threats: [
-      { title: 'Ransomware against care', body: 'Attacks encrypt clinical systems and force hospitals to divert patients. Inline intrusion prevention stops ransomware before it spreads.', image: { src: 'img/healthcare-ransomware.png', alt: 'Healthcare staff beside a laptop displaying a ransomware lock symbol', width: 646, height: 382 } },
-      { title: 'Connected medical devices', body: 'Infusion pumps and imaging devices run old, unpatchable software. Network segmentation and firewall controls reduce the risk they carry.', image: { src: 'img/healthcare-medical-devices.jpg', alt: 'CT scanner and monitoring equipment in a medical imaging room', width: 1400, height: 933 } },
+      { title: 'Ransomware against care', body: 'Ransomware locks scheduling, imaging and records systems, and can close a practice for days. Inline intrusion prevention stops ransomware before it spreads.', image: { src: 'img/healthcare-ransomware.png', alt: 'Healthcare staff beside a laptop displaying a ransomware lock symbol', width: 646, height: 382 } },
+      { title: 'Connected medical devices', body: 'X-ray, imaging and other connected devices often run old software that cannot be patched. Network segmentation and firewall controls reduce the risk they carry.', image: { src: 'img/healthcare-medical-devices.jpg', alt: 'CT scanner and monitoring equipment in a medical imaging room', width: 1400, height: 933 } },
       { title: 'Insider data exposure', body: 'More people need access to records than in any other industry, making least-privilege access and audit essential.', image: { src: 'img/healthcare-insider-exposure.png', alt: 'Insider threat survey: remote and hybrid workforces 75%, AI and automation in cybersecurity 69%, cloud collaboration and data sharing 66%, advanced social engineering 53%', width: 663, height: 284, fit: 'contain' } },
     ],
     controlHeading: 'Meeting HIPAA and beyond',
@@ -64,12 +64,13 @@ export const INDUSTRIES = [
     outcomes: [
       { icon: 'lock', title: 'Stop ransomware', body: 'Prevent the attacks that force downtime.' },
       { icon: 'shield', title: 'Protect ePHI', body: 'Keep patient data confidential and intact.' },
-      { icon: 'scale', title: 'Audit-ready', body: 'Prove HIPAA compliance on demand.' },
+      { icon: 'scale', title: 'Audit-ready', body: 'Keep HIPAA evidence ready on demand.' },
       { icon: 'clock', title: 'Keep systems up', body: 'Patch without disrupting clinical workflows.' },
     ],
     faq: [
       { q: 'Does it cover connected medical devices?', a: 'Medical devices are discovered and monitored, and network segmentation reduces the risk they carry.' },
-      { q: 'Will it disrupt clinical workflows?', a: 'Patching and policy are scheduled around clinical hours, so care is never interrupted.' },
+      { q: 'Will it disrupt clinical workflows?', a: 'Patching and policy changes are scheduled around patient hours, so updates happen when the practice is closed.' },
+      { q: 'Do we need our own IT staff?', a: 'No. SecureTrust Cyber specialists deploy and manage the platform. Your team only needs to know who to call.' },
     ],
   }),
 
