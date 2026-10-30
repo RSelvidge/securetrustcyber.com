@@ -67,10 +67,6 @@ export const INDUSTRIES = [
       { icon: 'scale', title: 'Audit-ready', body: 'Prove HIPAA compliance on demand.' },
       { icon: 'clock', title: 'Keep systems up', body: 'Patch without disrupting clinical workflows.' },
     ],
-    caseStudy: { logo: 'Apex Health Network', quote: 'SecureTrust let us secure our clinical estate without a single minute of unplanned downtime.', name: 'Dr. Elena Vasquez', role: 'CIO' },
-    quote: { heading: 'Trusted across healthcare', items: [
-      { text: 'We went from fearing ransomware to containing it. Inline prevention stopped an encryption attempt before it touched a single record.', name: 'Marcus Webb', role: 'Head of IT Infrastructure', company: 'Regional hospital' },
-    ] },
     faq: [
       { q: 'Does it cover connected medical devices?', a: 'Medical devices are discovered and monitored, and network segmentation reduces the risk they carry.' },
       { q: 'Will it disrupt clinical workflows?', a: 'Patching and policy are scheduled around clinical hours, so care is never interrupted.' },
@@ -103,7 +99,6 @@ export const INDUSTRIES = [
       { icon: 'radar', title: 'Faster response', body: 'Detect and contain incidents in minutes.' },
       { icon: 'shield', title: 'Supply-chain control', body: 'See and govern third-party access.' },
     ],
-    caseStudy: { logo: 'Helix Capital', quote: 'SecureTrust gave us a single view of risk across banking, trading and payments.', name: 'James Okoro', role: 'CISO' },
     faq: [
       { q: 'Does it help with FFIEC examinations?', a: 'Yes. The control map above shows how each capability supports the FFIEC IT Examination Handbook booklets examiners use.' },
       { q: 'Can it integrate with our existing GRC tooling?', a: 'Yes, via the API integration layer.' },

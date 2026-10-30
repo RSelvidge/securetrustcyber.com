@@ -323,11 +323,6 @@ export const PAGES = [
     blurb: 'Announcements and media resources.',
     mega: { menu: 'company', col: 0 }, footer: 'company',
   }),
-  page('company/awards', 'Awards & Accolades', {
-    group: 'company', order: 2, icon: 'award',
-    blurb: 'Recognition from across the industry.',
-    mega: { menu: 'company', col: 0 }, footer: 'company',
-  }),
   page('company/careers', 'Careers', {
     group: 'company', order: 3, icon: 'users',
     blurb: 'Join the team.',

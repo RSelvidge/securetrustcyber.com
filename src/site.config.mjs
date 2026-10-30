@@ -16,11 +16,7 @@ export const SITE = {
   origin: 'https://securetrustcyber.com',
   bookingUrl: 'https://bookings.cloud.microsoft/bookwithme/user/20566259f3624bc19b31984aa6bd3d05@securetrust.io/meetingtype/2wj5NMEGaUC1HXxVo9IWUA2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile',
 
-  // Address is placeholder copy — replace before going live.
-  address: 'Replace with your registered address',
-  vat: 'VAT: replace',
   email: 'info@securetrust.io',
-  phone: 'Replace with your phone number',
 
   // Contact Sales form delivery (Web3Forms). The key decides which inbox
   // receives submissions; it is public by design, so it is safe to commit.
@@ -42,13 +38,6 @@ export const SITE = {
     contact: 'Contact Sales',
   },
 
-  // Placeholder statistics — replace with real figures before going live.
-  stats: {
-    capabilities: '10',
-    threatFeeds: '250+',
-    dataTypes: '350+',
-    categories: '80+',
-  },
 };
 
 // The wordmark as inline SVG — used by header (dark) and footer (inverse).

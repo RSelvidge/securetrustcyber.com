@@ -61,7 +61,7 @@ export default {
     platform: { heading: 'Unified security & compliance platform', modules: ['FWaaS', 'SWG', 'CASB', 'ZTNA'] },
 
     twoPath: {
-      enterprise: { title: 'Modern enterprise security', body: 'Healthcare, manufacturing, finance, technology and retail all run on SecureTrust Cyber.' },
+      enterprise: { title: 'Modern enterprise security', body: 'Built for regulated organizations, with a focus on healthcare providers and the compliance evidence they need.' },
       partner: { title: 'Partner with us', body: 'Join a partner program built for MSPs and MSSPs, with PSA and RMM integrations out of the box.' },
     },
 
@@ -74,21 +74,7 @@ export default {
 
     comparison: { heading: 'Fewer tools. No gaps.', body: 'Consolidating onto one platform lowers cost, cuts complexity and closes the seams between point products.' },
 
-    reviews: {
-      eyebrow: 'What our customers say', heading: 'Rated by the teams who use it',
-      reviews: [
-        { rating: 5, title: 'Front-row security like a Swiss army knife', body: 'Every layer we needed in one place, without the integration headaches.', reviewer: 'IT Manager', source: 'G2' },
-        { rating: 5, title: 'Solid product with a great team', body: 'The support is genuinely responsive, a named expert, not a queue.', reviewer: 'Head of Group IT', source: 'G2' },
-        { rating: 4, title: 'Consolidated our whole stack', body: 'We retired three point products the month we deployed.', reviewer: 'CTO / CIO', source: 'G2' },
-        { rating: 5, title: 'Replaced our VPN and firewalls', body: 'One platform now covers what used to be a pile of appliances.', reviewer: 'IT Manager', source: 'G2' },
-      ],
-      scores: [
-        { value: '4.4', label: 'G2' }, { value: '4.8', label: 'Capterra' }, { value: '4.7', label: 'Gartner' },
-        { value: '4.4', label: 'SourceForge' }, { value: '4.8', label: 'TrustRadius' }, { value: '4.8', label: 'G2 (mid-market)' },
-      ],
-    },
 
-    awards: ['G2 Leader 2026', 'Capterra Top Rated', 'SourceForge Leader', 'Gartner Peer Insights'],
 
     cta: { heading: 'One Platform. Total Security.', body: 'See the platform that closes the gap across your entire estate.' },
   },

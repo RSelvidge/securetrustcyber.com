@@ -4,12 +4,10 @@
 
 import { html, join, when } from '../lib/html.mjs';
 import { hero } from '../components/hero.mjs';
-import { logoStrip } from '../components/logo-strip.mjs';
 import { featureGrid } from '../components/feature-grid.mjs';
 import { tabSelector } from '../components/tab-selector.mjs';
 import { platformDiagram } from '../components/platform-diagram.mjs';
 import { statRow } from '../components/stat-row.mjs';
-import { reviewCards } from '../components/review-cards.mjs';
 import { dualCta } from '../components/dual-cta.mjs';
 import { icon } from '../lib/icons.mjs';
 import { PAGES } from '../site.registry.mjs';
@@ -35,8 +33,6 @@ export default function index(ctx, page) {
   return html`
     ${hero(ctx, d.hero ?? {})}
 
-    ${logoStrip(ctx, {})}
-
     ${featureGrid(ctx, {
       eyebrow: 'Why SecureTrust Cyber', heading: d.introHeading ?? 'One platform. Every surface covered.',
       intro: d.introText,
@@ -56,10 +52,6 @@ export default function index(ctx, page) {
     ${industryStories(ctx, industries)}
 
     ${comparison(ctx, d)}
-
-    ${reviewCards(ctx, d.reviews ?? {})}
-
-    ${awards(ctx, d.awards ?? [])}
 
     ${relatedContent(ctx, relatedPosts)}
 
@@ -135,16 +127,6 @@ function comparison(ctx, d) {
   </section>`;
 }
 
-function awards(ctx, awards) {
-  if (!awards.length) return '';
-  return html`<section class="section section--muted" style="padding-block:var(--space-xl)">
-    <div class="container">
-      <div class="award-grid">
-        ${join(awards.map((a) => html`<span class="award">${icon('award')} ${a}</span>`))}
-      </div>
-    </div>
-  </section>`;
-}
 
 function relatedContent(ctx, posts) {
   if (!posts.length) return '';

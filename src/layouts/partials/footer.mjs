@@ -20,7 +20,6 @@ export const footer = (ctx) => {
       </a>
       <p class="site-footer__tagline">${ctx.site.tagline}</p>
       <a class="btn btn--inverse"${ctx.linkAttrs('talk-to-an-expert')} href="${ctx.url('talk-to-an-expert')}" style="justify-self:start">${ctx.site.cta.trial}</a>
-      <address class="site-footer__address">${ctx.site.address}<br>VAT ${ctx.site.vat}</address>
       <div class="social-links">
         ${join(ctx.site.socials.map((s) => html`
           <a href="${s.href}" aria-label="${s.name}">${icon(s.icon)}</a>`))}

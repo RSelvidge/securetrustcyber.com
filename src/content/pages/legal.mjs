@@ -11,6 +11,8 @@ const legal = (slug, title, body) => ({
   metaTitle: `${title} | SecureTrust Cyber`,
   metaDescription: `${title} for SecureTrust Cyber, covering how we handle your data and govern use of our services.`,
   cta: false,
+  noindex: true, // ponytail: drop once counsel finalizes the text
+  sitemap: false,
   blocks: [
     (ctx) => hero(ctx, { variant: 'compact', eyebrow: 'Legal', headline: title, sub: 'Last updated: September 2026.' }),
     (ctx) => prose(ctx, { heading: title, body }),

@@ -60,27 +60,6 @@ const press = {
   ],
 };
 
-const awards = {
-  slug: 'company/awards',
-  type: 'page',
-  title: 'Awards & Accolades',
-  metaTitle: 'Awards & Accolades | SecureTrust Cyber',
-  metaDescription: 'Industry awards and recognition for SecureTrust Cyber.',
-  blocks: [
-    (ctx) => hero(ctx, { variant: 'compact', eyebrow: 'Recognition', headline: 'Awards & accolades', sub: 'Recognition from across the security industry.', primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' } }),
-    (ctx) => featureGrid(ctx, {
-      heading: 'Recent recognition',
-      items: [
-        { icon: 'award', title: 'G2 Leader 2026', body: 'Recognized as a leader in endpoint security.' },
-        { icon: 'award', title: 'Capterra Top Rated', body: 'Top rated by verified customers.' },
-        { icon: 'award', title: 'SourceForge Leader', body: 'Spring 2026 category leader.' },
-        { icon: 'award', title: 'Gartner Peer Insights', body: 'Customers for mid-market endpoint protection.' },
-      ],
-      variant: '4up',
-    }),
-  ],
-};
-
 const careers = {
   slug: 'company/careers',
   type: 'page',
@@ -107,4 +86,4 @@ const contact = {
   submitLabel: 'Send message',
 };
 
-export default [about, press, awards, careers, contact];
+export default [about, press, careers, contact];
