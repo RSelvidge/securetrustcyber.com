@@ -3,7 +3,6 @@
 import { html, join } from '../../lib/html.mjs';
 import { hero } from '../../components/hero.mjs';
 import { featureGrid } from '../../components/feature-grid.mjs';
-import { metricsBand } from '../../components/metrics-band.mjs';
 import { prose } from '../../components/prose.mjs';
 
 const about = {
@@ -23,11 +22,6 @@ const about = {
       eyebrow: 'Who we are', heading: 'Security that closes the gap',
       body: '<p>SecureTrust Cyber unifies email, endpoint, network, identity and data security into a single platform with one agent and one console. We built it because we watched teams patch together a dozen point products, and still leave gaps.</p><p>Our platform correlates telemetry across every layer, so an attack that crosses email, endpoint and identity is seen as one story instead of three disconnected alerts.</p><p>Today we protect more than three million endpoints across thousands of organizations, from mid-sized businesses to critical infrastructure.</p>',
     }),
-    (ctx) => metricsBand(ctx, { metrics: [
-      { value: '3M+', label: 'endpoints secured' },
-      { value: '20,000+', label: 'organizations' },
-      { value: '100M+', label: 'attacks prevented' },
-    ] }),
     (ctx) => featureGrid(ctx, {
       variant: 'alternating',
       eyebrow: 'Leadership',

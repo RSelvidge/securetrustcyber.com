@@ -4,7 +4,6 @@ import { html, join } from '../../lib/html.mjs';
 import { hero } from '../../components/hero.mjs';
 import { featureGrid } from '../../components/feature-grid.mjs';
 import { timeline } from '../../components/timeline.mjs';
-import { metricsBand } from '../../components/metrics-band.mjs';
 
 const overview = {
   slug: 'partners/index',
@@ -28,11 +27,6 @@ const overview = {
         { icon: 'users', title: 'Partner support', body: 'Dedicated partner managers and pre-sales engineering.' },
       ],
     }),
-    (ctx) => metricsBand(ctx, { metrics: [
-      { value: '1,500+', label: 'channel partners' },
-      { value: '20,000+', label: 'organizations protected' },
-      { value: '4.8/5', label: 'partner satisfaction' },
-    ] }),
   ],
 };
 
