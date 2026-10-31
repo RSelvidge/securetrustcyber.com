@@ -15,6 +15,12 @@ const EXTERNAL_DOMAINS = [
   // Blog citation sources
   'siliconangle.com', 'flashpoint.io', 'www.beckershospitalreview.com',
   'securitybrief.news', 'securitybrief.co.uk', 'flare.io', 'www.prophetsecurity.ai',
+  // Vulnerability scan frequency article
+  'cloud.google.com', 'controls-assessment-specification.readthedocs.io',
+  'learn.microsoft.com', 'ndisac.org', 'tenable.com', 'watchdogsecurity.io',
+  'www.alston.com', 'www.bleepingcomputer.com', 'www.cisa.gov',
+  'www.cogent.com', 'www.gtlaw.com', 'www.invicti.com', 'www.paubox.com',
+  'www.squirepattonboggs.com', 'www.stingrai.io', 'www.tenable.com',
 ];
 
 const SITE_HOST = new URL(SITE.origin).host;
