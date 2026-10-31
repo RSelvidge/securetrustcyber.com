@@ -22,6 +22,8 @@ const EXTERNAL_DOMAINS = [
   'www.cogent.com', 'www.gtlaw.com', 'www.invicti.com', 'www.paubox.com',
   'www.squirepattonboggs.com', 'www.stingrai.io', 'www.tenable.com',
   'www.pcisecuritystandards.org', 'www.hhs.gov', 'csrc.nist.gov', 'www.first.org',
+  // Dental office cybersecurity and HIPAA article
+  'www.beckersdental.com', 'www.ecfr.gov', 'www.ada.org',
 ];
 
 const SITE_HOST = new URL(SITE.origin).host;
