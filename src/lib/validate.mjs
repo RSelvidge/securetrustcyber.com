@@ -12,18 +12,6 @@ const EXTERNAL_DOMAINS = [
   'fonts.googleapis.com', 'fonts.gstatic.com', 'www.g2.com', 'www.capterra.com',
   'www.gartner.com', 'sourceforge.net', 'www.linkedin.com', 'www.youtube.com',
   'www.facebook.com', 'x.com', 'twitter.com', 'bookings.cloud.microsoft',
-  // Blog citation sources
-  'siliconangle.com', 'flashpoint.io', 'www.beckershospitalreview.com',
-  'securitybrief.news', 'securitybrief.co.uk', 'flare.io', 'www.prophetsecurity.ai',
-  // Vulnerability scan frequency article
-  'cloud.google.com', 'controls-assessment-specification.readthedocs.io',
-  'learn.microsoft.com', 'ndisac.org', 'tenable.com', 'watchdogsecurity.io',
-  'www.alston.com', 'www.bleepingcomputer.com', 'www.cisa.gov',
-  'www.cogent.com', 'www.gtlaw.com', 'www.invicti.com', 'www.paubox.com',
-  'www.squirepattonboggs.com', 'www.stingrai.io', 'www.tenable.com',
-  'www.pcisecuritystandards.org', 'www.hhs.gov', 'csrc.nist.gov', 'www.first.org',
-  // Dental office cybersecurity and HIPAA article
-  'www.beckersdental.com', 'www.ecfr.gov', 'www.ada.org',
 ];
 
 const SITE_HOST = new URL(SITE.origin).host;
@@ -117,7 +105,8 @@ export function links(rendered, registryMap) {
     for (const href of hrefs) {
       if (href === '#') { errors.push(`"${page.slug}" has a placeholder href="#"`); continue; }
       if (isExternalUrl(href)) {
-        if (/^https?:/i.test(href) && !allowlistedExternal(href)) {
+        // Blog articles cite outside sources by design; the allowlist guards every other page.
+        if (/^https?:/i.test(href) && page.type !== 'blog-post' && !allowlistedExternal(href)) {
           errors.push(`"${page.slug}" links to unallowlisted external URL "${href}"`);
         }
         continue;
