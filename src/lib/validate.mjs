@@ -21,6 +21,7 @@ const EXTERNAL_DOMAINS = [
   'www.alston.com', 'www.bleepingcomputer.com', 'www.cisa.gov',
   'www.cogent.com', 'www.gtlaw.com', 'www.invicti.com', 'www.paubox.com',
   'www.squirepattonboggs.com', 'www.stingrai.io', 'www.tenable.com',
+  'www.pcisecuritystandards.org', 'www.hhs.gov', 'csrc.nist.gov', 'www.first.org',
 ];
 
 const SITE_HOST = new URL(SITE.origin).host;
