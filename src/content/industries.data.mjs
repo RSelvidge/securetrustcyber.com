@@ -37,7 +37,7 @@ const buildIndustry = (ind) => ({
   caseStudy: ind.caseStudy,
   quote: ind.quote,
   faq: ind.faq,
-  cta: { heading: ind.ctaHeading ?? 'Protect your organization', body: ind.ctaBody },
+  cta: { heading: ind.ctaHeading ?? 'Protect your organization', body: ind.ctaBody, ...(ind.ctaSecondary && { secondary: ind.ctaSecondary }) },
 });
 
 export const INDUSTRIES = [
@@ -47,6 +47,7 @@ export const INDUSTRIES = [
     sub: 'Protect patient data and practice systems from ransomware and breaches, and keep the evidence your HIPAA risk analysis needs.',
     meta: 'Cybersecurity for medical and dental practices: protect patient data and practice systems from ransomware and keep HIPAA evidence ready.',
     chips: ['HIPAA', 'HITECH'],
+    ctaSecondary: { label: 'Healthcare pricing', href: 'healthcare-pricing' },
     threatIntro: 'Practices are a prime target: attackers know a clinic cannot afford to close its doors, and patient records are valuable.',
     threats: [
       { title: 'Ransomware against care', body: 'Ransomware locks scheduling, imaging and records systems, and can close a practice for days. Inline intrusion prevention stops ransomware before it spreads.', image: { src: 'img/healthcare-ransomware.png', alt: 'Healthcare staff beside a laptop displaying a ransomware lock symbol', width: 646, height: 382 } },

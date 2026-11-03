@@ -54,7 +54,8 @@
         if (button) { button.disabled = false; button.textContent = label; }
         if (ok) {
           form.reset();
-          notice(form, 'success', 'Thanks, your request is in. A member of our team will be in touch within one business day.');
+          notice(form, 'success', form.getAttribute('data-success') ||
+            'Thanks, your request is in. A member of our team will be in touch within one business day.');
         } else {
           notice(form, 'error', 'Sorry, your request could not be sent. Please try again, or email us directly.');
         }
@@ -73,6 +74,15 @@
       a.href = 'mailto:' + email;
       a.textContent = ' ' + email;
       box.appendChild(a);
+    }
+    var next = form.getAttribute('data-success-link');
+    if (kind === 'success' && next) {
+      var b = document.createElement('a');
+      b.href = next;
+      b.target = '_blank';
+      b.rel = 'noopener noreferrer';
+      b.textContent = ' ' + form.getAttribute('data-success-link-label');
+      box.appendChild(b);
     }
     if (!box.parentNode) form.insertBefore(box, form.firstElementChild);
     box.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
