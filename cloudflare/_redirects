@@ -1,0 +1,9 @@
+# Removed pages -> closest live page (fixes Search Console "Not found (404)").
+/company/awards                  /company/press        301
+/company/awards.html             /company/press        301
+/compliance/nis2                 /compliance/dora      301
+/compliance/nis2.html            /compliance/dora      301
+/resources/demos                 /company/contact      301
+/resources/demos.html            /company/contact      301
+/blog/nis2-compliance-guide      /blog                 301
+/blog/nis2-compliance-guide.html /blog                 301
