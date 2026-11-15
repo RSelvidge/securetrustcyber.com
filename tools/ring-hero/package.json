@@ -1,0 +1,12 @@
+{
+  "name": "ring-hero-bundle",
+  "private": true,
+  "description": "Builds assets/js/ring-hero.js (three.js + ring-hero.mjs as one classic script). Dev-only: the site itself stays zero-dependency.",
+  "scripts": {
+    "build": "esbuild ring-hero.mjs --bundle --minify --format=iife --target=es2019 --legal-comments=none --outfile=../../assets/js/ring-hero.js"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.0",
+    "three": "0.160.0"
+  }
+}

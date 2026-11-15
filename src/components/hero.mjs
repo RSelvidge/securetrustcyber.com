@@ -1,11 +1,12 @@
 // src/components/hero.mjs — hero section with 5 variants: split | diagram |
 // terminal | centered | compact. Every href goes through ctx.url.
 
-import { html, join, when } from '../lib/html.mjs';
+import { html, join, raw, when } from '../lib/html.mjs';
 import { icon } from '../lib/icons.mjs';
 import { dashboard, terminal } from './mock.mjs';
+import { RING_FRAMEWORKS } from '../content/ring-hero.data.mjs';
 
-export const HERO_VARIANTS = ['split', 'diagram', 'terminal', 'centered', 'compact'];
+export const HERO_VARIANTS = ['split', 'diagram', 'terminal', 'centered', 'compact', 'ring'];
 
 export function hero(ctx, opts = {}) {
   const {
@@ -21,6 +22,8 @@ export function hero(ctx, opts = {}) {
     compact = false,
     bg = null, // background photo under a navy overlay; replaces the side mock
     textSide = 'left', // 'right' puts the text over the right of the photo
+  lighter = false, // a lighter navy overlay so more of the photo shows
+    ring = null, // variant 'ring': { product, ring, name, points } — animated product ring (assets/js/ring-hero.js)
   } = opts;
 
   const rotate = rotating.length
@@ -38,7 +41,19 @@ export function hero(ctx, opts = {}) {
     ? html`<div class="hero__chips">${join(chips.map((c) => html`<span class="chip">${c}</span>`))}</div>`
     : '';
 
-  const mediaBlock = bg ? '' : variant === 'terminal'
+  const mediaBlock = bg ? '' : variant === 'ring' && ring
+    ? html`<div class="hero__media ring-hero" data-ring-hero data-product="${ring.product}">
+        <canvas class="ring-hero__canvas" aria-hidden="true"></canvas>
+        <div class="ring-hero__core">
+          <div>
+            <p class="ring-hero__ring">${ring.ring}</p>
+            <p class="ring-hero__name">${ring.name}</p>
+            <ul class="ring-hero__points">${join(ring.points.map((p) => html`<li>${p}</li>`))}</ul>
+          </div>
+        </div>
+      </div>
+      <script src="${ctx.url.asset('js/ring-hero.js')}" defer></script>`
+    : variant === 'terminal'
     ? html`<div class="hero__media">${terminal()}</div>`
     : (variant === 'split' || variant === 'diagram')
       ? html`<div class="hero__media"><div class="mock">${dashboard({ title: media })}</div></div>`
@@ -53,7 +68,10 @@ export function hero(ctx, opts = {}) {
       ${chipRow}
     </div>`;
 
-  return html`<section class="hero hero--${variant}${compact ? ' hero--compact' : ''}${bg ? ' hero--photo' : ''}${bg && textSide === 'right' ? ' hero--text-right' : ''}"${bg ? html` style="background-image: var(--hero-overlay), url('${ctx.url.asset(bg)}')"` : ''}>
+  return html`<section class="hero hero--${variant}${compact ? ' hero--compact' : ''}${bg ? ' hero--photo' : ''}${bg && textSide === 'right' ? ' hero--text-right' : ''}${bg && lighter ? ' hero--lighter' : ''}"${bg ? html` style="background-image: var(--hero-overlay), url('${ctx.url.asset(bg)}')"` : ''}>
     <div class="container hero__inner">${body}${mediaBlock}</div>
+    ${when(variant === 'ring', html`<div class="ring-hero__ticker" aria-label="Frameworks we map to"><div class="ring-hero__track">${join(
+      [...RING_FRAMEWORKS, ...RING_FRAMEWORKS].map((f, i) => html`<span${i >= RING_FRAMEWORKS.length ? raw(' aria-hidden="true"') : ''}>${f}</span>`)
+    )}</div></div>`)}
   </section>`;
 }
