@@ -42,7 +42,7 @@ const buildIndustry = (ind) => ({
 
 export const INDUSTRIES = [
   buildIndustry({
-    slug: 'healthcare', title: 'Healthcare', heroVariant: 'split', eyebrow: 'Healthcare', heroImage: 'img/heroes/healthcare.jpg', heroTextSide: 'right',
+    slug: 'healthcare', title: 'Healthcare', heroVariant: 'practice', eyebrow: 'Healthcare', // live practice map (tools/ring-hero/practice.mjs)
     headline: 'Security that keeps care running',
     sub: 'Protect patient data and practice systems from ransomware and breaches, and keep the evidence your HIPAA risk analysis needs.',
     meta: 'Cybersecurity for medical and dental practices: protect patient data and practice systems from ransomware and keep HIPAA evidence ready.',

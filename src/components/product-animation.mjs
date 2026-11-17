@@ -13,10 +13,25 @@ const header = (text) => label(500, 52, text, 'pm-kicker');
 
 function scene(slug) {
   switch (slug) {
-    case 'fwaas': return html`${header('TRAFFIC INSPECTION')}${device(70, 175, 'Users & sites')}
-      ${stream('M230 220H780')}${line('M230 265H480', 'pm-route--danger')}${flow('M230 265H480', 0, 'pm-flow--threat')}
-      ${box(460, 123, 80, 230, html`<path d="M487 145v185M513 145v185" class="pm-gateway"/>`)}
-      ${box(780, 175, 160, 110, html`${label(860, 222, 'Protected')}${label(860, 248, 'applications')}`)}${cross(455, 265)}${check(860, 155)}${label(500, 390, 'Threat blocked · approved traffic continues', 'pm-outcome')}`;
+    case 'fwaas': {
+      // one cloud firewall reading every connection: who, which app, which port, even inside encryption
+      const node = (x, y, title, sub) => box(x, y, 180, 76, html`${label(x + 90, y + 33, title)}${label(x + 90, y + 57, sub, 'pm-small')}`);
+      const msg = (i, cls, text) => html`<g class="pm-fw-msg pm-fw-msg--${i}"><rect x="255" y="412" width="490" height="36" rx="18" class="pm-fw-pill ${cls}"/>${label(500, 436, text, 'pm-fw-pill-text')}</g>`;
+      const lan = 'M220 108C330 108 380 205 445 205H555C640 205 700 148 780 148';
+      const remote = 'M220 235H555C650 235 700 308 780 308';
+      return html`${header('TRAFFIC INSPECTION')}
+      ${node(40, 70, 'Office LAN', 'Front desk · operatories')}${node(40, 197, 'Remote staff', 'Home and mobile')}${node(40, 324, 'Internet', 'Inbound connections')}
+      ${node(780, 110, 'Practice apps', 'EHR · imaging · billing')}${node(780, 270, 'Cloud & SaaS', 'Microsoft 365 · web')}
+      ${stream(lan)}${stream(remote)}${line('M220 362C330 362 380 270 445 262', 'pm-route--danger')}
+      ${box(445, 75, 110, 320, html`<path d="M487 98v270M513 98v270" class="pm-gateway"/><rect x="452" y="98" width="96" height="6" rx="3" class="pm-fw-scan"/>${label(500, 386, 'FWaaS', 'pm-small')}`)}
+      <rect x="445" y="75" width="110" height="320" rx="16" class="pm-fw-flash"/>
+      <circle r="8" class="pm-fw-threat" style="offset-path:path('M220 362C330 362 380 270 445 262')"/>
+      <circle r="7" class="pm-fw-hidden" style="offset-path:path('M220 235H500')"/>
+      ${msg(1, 'is-ok', 'Front desk → Practice app · TLS 443 · Allowed')}
+      ${msg(2, 'is-bad', 'Internet → Remote desktop 3389 · Blocked: no rule')}
+      ${msg(3, 'is-ok', 'Remote staff → Microsoft 365 · TLS 443 · Allowed')}
+      ${msg(4, 'is-bad', 'Malware inside encrypted session · Blocked')}`;
+    }
     case 'ips': return html`${header('EXPLOIT PREVENTION')}${device(60, 175, 'Incoming traffic')}
       ${stream('M220 230H790')}${box(375, 125, 250, 220, html`${label(500, 170, 'Deep inspection')}<path class="pm-wave" d="M400 245h32l15-38 25 74 23-55 17 19h88"/><rect class="pm-inspect-sweep" x="400" y="195" width="8" height="100" rx="4"/>`)}
       ${flow('M220 230H425', 0, 'pm-flow--threat')}${cross(425, 230)}${device(790, 175, 'Workload')}${label(500, 390, 'Exploit detected before delivery', 'pm-outcome')}`;

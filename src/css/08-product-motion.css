@@ -24,3 +24,21 @@
 @media(prefers-reduced-motion:reduce){.product-motion .product-motion__stage *{animation:none!important}.product-motion .pm-flow{opacity:0}.product-motion .pm-reject,.product-motion .pm-reveal,.product-motion .pm-alert,.product-motion .pm-discover,.product-motion .pm-installed{opacity:1}.product-motion .pm-redaction{opacity:1}.product-motion .pm-document-scan,.product-motion .pm-inspect-sweep{opacity:0}.product-motion .pm-chain{stroke-dashoffset:0}.product-motion .pm-progress{transform:scaleX(1)}}
 
 .product-motion__legend{padding:14px 18px;border-top:1px solid #54769655;color:#aac6de;font-size:12px;line-height:1.6}
+
+/* FWaaS scene: every connection is read (user, app, port, even inside TLS); two threats are stopped per 10s cycle */
+.product-motion[data-product-motion="fwaas"]{--fw:10s}
+.product-motion[data-product-motion="fwaas"] .product-motion__art{opacity:.16}
+.product-motion .pm-fw-scan{fill:#b8f4ff;opacity:.55;filter:drop-shadow(0 0 6px #51d6ff);animation:pm-fw-scan 2.5s linear infinite}
+.product-motion .pm-fw-flash{fill:var(--pm-red);opacity:0;mix-blend-mode:screen;animation:pm-fw-flash var(--fw) linear infinite}
+.product-motion .pm-fw-threat{fill:var(--pm-red);filter:drop-shadow(0 0 7px #ff7064);offset-rotate:0deg;animation:pm-fw-threat var(--fw) linear infinite}
+.product-motion .pm-fw-hidden{fill:#b8f4ff;filter:drop-shadow(0 0 6px #51d6ff);offset-rotate:0deg;animation:pm-fw-hidden var(--fw) linear infinite}
+.product-motion .pm-fw-pill{stroke-width:1.5}.product-motion .pm-fw-pill.is-ok{fill:#0f3b45f2;stroke:var(--pm-green)}.product-motion .pm-fw-pill.is-bad{fill:#4a2233f2;stroke:var(--pm-red)}
+.product-motion .pm-fw-pill-text{font-size:16px;font-weight:600}
+.product-motion .pm-fw-msg{opacity:0;animation:pm-fw-msg var(--fw) linear infinite}
+.product-motion .pm-fw-msg--2{animation-delay:2.5s}.product-motion .pm-fw-msg--3{animation-delay:5s}.product-motion .pm-fw-msg--4{animation-delay:7.5s}
+@keyframes pm-fw-scan{0%{transform:translateY(0);opacity:0}10%{opacity:.6}90%{opacity:.6}100%{transform:translateY(262px);opacity:0}}
+@keyframes pm-fw-msg{0%{opacity:0}2%,23%{opacity:1}25%,100%{opacity:0}}
+@keyframes pm-fw-threat{0%,12%{offset-distance:0%;opacity:0}14%{opacity:1}26%{offset-distance:100%;opacity:1;r:8px}32%{offset-distance:100%;opacity:0;r:18px}100%{offset-distance:100%;opacity:0}}
+@keyframes pm-fw-hidden{0%,62%{offset-distance:0%;opacity:0;fill:#b8f4ff}64%{opacity:1}73%{fill:#b8f4ff}76%{offset-distance:100%;opacity:1;fill:var(--pm-red);r:7px}82%{offset-distance:100%;opacity:0;r:17px}100%{offset-distance:100%;opacity:0}}
+@keyframes pm-fw-flash{0%,25%{opacity:0}27%{opacity:.55}35%{opacity:0}75%{opacity:0}77%{opacity:.55}85%,100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.product-motion .pm-fw-msg--2{opacity:1}.product-motion .pm-fw-threat,.product-motion .pm-fw-hidden,.product-motion .pm-fw-scan{opacity:0}}

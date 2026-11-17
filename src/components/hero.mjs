@@ -6,7 +6,7 @@ import { icon } from '../lib/icons.mjs';
 import { dashboard, terminal } from './mock.mjs';
 import { RING_FRAMEWORKS } from '../content/ring-hero.data.mjs';
 
-export const HERO_VARIANTS = ['split', 'diagram', 'terminal', 'centered', 'compact', 'ring'];
+export const HERO_VARIANTS = ['split', 'diagram', 'terminal', 'centered', 'compact', 'ring', 'practice'];
 
 export function hero(ctx, opts = {}) {
   const {
@@ -51,6 +51,13 @@ export function hero(ctx, opts = {}) {
             <ul class="ring-hero__points">${join(ring.points.map((p) => html`<li>${p}</li>`))}</ul>
           </div>
         </div>
+      </div>
+      <script src="${ctx.url.asset('js/ring-hero.js')}" defer></script>`
+    : variant === 'practice'
+    ? html`<div class="hero__media practice-map" data-practice-map>
+        <canvas class="practice-map__canvas" aria-hidden="true"></canvas>
+        <div class="practice-map__labels" data-pm="labels"></div>
+        <p class="practice-map__legend"><span>Practice traffic</span><span class="is-bad">Threat stopped</span><em>Illustrative</em></p>
       </div>
       <script src="${ctx.url.asset('js/ring-hero.js')}" defer></script>`
     : variant === 'terminal'
