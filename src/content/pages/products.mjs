@@ -6,6 +6,7 @@ import { featureGrid } from '../../components/feature-grid.mjs';
 import { icon } from '../../lib/icons.mjs';
 import { CATEGORIES } from '../categories.data.mjs';
 import { PRODUCTS } from '../products.data.mjs';
+import { productAnimation } from '../../components/product-animation.mjs';
 
 const categoryPage = (cat) => {
   const products = PRODUCTS.filter((p) => p.category === cat.slug);
@@ -40,7 +41,7 @@ const categoryPage = (cat) => {
   };
 };
 
-// All Products index page.
+// All Products index page, including a motion study for every product.
 const allProducts = {
   slug: 'products',
   type: 'page',
@@ -54,6 +55,11 @@ const allProducts = {
       sub: 'Explore the ten natively integrated modules that make up SecureTrust Cyber.',
       primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' },
     }),
+    (ctx) => html`<section class="product-motion-section" id="product-animations"><div class="container">
+      <div class="section-head"><p class="eyebrow">Protection in motion</p><h2 class="section__title">See every layer at work.</h2><p class="section__intro">Ten short illustrations show how the controls protect traffic, applications and data.</p></div>
+      <div class="product-motion-gallery">${join(PRODUCTS.map((product) => productAnimation(ctx, product, { compact: true })))}</div>
+      <p class="product-motion__note">Conceptual service illustrations. Actual behavior depends on configuration and policy.</p>
+    </div></section>`,
     (ctx) => html`<section class="section"><div class="container">
       <div class="grid grid--3">
         ${join(CATEGORIES.map((c) => html`

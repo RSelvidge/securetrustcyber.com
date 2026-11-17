@@ -1,5 +1,5 @@
 // src/templates/product.mjs — structured product page:
-// hero → problem → capabilities → how-it-works → platform → proof → quote → FAQ → related → CTA.
+// hero → problem → motion → capabilities → how-it-works → platform → proof → quote → FAQ → related → CTA.
 
 import { html, when } from '../lib/html.mjs';
 import { hero } from '../components/hero.mjs';
@@ -14,6 +14,8 @@ import { relatedRail } from '../components/related-rail.mjs';
 import { dualCta } from '../components/dual-cta.mjs';
 import { icon } from '../lib/icons.mjs';
 import { datasheetPath } from '../lib/datasheets.mjs';
+import { productAnimation } from '../components/product-animation.mjs';
+import { microsegmentation } from '../components/microsegmentation.mjs';
 
 export const VARIANTS = ['split', 'diagram', 'terminal'];
 
@@ -29,10 +31,14 @@ export default function product(ctx, page) {
       </div>
     </section>
 
+    ${page.microsegmentation ? microsegmentation() : ''}
+
     ${page.problem ? featureGrid(ctx, {
       eyebrow: 'The problem', heading: page.problem.heading, intro: page.problem.intro,
       items: page.problem.items, variant: '3up',
     }) : ''}
+
+    <section class="product-motion-section"><div class="container">${productAnimation(ctx, page)}</div></section>
 
     ${page.capabilities ? featureGrid(ctx, {
       eyebrow: 'Capabilities', heading: page.capabilities.heading, intro: page.capabilities.intro,

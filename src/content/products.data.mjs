@@ -37,6 +37,7 @@ const buildProduct = (p) => ({
   },
   howItWorks: p.steps ? { heading: 'How it works', steps: p.steps } : undefined,
   platform: p.platform === false ? undefined : (p.platform ?? {}),
+  microsegmentation: p.microsegmentation ?? false,
   proof: p.proof,
   quote: p.quote,
   faq: p.faq,
@@ -47,6 +48,7 @@ export const PRODUCTS = [
   /* ============ Network Security ============ */
   buildProduct({
     slug: 'fwaas', title: 'Firewall-as-a-Service (FWaaS)', category: 'network-security',
+    microsegmentation: true, // animated microsegmentation section below the datasheet band
     platform: {
       scene: 'fwaas', heading: 'A firewall in every tunnel.',
       intro: 'Every user and every device has its own tunnel, and every tunnel starts with Firewall-as-a-Service. Unwanted traffic is dropped at the edge, while legitimate traffic keeps flowing to your apps.',
