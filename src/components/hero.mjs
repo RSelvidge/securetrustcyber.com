@@ -6,7 +6,7 @@ import { icon } from '../lib/icons.mjs';
 import { dashboard, terminal } from './mock.mjs';
 import { RING_FRAMEWORKS } from '../content/ring-hero.data.mjs';
 
-export const HERO_VARIANTS = ['split', 'diagram', 'terminal', 'centered', 'compact', 'ring', 'practice'];
+export const HERO_VARIANTS = ['split', 'diagram', 'terminal', 'centered', 'compact', 'ring', 'practice', 'threats'];
 
 export function hero(ctx, opts = {}) {
   const {
@@ -23,6 +23,7 @@ export function hero(ctx, opts = {}) {
     bg = null, // background photo under a navy overlay; replaces the side mock
     textSide = 'left', // 'right' puts the text over the right of the photo
   lighter = false, // a lighter navy overlay so more of the photo shows
+    threats = null, // variant 'threats': { industry, items: [{ threat, label, name }] } — industry threat ring (assets/js/ring-hero.js)
     ring = null, // variant 'ring': { product, ring, name, points } — animated product ring (assets/js/ring-hero.js)
   } = opts;
 
@@ -49,6 +50,18 @@ export function hero(ctx, opts = {}) {
             <p class="ring-hero__ring">${ring.ring}</p>
             <p class="ring-hero__name">${ring.name}</p>
             <ul class="ring-hero__points">${join(ring.points.map((p) => html`<li>${p}</li>`))}</ul>
+          </div>
+        </div>
+      </div>
+      <script src="${ctx.url.asset('js/ring-hero.js')}" defer></script>`
+    : variant === 'threats' && threats
+    ? html`<div class="hero__media ring-hero threat-ring" data-threat-ring data-threats="${JSON.stringify(threats.items.map(({ threat, label }) => ({ threat, label })))}">
+        <canvas class="ring-hero__canvas" aria-hidden="true"></canvas>
+        <div class="ring-hero__core">
+          <div>
+            <p class="ring-hero__ring">${threats.industry} · top threats</p>
+            <p class="ring-hero__name">Covered by</p>
+            <ul class="ring-hero__points threat-ring__list">${join([...new Set(threats.items.map((t) => t.name))].map((name) => html`<li data-lock="${threats.items.flatMap((t, i) => (t.name === name ? [i] : [])).join(' ')}"><span>${name}</span><small>${threats.items.filter((t) => t.name === name).map((t) => t.threat).join(' · ')}</small></li>`))}</ul>
           </div>
         </div>
       </div>

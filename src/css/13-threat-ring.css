@@ -1,0 +1,19 @@
+/* 13-threat-ring.css — industry-page hero: the product ring with the industry's threats on its panels
+   (hero variant 'threats', scene in assets/js/ring-hero.js). Reuses the ring-hero styles from 10-ring-hero.css. */
+
+.hero--threats .hero__inner { grid-template-columns: 1fr 1fr; }
+@media (max-width: 60rem) { .hero--threats .hero__inner { grid-template-columns: 1fr; } }
+
+/* products in the core: dim with a red dot until the scene locks them onto their threat */
+.threat-ring.is-live .threat-ring__list li { color: rgba(255,255,255,.4); transition: color .4s; }
+.threat-ring.is-live .threat-ring__list li::before { background: #FF5A6A; box-shadow: 0 0 8px #FF5A6A; transition: background .4s, box-shadow .4s; }
+.threat-ring.is-live .threat-ring__list li.is-locked { color: rgba(255,255,255,.95); }
+.threat-ring.is-live .threat-ring__list li.is-locked::before { background: var(--blue-500); box-shadow: 0 0 8px var(--glow); }
+
+/* each product line carries the threat(s) it covers */
+.threat-ring__list { gap: .5em; }
+.threat-ring__list li { display: grid; grid-template-columns: auto 1fr; column-gap: .45em; text-align: left; line-height: 1.25; }
+.threat-ring__list li::before { margin: .35em 0 0; grid-row: span 2; }
+.threat-ring__list small { grid-column: 2; font-size: .82em; font-weight: 400; color: rgba(255,170,180,.85); transition: color .4s; }
+.threat-ring__list li.is-locked small, .threat-ring:not(.is-live) .threat-ring__list small { color: rgba(207,230,255,.7); }
+.threat-ring .ring-hero__name { margin-bottom: .55em; }

@@ -1,5 +1,12 @@
 // src/content/industries.data.mjs — 10 industry definitions.
 
+import { THREAT_RING, RING_PRODUCTS } from './threat-ring.data.mjs';
+
+const ringOf = (ind) => THREAT_RING[ind.slug] && {
+  industry: ind.title,
+  items: ind.threats.map((t, i) => ({ threat: t.title, ...RING_PRODUCTS[THREAT_RING[ind.slug][i]] })),
+};
+
 const buildIndustry = (ind) => ({
   slug: `industries/${ind.slug}`,
   type: 'industry',
@@ -8,7 +15,8 @@ const buildIndustry = (ind) => ({
   metaTitle: `${ind.title} Cybersecurity | SecureTrust Cyber`,
   metaDescription: ind.meta,
   hero: {
-    variant: ind.heroVariant,
+    variant: THREAT_RING[ind.slug] ? 'threats' : ind.heroVariant,
+    threats: ringOf(ind),
     eyebrow: ind.eyebrow ?? 'Industry Solutions',
     headline: ind.headline,
     sub: ind.sub,
@@ -16,7 +24,7 @@ const buildIndustry = (ind) => ({
     secondary: { label: 'See the platform', href: 'products' },
     media: ind.title,
     chips: ind.chips ?? [],
-    bg: ind.heroImage,
+    bg: THREAT_RING[ind.slug] ? undefined : ind.heroImage,
     textSide: ind.heroTextSide,
   },
   threats: {
