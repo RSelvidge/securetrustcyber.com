@@ -91,9 +91,9 @@ export const INDUSTRIES = [
     chips: ['FFIEC', 'PCI DSS', 'ISO 27001'],
     threatIntro: 'Financial institutions face motivated, well-funded attackers and relentless regulatory scrutiny.',
     threats: [
-      { title: 'Account takeover', body: 'Stolen credentials are the weapon of choice. Zero-trust access and identity-based policy stop abuse before money moves.', image: { src: 'img/financial-account-takeover.png', alt: 'Person using a laptop with login credentials and security lock graphics', width: 678, height: 363, fit: 'contain' } },
-      { title: 'Data and payment fraud', body: 'Sensitive data exfiltration and payment fraud are stopped by DLP and cloud app governance.', image: { src: 'img/financial-payment-fraud.png', alt: 'Fraud prevention graphic with credit card, identity, and data protection symbols', width: 650, height: 414, fit: 'contain' } },
-      { title: 'Third-party risk', body: 'Vendors are an extension of your attack surface. Least-privilege access keeps supply-chain risk visible and governed.', image: { src: 'img/financial-third-party-risk.png', alt: 'Cartoon of a business meeting reviewing a tangled diagram of third-party connections', width: 642, height: 406, fit: 'contain' } },
+      { title: 'Account takeover', body: 'Stolen credentials are the weapon of choice. Zero-trust access and identity-based policy stop abuse before money moves.', image: { src: 'img/industries/financial-takeover.webp', alt: 'Illustration: a trusted laptop signs in through a zero trust ring to a bank, while a login from a compromised laptop is blocked by a shield', width: 1280, height: 720 } },
+      { title: 'Data and payment fraud', body: 'Sensitive data exfiltration and payment fraud are stopped by DLP and cloud app governance.', image: { src: 'img/industries/financial-fraud.webp', alt: 'Illustration: card data and customer records inside a bank, with an exfiltration path to a fraud server cut off by a DLP shield', width: 1280, height: 720 } },
+      { title: 'Third-party risk', body: 'Vendors are an extension of your attack surface. Least-privilege access keeps supply-chain risk visible and governed.', image: { src: 'img/industries/financial-thirdparty.webp', alt: 'Illustration: vendor connections passing through a zero trust ring into a bank, with a compromised vendor marked in red and blocked', width: 1280, height: 720 } },
     ],
     controlHeading: 'Mapping to the FFIEC IT Examination Handbook',
     controlMap: [

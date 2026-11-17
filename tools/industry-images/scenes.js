@@ -49,6 +49,57 @@ export const SCENES = {
     std(S, V(.5, 1.4, 0));
   },
 
+  /* ================= FINANCIAL SERVICES ================= */
+  // Third-party risk: vendors connect into the bank only through a Zero Trust ring with least-privilege access; a compromised vendor is refused.
+  'financial-thirdparty'(S) {
+    const s = S.scene; s.add(platform(6.4));
+    s.add(at(building({ w: 3, d: 1.8, h: 1.7, roof: 'columns', cols: 5, rows: 2 }), 2.9, 0, -1, -.25, 1));
+    s.add(at(database(COL.panel, .6), 4.6, 0, .7));
+    s.add(at(ringGate(1.2), -.2, 1.6, .2, Math.PI / 2 - .9));
+    const vendors = [[-4.2, -1.9, 'cloud'], [-4.6, .2, 'box'], [-4, 2.1, 'bad'], [-2.6, 2.9, 'laptop']];
+    vendors.forEach(([x, z, k]) => {
+      const bad = k === 'bad';
+      if (k === 'cloud') s.add(at(cloud(COL.panel, COL.glow, .55), x, 1, z));
+      else if (k === 'laptop') s.add(at(device('laptop'), x, 0, z, .5, .75));
+      else s.add(at(building({ w: 1.1, d: .9, h: 1, roof: 'flat', cols: 3, rows: 2, red: bad ? [0, 1, 2, 3, 4, 5] : [], tint: bad ? 0x3a1236 : COL.panel }), x, 0, z, .3, .9));
+      s.add(arc(V(x + .5, bad ? .9 : 1, z), V(bad ? -1.3 : -.2, bad ? 1.4 : 1.6, bad ? 1.1 : .2), { c: bad ? COL.red : COL.glow, lift: .9, packets: 2, r: bad ? .035 : .025 }));
+      if (bad) s.add(at(warn(.45), x, 1.65, z));
+    });
+    s.add(at(shield(COL.blue, .8), -1.4, 1.5, 1.2, -.3)); s.add(sparks(V(-1.45, 1.4, 1.1), 35, COL.red, .6));
+    s.add(arc(V(.1, 1.6, .1), V(1.6, 1.1, -.5), { lift: .7, packets: 3 }));
+    glowLight(s, COL.blue, V(-.2, 2.6, 2.2), 7); glowLight(s, COL.red, V(-3.6, 1.8, 2.6), 4);
+    std(S, V(0, 1.3, 0), V(.8, 6.4, 19.5));
+  },
+
+  // Account takeover: a legitimate user signs in through the Zero Trust ring; a login from a stolen-credential device is refused before it reaches the bank.
+  'financial-takeover'(S) {
+    const s = S.scene; s.add(platform(6.2));
+    s.add(at(building({ w: 3, d: 1.8, h: 1.7, roof: 'columns', cols: 5, rows: 2 }), 2.9, 0, -1.2, -.3, 1));
+    s.add(at(ringGate(1.15), .2, 1.5, .3, Math.PI / 2 - .8));
+    s.add(at(device('laptop', { screen: 'login' }), -3, 0, -2.2, .6, .85));
+    s.add(arc(V(-2.6, 1, -2.1), V(.1, 1.5, .2), { lift: .9, packets: 3 }));
+    s.add(arc(V(.5, 1.5, .2), V(2, 1.3, -.7), { lift: .6, packets: 3 }));
+    s.add(at(device('laptop', { screen: 'red' }), -4.3, 0, 1.4, .9, .85)); s.add(at(warn(.45), -4.3, 1.6, 1.4));
+    s.add(arc(V(-3.9, 1, 1.3), V(-1.7, 1.5, 1), { c: COL.red, lift: .8, packets: 2, r: .035 }));
+    s.add(at(shield(COL.blue, .85), -1.6, 1.6, 1.1, -.2)); s.add(sparks(V(-1.7, 1.5, 1.05), 35, COL.red, .6));
+    glowLight(s, COL.blue, V(0, 2.6, 2.2), 7); glowLight(s, COL.red, V(-3.4, 1.8, 2.6), 4);
+    std(S, V(-.2, 1.3, 0), V(.8, 6.2, 18.5));
+  },
+  // Data and payment fraud: card data and customer records stay inside the bank; a DLP shield cuts off the red exfiltration arc to a fraud server.
+  'financial-fraud'(S) {
+    const s = S.scene; s.add(platform(6.2));
+    s.add(at(building({ w: 3, d: 1.8, h: 1.7, roof: 'columns', cols: 5, rows: 2 }), -2.4, 0, -1.4, .3, 1));
+    s.add(at(database(COL.panel, .75), -3.6, 0, 1));
+    const c = at(card(), -1.4, 1.3, 1.2, .3, 1.2); c.rotation.x = -.3; s.add(c);
+    s.add(at(doc(), -.6, 0, .4, .1, 1)); s.add(at(doc(), -.2, 0, .8, .2, 1));
+    s.add(at(ringGate(1.8, COL.blue), -1.8, .02, 0).rotateX(-Math.PI / 2));
+    s.add(arc(V(-.4, 1.4, .6), V(4.4, 2.4, -.6), { c: COL.red, lift: 1.4, packets: 3 }));
+    s.add(at(shield(COL.blue, .95), 1.8, 2.5, .3, -.6)); s.add(sparks(V(1.7, 2.4, .3), 40, COL.red, .8));
+    s.add(at(globe(.75, COL.red), 4.4, 2.4, -.8)); s.add(at(warn(.45), 4.4, 3.5, -.8));
+    glowLight(s, COL.blue, V(1.6, 2.8, 2), 7); glowLight(s, COL.red, V(4.6, 2.6, .4), 5);
+    std(S, V(.4, 1.4, 0), V(9, 5, 14));
+  },
+
   /* ================= MANUFACTURING ================= */
   // OT/IT convergence: office IT and the plant floor are now networked; a FWaaS segmentation wall sits between them.
   'manufacturing-otit'(S) {
