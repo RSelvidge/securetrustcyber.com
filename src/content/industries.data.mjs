@@ -123,9 +123,9 @@ export const INDUSTRIES = [
     chips: ['IEC 62443'],
     threatIntro: 'Manufacturing runs on a mix of legacy OT and modern IT, and downtime costs millions per hour.',
     threats: [
-      { title: 'OT/IT convergence', body: 'Industrial control systems are increasingly networked, exposing them to IT-borne attacks. Segmentation and firewall controls contain the risk.' },
-      { title: 'Ransomware downtime', body: 'An encrypted production line stops output. Inline intrusion prevention halts ransomware before it spreads.' },
-      { title: 'Unpatched industrial systems', body: 'Legacy machines cannot be patched easily. Segmentation and cloud app governance reduce the risk.' },
+      { title: 'OT/IT convergence', body: 'Industrial control systems are increasingly networked, exposing them to IT-borne attacks. Segmentation and firewall controls contain the risk.', image: { src: 'img/industries/manufacturing-otit.webp', alt: 'Illustration: a factory and office IT systems separated by a glowing segmentation wall, with a red threat stopped by a shield at the wall', width: 1280, height: 720 } },
+      { title: 'Ransomware downtime', body: 'An encrypted production line stops output. Inline intrusion prevention halts ransomware before it spreads.', image: { src: 'img/industries/manufacturing-ransomware.webp', alt: 'Illustration: a production line locked in red by ransomware while a shield blocks a red payload heading for the second line', width: 1280, height: 720 } },
+      { title: 'Unpatched industrial systems', body: 'Legacy machines cannot be patched easily. Segmentation and cloud app governance reduce the risk.', image: { src: 'img/industries/manufacturing-legacy.webp', alt: 'Illustration: a legacy industrial controller with a warning sign, isolated inside a protective segment ring', width: 1280, height: 720 } },
     ],
     controlHeading: 'Protecting OT and IT',
     controlMap: [
@@ -153,9 +153,9 @@ export const INDUSTRIES = [
     chips: ['NERC CIP', 'CIS Controls'],
     threatIntro: 'Energy is a top target for nation-state actors, where an incident can cascade beyond the organization.',
     threats: [
-      { title: 'Nation-state attacks', body: 'Sophisticated, persistent adversaries target the grid. AI/ML detection and continuous monitoring are essential.' },
-      { title: 'Legacy SCADA', body: 'Operational systems outlive their support windows. Segmentation and access control compensate for the gap.' },
-      { title: 'Supply-chain compromise', body: 'Vendors with access to OT are a path in. Least-privilege access governs that access.' },
+      { title: 'Nation-state attacks', body: 'Sophisticated, persistent adversaries target the grid. AI/ML detection and continuous monitoring are essential.', image: { src: 'img/industries/energy-nationstate.webp', alt: 'Illustration: red attack paths from a globe converging on power-grid pylons, stopped by a shield above a monitoring screen', width: 1280, height: 720 } },
+      { title: 'Legacy SCADA', body: 'Operational systems outlive their support windows. Segmentation and access control compensate for the gap.', image: { src: 'img/industries/energy-scada.webp', alt: 'Illustration: a SCADA control room behind a segmentation wall with one controlled access ring, a red attack stopped at the wall', width: 1280, height: 720 } },
+      { title: 'Supply-chain compromise', body: 'Vendors with access to OT are a path in. Least-privilege access governs that access.', image: { src: 'img/industries/energy-supplychain.webp', alt: 'Illustration: vendor connections passing through a zero trust ring into a utility, with a compromised vendor marked in red and blocked', width: 1280, height: 720 } },
     ],
     controlHeading: 'NERC CIP alignment',
     controlMap: [
@@ -183,9 +183,9 @@ export const INDUSTRIES = [
     chips: ['CIS Controls', 'ISO 27001'],
     threatIntro: 'Public sector bodies hold sensitive citizen data and face both criminal and state-sponsored threats.',
     threats: [
-      { title: 'Citizen data at risk', body: 'Breaches of public records erode trust. DLP and access control protect the data.' },
-      { title: 'Legacy systems', body: 'Government IT runs on old platforms. Segmentation and access control limit the damage they can cause.' },
-      { title: 'Phishing at scale', body: 'Staff are heavily targeted. DNS Security and the Secure Web Gateway block the most common vectors.' },
+      { title: 'Citizen data at risk', body: 'Breaches of public records erode trust. DLP and access control protect the data.', image: { src: 'img/industries/government-citizendata.webp', alt: 'Illustration: a civic building and records database, with a red data leak stopped by a shield', width: 1280, height: 720 } },
+      { title: 'Legacy systems', body: 'Government IT runs on old platforms. Segmentation and access control limit the damage they can cause.', image: { src: 'img/industries/government-legacy.webp', alt: 'Illustration: aging server racks with a warning sign, contained inside a protective segment ring', width: 1280, height: 720 } },
+      { title: 'Phishing at scale', body: 'Staff are heavily targeted. DNS Security and the Secure Web Gateway block the most common vectors.', image: { src: 'img/industries/government-phishing.webp', alt: 'Illustration: a wave of phishing emails with a red hook blocked by a shield wall before reaching a government office', width: 1280, height: 720 } },
     ],
     controlHeading: 'Meeting public-sector standards',
     controlMap: [
@@ -213,9 +213,9 @@ export const INDUSTRIES = [
     chips: ['Cyber Essentials', 'GDPR'],
     threatIntro: 'Schools and universities run open networks with thousands of devices and limited security staff.',
     threats: [
-      { title: 'Ransomware on schools', body: 'Schools are a favorite target because they cannot afford downtime. Inline prevention stops encryption.' },
-      { title: 'BYOD sprawl', body: 'Thousands of unmanaged devices connect daily. Zero-trust access and web controls bring order.' },
-      { title: 'Research theft', body: 'Valuable research is targeted by competitors and nation-states. Least-privilege access and DLP protect it.' },
+      { title: 'Ransomware on schools', body: 'Schools are a favorite target because they cannot afford downtime. Inline prevention stops encryption.', image: { src: 'img/industries/education-ransomware.webp', alt: 'Illustration: a school building locked in red by ransomware while a shield blocks a red payload', width: 1280, height: 720 } },
+      { title: 'BYOD sprawl', body: 'Thousands of unmanaged devices connect daily. Zero-trust access and web controls bring order.', image: { src: 'img/industries/education-byod.webp', alt: 'Illustration: many phones, tablets and laptops streaming through a zero trust ring to the campus, one unverified device flagged in red', width: 1280, height: 720 } },
+      { title: 'Research theft', body: 'Valuable research is targeted by competitors and nation-states. Least-privilege access and DLP protect it.', image: { src: 'img/industries/education-research.webp', alt: 'Illustration: lab research and data inside a protective ring, with a red exfiltration path cut off by a shield', width: 1280, height: 720 } },
     ],
     controlHeading: 'Security for open campuses',
     controlMap: [
@@ -243,9 +243,9 @@ export const INDUSTRIES = [
     chips: ['PCI DSS', 'GDPR'],
     threatIntro: 'Retail handles payment data across hundreds of locations and a huge attack surface.',
     threats: [
-      { title: 'Payment data theft', body: 'Point-of-sale systems are a prize target. DLP and segmentation protect cardholder data.' },
-      { title: 'Seasonal spikes', body: 'Attackers strike during peak seasons when teams are stretched. Cloud automation keeps defenses on.' },
-      { title: 'E-commerce fraud', body: 'Fraudulent transactions and account takeover hit online channels. Zero-trust access reduces loss.' },
+      { title: 'Payment data theft', body: 'Point-of-sale systems are a prize target. DLP and segmentation protect cardholder data.', image: { src: 'img/industries/retail-payments.webp', alt: 'Illustration: a point-of-sale terminal and payment card inside a protected segment, with a red data leak stopped by a shield', width: 1280, height: 720 } },
+      { title: 'Seasonal spikes', body: 'Attackers strike during peak seasons when teams are stretched. Cloud automation keeps defenses on.', image: { src: 'img/industries/retail-seasonal.webp', alt: 'Illustration: shopping traffic surging on a chart while cloud firewall rings scale to keep protection on', width: 1280, height: 720 } },
+      { title: 'E-commerce fraud', body: 'Fraudulent transactions and account takeover hit online channels. Zero-trust access reduces loss.', image: { src: 'img/industries/retail-ecommerce.webp', alt: 'Illustration: an online store checkout with a fraudulent login, marked in red, stopped at a zero trust ring', width: 1280, height: 720 } },
     ],
     controlHeading: 'PCI DSS alignment',
     controlMap: [
@@ -273,9 +273,9 @@ export const INDUSTRIES = [
     chips: ['ISO 27001', 'SOC 2', 'CIS Controls'],
     threatIntro: 'Technology companies move fast, ship constantly and hold customer data, a tempting combination for attackers.',
     threats: [
-      { title: 'Supply-chain attacks', body: 'Attackers poison dependencies and cloud apps. Cloud governance and monitoring catch the result.' },
-      { title: 'Cloud sprawl', body: 'Fast-moving teams create shadow cloud assets. CASB visibility brings them under control.' },
-      { title: 'Customer data', body: 'SaaS products hold sensitive customer data. DLP and access control protect it.' },
+      { title: 'Supply-chain attacks', body: 'Attackers poison dependencies and cloud apps. Cloud governance and monitoring catch the result.', image: { src: 'img/industries/technology-supplychain.webp', alt: 'Illustration: a chain of software packages with one poisoned package in red caught under a monitoring ring', width: 1280, height: 720 } },
+      { title: 'Cloud sprawl', body: 'Fast-moving teams create shadow cloud assets. CASB visibility brings them under control.', image: { src: 'img/industries/technology-cloudsprawl.webp', alt: 'Illustration: scattered cloud services brought into view by a central ring, with one risky cloud app flagged in red', width: 1280, height: 720 } },
+      { title: 'Customer data', body: 'SaaS products hold sensitive customer data. DLP and access control protect it.', image: { src: 'img/industries/technology-customerdata.webp', alt: 'Illustration: a customer database under a protective dome, with a red data leak stopped by a shield', width: 1280, height: 720 } },
     ],
     controlHeading: 'ISO 27001 and SOC 2 alignment',
     controlMap: [
@@ -303,9 +303,9 @@ export const INDUSTRIES = [
     chips: ['NERC CIP', 'ISA/IEC 62443'],
     threatIntro: 'Critical infrastructure faces the most capable adversaries and the highest-stakes consequences.',
     threats: [
-      { title: 'Nation-state campaigns', body: 'Persistent, well-resourced attackers probe these networks daily. AI/ML detection and monitoring are essential.' },
-      { title: 'Cascading failures', body: 'A breach in one system can ripple outward. Microsegmentation contains the blast radius.' },
-      { title: 'Legacy OT', body: 'Operational technology outlives its security support. Segmentation and access control compensate.' },
+      { title: 'Nation-state campaigns', body: 'Persistent, well-resourced attackers probe these networks daily. AI/ML detection and monitoring are essential.', image: { src: 'img/industries/critical-nationstate.webp', alt: 'Illustration: red attack paths from a globe toward a water and power facility, stopped by a shield', width: 1280, height: 720 } },
+      { title: 'Cascading failures', body: 'A breach in one system can ripple outward. Microsegmentation contains the blast radius.', image: { src: 'img/industries/critical-cascading.webp', alt: 'Illustration: a network where one compromised node in red is contained by a segmentation wall before the failure spreads', width: 1280, height: 720 } },
+      { title: 'Legacy OT', body: 'Operational technology outlives its security support. Segmentation and access control compensate.', image: { src: 'img/industries/critical-legacyot.webp', alt: 'Illustration: aging pumps, pipes and a controller with a warning sign, contained inside a protective segment ring', width: 1280, height: 720 } },
     ],
     controlHeading: 'Sector-specific frameworks',
     controlMap: [
@@ -332,9 +332,9 @@ export const INDUSTRIES = [
     chips: ['Cyber Essentials', 'CIS Controls'],
     threatIntro: 'SMBs are attacked because they are seen as easy targets, and a single breach can be fatal.',
     threats: [
-      { title: 'Ransomware', body: 'SMBs are hit hardest because they cannot pay and cannot recover. Inline prevention beats recovery.' },
-      { title: 'Phishing and malicious sites', body: 'A single convincing link can compromise the whole business. DNS Security and SWG stop most.' },
-      { title: 'No security team', body: 'Most SMBs have no dedicated security staff. Cloud automation is the only realistic answer.' },
+      { title: 'Ransomware', body: 'SMBs are hit hardest because they cannot pay and cannot recover. Inline prevention beats recovery.', image: { src: 'img/industries/smb-ransomware.webp', alt: 'Illustration: a small business office locked in red by ransomware while a shield blocks the payload', width: 1280, height: 720 } },
+      { title: 'Phishing and malicious sites', body: 'A single convincing link can compromise the whole business. DNS Security and SWG stop most.', image: { src: 'img/industries/smb-phishing.webp', alt: 'Illustration: a phishing email and malicious site in red blocked by a shield wall before reaching staff devices', width: 1280, height: 720 } },
+      { title: 'No security team', body: 'Most SMBs have no dedicated security staff. Cloud automation is the only realistic answer.', image: { src: 'img/industries/smb-noteam.webp', alt: 'Illustration: a small office under an automated protective dome with cloud-managed security, a red threat stopped at the edge', width: 1280, height: 720 } },
     ],
     controlHeading: 'The essentials, done for you',
     controlMap: [

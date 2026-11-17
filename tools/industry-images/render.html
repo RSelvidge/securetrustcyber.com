@@ -1,0 +1,13 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#050d3a}canvas{display:block}</style></head>
+<body>
+<script type="module">
+import { stage } from './kit.js';
+import { SCENES } from './scenes.js';
+const name = decodeURIComponent(location.hash.slice(1));
+const S = stage(1280, 720);
+SCENES[name](S);
+S.renderer.render(S.scene, S.camera);
+window.renderDone = true;
+</script>
+</body></html>
