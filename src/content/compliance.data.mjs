@@ -111,6 +111,7 @@ export const COMPLIANCE = [
       { requirement: 'Audit controls (§164.312(b))', answer: 'Centralized log collection and event correlation for a complete audit trail.', href: 'products/siem', product: 'SIEM Platform' },
       { requirement: 'Integrity (§164.312(c)(1))', answer: 'IPS and DLP prevent unauthorized modification and exfiltration of ePHI.', href: 'products/ips', product: 'Intrusion Prevention System' },
       { requirement: 'Transmission security (§164.312(e)(1))', answer: 'TLS inspection and DLP protect ePHI in transit across web, SaaS and email.', href: 'products/dlp', product: 'Data Loss Prevention' },
+      { requirement: 'Risk analysis (§164.308(a)(1)(ii)(A))', answer: 'An engineer-led assessment of where ePHI lives, the threats to it, and a prioritized remediation plan.', href: 'services/hipaa-risk-assessment', product: 'HIPAA Security Risk Assessment' },
     ],
     evidence: [
       { title: 'Access audit', body: 'Records of who accessed what, and when.' },

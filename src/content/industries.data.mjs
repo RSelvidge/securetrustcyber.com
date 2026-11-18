@@ -69,7 +69,7 @@ export const INDUSTRIES = [
       { requirement: 'HIPAA Security Rule: Access Control (45 CFR §164.312(a)(1))', answer: 'Identity- and context-based least-privilege access restricts who can see patient data.', href: 'products/ztna', product: 'Universal ZTNA' },
       { requirement: 'HIPAA: Audit Controls (§164.312(b))', answer: 'Centralized log collection and correlation produce a complete audit trail.', href: 'products/siem', product: 'SIEM Platform' },
       { requirement: 'HIPAA: Transmission Security (§164.312(e)(1))', answer: 'DLP and TLS inspection protect ePHI in transit across web, SaaS and email.', href: 'products/dlp', product: 'Data Loss Prevention' },
-      { requirement: 'HIPAA: Risk Analysis (§164.308(a)(1)(ii)(A))', answer: 'Continuous vulnerability and configuration visibility supports a defensible risk analysis.', href: 'products/patch-management', product: 'Managed Patch Management' },
+      { requirement: 'HIPAA: Risk Analysis (§164.308(a)(1)(ii)(A))', answer: 'An engineer-led security risk assessment documents where ePHI lives, the risks to it, and what to fix first.', href: 'services/hipaa-risk-assessment', product: 'HIPAA Security Risk Assessment' },
     ],
     outcomeIntro: 'Fewer breaches, faster recovery, and audit-ready compliance.',
     outcomes: [

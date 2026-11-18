@@ -1,0 +1,23 @@
+/* 15-hipaa-risk-assessment.css — /services/hipaa-risk-assessment. Reuses the
+   hp-* building blocks from 10-healthcare-pricing.css; only the extras live here. */
+
+.page--hipaa-risk-assessment .hp-hero { padding-block: var(--space-xl) var(--space-2xl); }
+.page--hipaa-risk-assessment .hp-hero__title { font-size: var(--step-4); }
+.page--hipaa-risk-assessment .hero__sub { margin-top: var(--space-s); }
+
+/* illustrative finding card */
+.ra-finding { margin: 0; background: var(--white); color: var(--color-text); border-radius: var(--radius-l); padding: var(--space-m); box-shadow: var(--shadow-4); border: 1px solid var(--color-border); align-self: start; }
+.ra-finding__risk { font-weight: var(--weight-medium); display: grid; gap: var(--space-2xs); justify-items: start; }
+.ra-finding__list { margin: var(--space-s) 0 0; display: grid; gap: var(--space-s); }
+.ra-finding__list dt { font-size: var(--step--2); font-weight: 700; text-transform: uppercase; letter-spacing: var(--tracking-wide); color: var(--color-text-muted); }
+.ra-finding__list dd { margin: var(--space-3xs) 0 0; }
+
+/* what to have ready */
+.ra-needs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-l); margin-top: var(--space-xl); }
+.ra-needs h3 { font-size: var(--step-1); }
+@media (max-width: 48rem) { .ra-needs { grid-template-columns: 1fr; } }
+
+/* what happens next */
+.ra-next { list-style: decimal; margin: var(--space-s) 0 0; padding-left: 1.25rem; display: grid; gap: var(--space-xs); color: var(--color-text-inverse); }
+
+#deliverables, #how-it-works, #request { scroll-margin-top: 5rem; }
