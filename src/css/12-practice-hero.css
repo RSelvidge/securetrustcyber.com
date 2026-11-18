@@ -3,6 +3,7 @@
 
 .hero--practice .hero__inner { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
 @media (max-width: 60rem) { .hero--practice .hero__inner { grid-template-columns: 1fr; } }
+.hero--practice .hero__title { font-size: var(--step-4); } /* long healthcare headline: 2 lines on desktop, not 4 */
 
 .practice-map { position: relative; width: 100%; aspect-ratio: 1.08; }
 .practice-map:not(.is-live) { display: none; }

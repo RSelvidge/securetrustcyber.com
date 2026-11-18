@@ -12,7 +12,7 @@ const buildIndustry = (ind) => ({
   type: 'industry',
   title: `${ind.title} Cybersecurity`,
   category: ind.slug,
-  metaTitle: `${ind.title} Cybersecurity | SecureTrust Cyber`,
+  metaTitle: ind.metaTitle ?? `${ind.title} Cybersecurity | SecureTrust Cyber`,
   metaDescription: ind.meta,
   hero: {
     variant: THREAT_RING[ind.slug] ? 'threats' : ind.heroVariant,
@@ -21,7 +21,7 @@ const buildIndustry = (ind) => ({
     headline: ind.headline,
     sub: ind.sub,
     primary: { label: 'Talk to an Expert', href: 'talk-to-an-expert' },
-    secondary: { label: 'See the platform', href: 'products' },
+    secondary: ind.heroSecondary ?? { label: 'See the platform', href: 'products' },
     media: ind.title,
     chips: ind.chips ?? [],
     bg: THREAT_RING[ind.slug] ? undefined : ind.heroImage,
@@ -51,9 +51,11 @@ const buildIndustry = (ind) => ({
 export const INDUSTRIES = [
   buildIndustry({
     slug: 'healthcare', title: 'Healthcare', heroVariant: 'practice', eyebrow: 'Healthcare', // live practice map (tools/ring-hero/practice.mjs)
-    headline: 'Security that keeps care running',
-    sub: 'Protect patient data and practice systems from ransomware and breaches, and keep the evidence your HIPAA risk analysis needs.',
-    meta: 'Cybersecurity for medical and dental practices: protect patient data and practice systems from ransomware and keep HIPAA evidence ready.',
+    metaTitle: 'Cybersecurity for Dental and Medical Practices | SecureTrust Cyber',
+    headline: 'Cybersecurity for Dental and Medical Practices',
+    sub: 'We deploy and manage firewall, ransomware protection, patching and monitoring for independent dental, medical and specialty practices, and keep your HIPAA evidence ready.',
+    heroSecondary: { label: 'How it works', href: 'healthcare-pricing' },
+    meta: 'Managed cybersecurity for dental and medical practices: we run your firewall, ransomware protection, patching and monitoring, and keep HIPAA evidence ready.',
     chips: ['HIPAA', 'HITECH'],
     ctaSecondary: { label: 'Healthcare pricing', href: 'healthcare-pricing' },
     threatIntro: 'Practices are a prime target: attackers know a clinic cannot afford to close its doors, and patient records are valuable.',
