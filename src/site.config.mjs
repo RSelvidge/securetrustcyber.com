@@ -15,7 +15,7 @@ export const SITE = {
 
   // The live domain.
   origin: 'https://securetrustcyber.com',
-  bookingUrl: 'https://bookings.cloud.microsoft/bookwithme/user/20566259f3624bc19b31984aa6bd3d05@securetrust.io/meetingtype/2wj5NMEGaUC1HXxVo9IWUA2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile',
+  bookingUrl: 'https://bookings.cloud.microsoft/bookwithme/user/0c501bbe665743f09a9115c307008c7f@securetrustcyber.com/meetingtype/4gW30VfXHEKxysbxN-aU3g2?anonymous&ismsaljsauthenabled&ep=mcard',
 
   email: 'info@securetrustcyber.com',
 
