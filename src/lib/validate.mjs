@@ -13,6 +13,7 @@ const EXTERNAL_DOMAINS = [
   'www.gartner.com', 'sourceforge.net', 'www.linkedin.com', 'www.youtube.com',
   'www.facebook.com', 'x.com', 'twitter.com', 'bookings.cloud.microsoft',
   'www.hhs.gov', // HHS OCR guidance cited on HIPAA pages
+  'www.healthit.gov', // HHS Security Risk Assessment Tool
 ];
 
 const SITE_HOST = new URL(SITE.origin).host;
@@ -113,7 +114,7 @@ export function links(rendered, registryMap) {
         continue;
       }
       // Skip asset-like hrefs (fonts, downloads, etc.) — only page links matter here.
-      if (/\.(css|js|svg|png|jpg|jpeg|webp|pdf|woff2?|ico)([?#]|$)/i.test(href)) continue;
+      if (/\.(css|js|svg|png|jpg|jpeg|webp|pdf|xlsx|woff2?|ico)([?#]|$)/i.test(href)) continue;
 
       const slug = resolveHref(page.slug, href);
       if (slug === null) continue; // fragment-only

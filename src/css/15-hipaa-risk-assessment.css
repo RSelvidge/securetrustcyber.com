@@ -21,3 +21,11 @@
 .ra-next { list-style: decimal; margin: var(--space-s) 0 0; padding-left: 1.25rem; display: grid; gap: var(--space-xs); color: var(--color-text-inverse); }
 
 #deliverables, #how-it-works, #request { scroll-margin-top: 5rem; }
+
+/* /resources/hipaa-risk-assessment-template */
+.page--hipaa-risk-template .hp-hero { padding-block: var(--space-xl) var(--space-2xl); }
+.page--hipaa-risk-template .hp-hero__title { font-size: var(--step-4); }
+.page--hipaa-risk-template .hero__actions { flex-wrap: wrap; }
+.ra-example td:first-child { white-space: nowrap; }
+.ra-example td, .ra-example th { vertical-align: top; }
+#example, #how-to-use { scroll-margin-top: 5rem; }

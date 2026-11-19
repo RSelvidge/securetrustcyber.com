@@ -306,6 +306,11 @@ export const PAGES = [
     blurb: 'News, research and guidance.',
     mega: { menu: 'resources', col: 1 }, footer: 'resources',
   }),
+  page('resources/hipaa-risk-assessment-template', 'HIPAA Risk Assessment Template', {
+    group: 'resources', order: 7, icon: 'file',
+    blurb: 'Free Excel template with a completed example.',
+    mega: { menu: 'resources', col: 1 }, footer: 'resources',
+  }),
 
   /* ================= Company (menu: company) ================= */
   page('managed-security', 'Expert-Managed Security', {

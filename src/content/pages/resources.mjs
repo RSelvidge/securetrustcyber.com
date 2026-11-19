@@ -51,6 +51,7 @@ const index = {
         { icon: 'users', title: 'Customer stories', body: 'How teams like yours use SecureTrust Cyber.', href: 'resources/customer-stories' },
         { icon: 'file', title: 'Solution briefs', body: 'The technical detail on every module.', href: 'resources/solution-briefs' },
         { icon: 'play', title: 'Webinars', body: 'Live and on-demand sessions with our experts.', href: 'resources/webinars' },
+        { icon: 'check', title: 'HIPAA risk assessment template', body: 'Free Excel template with a completed dental practice example.', href: 'resources/hipaa-risk-assessment-template' },
         { icon: 'shield', title: 'Trust center', body: 'Security, privacy and compliance at SecureTrust.', href: 'trust-center' },
       ],
       variant: '3up',
