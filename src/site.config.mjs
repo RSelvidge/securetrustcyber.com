@@ -22,7 +22,7 @@ export const SITE = {
   // Contact Sales form delivery (Web3Forms). The key decides which inbox
   // receives submissions; it is public by design, so it is safe to commit.
   // Get one at https://web3forms.com with the address that should receive leads.
-  formAccessKey: '17809f52-ff64-4454-bc6d-c7d3de0dc9bb',
+  formAccessKey: '1f7138f1-3e4b-4a60-8a5e-84d1a56c9510',
 
   socials: [
     { name: 'LinkedIn', href: 'https://www.linkedin.com/', icon: 'linkedin' },
