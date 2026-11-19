@@ -3,7 +3,7 @@
 import { html, join } from '../lib/html.mjs';
 
 export function controlMapTable(ctx, opts = {}) {
-  const { eyebrow = '', heading = '', rows = [] } = opts;
+  const { eyebrow = '', heading = '', rows = [], answerLabel = 'How SecureTrust satisfies it' } = opts;
 
   return html`<section class="section section--muted">
     <div class="container">
@@ -15,7 +15,7 @@ export function controlMapTable(ctx, opts = {}) {
         <table class="comparison-table control-map">
           <caption class="visually-hidden">${heading}</caption>
           <thead>
-            <tr><th scope="col">Requirement</th><th scope="col">How SecureTrust satisfies it</th></tr>
+            <tr><th scope="col">Requirement</th><th scope="col">${answerLabel}</th></tr>
           </thead>
           <tbody>
             ${join(rows.map((r) => html`
