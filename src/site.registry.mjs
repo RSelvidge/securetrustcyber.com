@@ -311,6 +311,11 @@ export const PAGES = [
     blurb: 'Free Excel template with a completed example.',
     mega: { menu: 'resources', col: 1 }, footer: 'resources',
   }),
+  page('zero-trust-network-access', 'What Is ZTNA?', {
+    group: 'resources', order: 8, icon: 'key',
+    blurb: 'Zero Trust Network Access explained.',
+    mega: { menu: 'resources', col: 1 }, footer: 'resources',
+  }),
 
   /* ================= Company (menu: company) ================= */
   page('managed-security', 'Expert-Managed Security', {
