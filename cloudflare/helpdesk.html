@@ -42,15 +42,48 @@
     window.NetZenBot={orgId:"wqaFJX5TwhwBNyfMUbRw",widgetKey:"wgt_live_add4d8106074f410"};
     const launchButton=document.getElementById('open-chat');
     const chatStatus=document.getElementById('chat-status');
+    const widgetOrigin='https://app.netzenai.com';
+    let widgetReady=false;
+    function expectedWidget(){
+      const frame=document.getElementById('netzenbot-iframe');
+      if(!frame)return null;
+      const url=new URL(frame.src);
+      if(url.origin!==widgetOrigin||!['/widget','/widget/'].includes(url.pathname)||
+        url.searchParams.get('orgId')!==window.NetZenBot.orgId||
+        url.searchParams.get('widgetKey')!==window.NetZenBot.widgetKey||
+        url.searchParams.get('customerOrigin')!==window.location.origin)return null;
+      return {frame,url};
+    }
+    // NetZen's current /widget/ route serves the ticket app; /widget serves webchat.
+    const routeObserver=new MutationObserver(()=>{
+      const target=expectedWidget();
+      if(!target)return;
+      if(target.url.pathname==='/widget/'){
+        target.url.pathname='/widget';target.frame.src=target.url.href;
+      }
+      routeObserver.disconnect();
+    });
+    routeObserver.observe(document.body,{childList:true});
     function syncChatState(){
-      if(typeof window.NetZenBot.open==='function'){
+      if(widgetReady&&typeof window.NetZenBot.open==='function'){
         clearInterval(readyCheck);launchButton.disabled=false;launchButton.textContent='Start a conversation';
         chatStatus.textContent='You can also use the chat button in the bottom-right corner.';
       }
     }
+    function unavailable(){
+      widgetReady=false;clearInterval(readyCheck);launchButton.disabled=true;
+      launchButton.textContent='Chat unavailable';
+      chatStatus.textContent='The chat connection could not be loaded. Please use the support portal below.';
+    }
+    window.addEventListener('message',event=>{
+      const target=expectedWidget();
+      if(!target||event.origin!==widgetOrigin||event.source!==target.frame.contentWindow)return;
+      if(event.data?.type==='NETZENBOT_READY'){widgetReady=true;syncChatState();}
+      if(event.data?.type==='NETZENBOT_ERROR')unavailable();
+    });
     const readyCheck=setInterval(syncChatState,200);
     window.addEventListener('load',syncChatState);
-    setTimeout(()=>{clearInterval(readyCheck);if(launchButton.disabled){launchButton.textContent='Chat unavailable';chatStatus.textContent='The chat connection could not be loaded. Please use the support portal below.'}},15000);
+    setTimeout(()=>{if(!widgetReady)unavailable();},15000);
     launchButton.addEventListener('click',()=>window.NetZenBot.open());
   </script>
   <script src="https://app.netzenai.com/netzenbot.js" async></script>
