@@ -7,6 +7,12 @@
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
+/helpdesk.html
+  Cache-Control: no-store
+
+/helpdesk
+  Cache-Control: no-store
+
 # ?v= cache-busting makes Google see each PDF twice; point it at the clean URL.
 /assets/datasheets/:file
   Link: <https://securetrustcyber.com/assets/datasheets/:file>; rel="canonical"
